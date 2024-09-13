@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "name":"Apple",
+        "label":"fruits",
+        "price":1.5,
+        "description":"Delicious fresh apple",
+        "image":"img/fruite-item-5.jpg"
+    },
+    {
+        "id":2,
+        "name":"Apple",
+        "label":"fruits",
+        "price":1.5,
+        "description":"Delicious fresh apple",
+        "image":"img/fruite-item-5.jpg"
+    }
+]
