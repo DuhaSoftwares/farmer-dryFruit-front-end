@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "White Honey",
+    "label": "honey",
+    "price": 800,
+    "unit": "kg",
+    "description": "White Honey",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Wild Honey",
+    "label": "honey",
+    "price": 800,
+    "unit": "kg",
+    "description": "Wild Honey",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Saffron Honey",
+    "label": "honey",
+    "price": 1200,
+    "unit": "kg",
+    "description": "Saffron Honey",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Guthand",
+    "label": "honey",
+    "price": 350,
+    "unit": "piece",
+    "description": "",
+    "image": ""
+  }
+]

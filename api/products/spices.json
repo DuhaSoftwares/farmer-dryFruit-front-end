@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Saffron",
+    "label": "spices",
+    "price": 300,
+    "unit": "gm",
+    "description": "Fresh Saffron",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Shilajit",
+    "label": "spices",
+    "price": 30,
+    "unit": "gm",
+    "description": "Fresh Shilajit",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Kehwa Masala",
+    "label": "spices",
+    "price": 250,
+    "unit": "",
+    "description": "Fresh Kehwa Masala",
+    "image": ""
+  }
+]

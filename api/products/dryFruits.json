@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Mamra Badam",
+    "label": "dryfruits",
+    "price": 1400,
+    "unit": "kg",
+    "description": "Fresh Mamra Badam",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Walnut giri",
+    "label": "dryfruits",
+    "price": 1200,
+    "unit": "kg",
+    "description": "Fresh Walnut Giri",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Cashews",
+    "label": "dryfruits",
+    "price": 1100,
+    "unit": "kg",
+    "description": "Fresh Cashews",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Razons",
+    "label": "dryfruits",
+    "price": 8400,
+    "unit": "kg",
+    "description": " Fresh Razons",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Black Berry",
+    "label": "dryfruits",
+    "price": 800,
+    "unit": "kg",
+    "description": " Fresh Berries",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Blue Berry",
+    "label": "dryfruits",
+    "price": 1000,
+    "unit": "kg",
+    "description": "Fresh Blue Berry ",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Crane Berry",
+    "label": "dryfruits",
+    "price": 1100,
+    "unit": "kg",
+    "description": "Crane Berry",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Peaches Berry",
+    "label": "dryfruits",
+    "price": 1000,
+    "unit": "kg",
+    "description": "Fresh Peaches",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Dry Mango",
+    "label": "dryfruits",
+    "price": 1000,
+    "unit": "kg",
+    "description": "Dry Mango",
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Kiwi",
+    "label": "dryfruits",
+    "price": 800,
+    "unit": "kg",
+    "description": "Kiwi",
+    "image": ""
+  },
+  {
+    "id": 11,
+    "name": "Appricots",
+    "label": "dryfruits",
+    "price": 800,
+    "unit": "kg",
+    "description": "Appricots",
+    "image": ""
+  },
+  {
+    "id": 12,
+    "name": "Pistachios",
+    "label": "dryfruits",
+    "price": 1200,
+    "unit": "kg",
+    "description": "Pistachios",
+    "image": ""
+  },
+  {
+    "id": 13,
+    "name": "Honey Roasted Mussli",
+    "label": "dryfruits",
+    "price": 1100,
+    "unit": "kg",
+    "description": "Honey Roasted ",
+    "image": ""
+  },
+  {
+    "id": 14,
+    "name": "Mixed Dry Fruits",
+    "label": "dryfruits",
+    "price": 1000,
+    "unit": "kg",
+    "description": "Mixed Dry Fruits",
+    "image": ""
+  },
+  {
+    "id": 15,
+    "name": "Munnaia",
+    "label": "dryfruits",
+    "price": 700,
+    "unit": "kg",
+    "description": "Fresh Munnaia",
+    "image": ""
+  },
+  {
+    "id": 16,
+    "name": "Dried Cherries",
+    "label": "dryfruits",
+    "price": 700,
+    "unit": "kg",
+    "description": "Fresh Dried Cherries",
+    "image": ""
+  }
+]

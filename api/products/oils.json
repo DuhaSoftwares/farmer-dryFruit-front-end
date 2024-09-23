@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Almond Oil",
+    "label": "oils",
+    "price": 450,
+    "unit": "",
+    "description": "Fresh Almond oil",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Walnut Oil",
+    "label": "oils",
+    "price": 450,
+    "unit": "",
+    "description": "Walnut oil",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Appricot Oil",
+    "label": "oils",
+    "price": 550,
+    "unit": "",
+    "description": "Fresh Appricot oil",
+    "image": ""
+  }
+]

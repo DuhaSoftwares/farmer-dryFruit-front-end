@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Saffron Cream",
+    "label": "beautyproducts",
+    "price": 400,
+    "unit": "",
+    "description": "Saffron Cream",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Scrab Oil",
+    "label": "beautyproducts",
+    "price": 450,
+    "unit": "",
+    "description": "Scrab oil",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Rose water",
+    "label": "beautyproducts",
+    "price": 300,
+    "unit": "",
+    "description": "Fresh Rose Water",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Saffron infured Oil",
+    "label": "beautyproducts",
+    "price": 1400,
+    "unit": "",
+    "description": "Saffron infured",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Saffron soap ",
+    "label": "beautyproducts",
+    "price": 200,
+    "unit": "",
+    "description": "Saffron soap",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Saffron Facial kit",
+    "label": "beautyproducts",
+    "price": 1600,
+    "unit": "",
+    "description": "Saffron Facial kit",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Saffron face scrum Oil",
+    "label": "beautyproducts",
+    "price": 800,
+    "unit": "",
+    "description": "Saffron face scrum oil",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Saffron face Wash",
+    "label": "beautyproducts",
+    "price": 500,
+    "unit": "",
+    "description": "Saffron Face wash",
+    "image": ""
+  }
+]
