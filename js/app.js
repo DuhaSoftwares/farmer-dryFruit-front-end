@@ -83,7 +83,7 @@ function displayProducts(products) {
       product.description;
     productElement.querySelector(
       ".product-price"
-    ).textContent = `$${product.price.toFixed(2)}`;
+    ).textContent = `₹${product.price.toFixed(2)}`;
     const addToCartBtn = productElement.querySelector(".add-to-cart");
     addToCartBtn.setAttribute("data-id", product.id);
 
@@ -120,6 +120,7 @@ function addToCart(product) {
       text: `${product.name} added to cart!`,
       icon: "success",
     });
+    getCartProductsLength();
   } catch (error) {
     // If there's an error, handle it (optional)
     console.error("Error adding to cart:", error);
@@ -141,3 +142,27 @@ fetchAllProducts([
   "api/products/oils.json",
   "api/products/honey.json",
 ]);
+
+/**
+ * Retrieves the number of products in the shopping cart and updates the cart icon.
+ *
+ * @function getCartProductsLength
+ * @returns {void}
+ *
+ * @description
+ * This function retrieves the products from the local storage, calculates the total number of products,
+ * and updates the HTML content of the cart icon with the product count.
+ *
+ * @example
+ * getCartProductsLength();
+ *
+ * @author YourName
+ * @since 1.0.0
+ */
+function getCartProductsLength() {
+  const cartItemsIcon = document.querySelector("#cart");
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartItemsIcon.innerHTML = cart.length;
+}
+
+getCartProductsLength();
