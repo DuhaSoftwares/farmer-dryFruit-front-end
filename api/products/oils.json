@@ -5,8 +5,8 @@
     "label": "oils",
     "price": 450,
     "unit": "",
-    "description": "Fresh Almond oil",
-    "image": ""
+    "description": "Fresh Almond Oil is rich in nutrients and perfect for cooking, skincare, and promoting healthy hair.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
     "label": "oils",
     "price": 450,
     "unit": "",
-    "description": "Walnut oil",
-    "image": ""
+    "description": "Walnut Oil is known for its rich flavor and is great for salad dressings and enhancing the taste of dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 3,
@@ -23,7 +23,7 @@
     "label": "oils",
     "price": 550,
     "unit": "",
-    "description": "Fresh Appricot oil",
-    "image": ""
+    "description": "Fresh Appricot Oil is a versatile oil used in cooking and cosmetics, known for its nourishing properties.",
+    "image": "https://via.placeholder.com/150"
   }
 ]

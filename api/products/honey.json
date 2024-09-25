@@ -5,8 +5,8 @@
     "label": "honey",
     "price": 800,
     "unit": "kg",
-    "description": "White Honey",
-    "image": ""
+    "description": "White Honey, renowned for its smooth texture and light flavor, is perfect for sweetening beverages and dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
     "label": "honey",
     "price": 800,
     "unit": "kg",
-    "description": "Wild Honey",
-    "image": ""
+    "description": "Wild Honey, harvested from the nectar of wildflowers, boasts a rich flavor and numerous health benefits.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 3,
@@ -23,8 +23,8 @@
     "label": "honey",
     "price": 1200,
     "unit": "kg",
-    "description": "Saffron Honey",
-    "image": ""
+    "description": "Saffron Honey, infused with premium saffron, offers a unique taste and aromatic qualities, perfect for gourmet dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 4,
@@ -32,7 +32,7 @@
     "label": "honey",
     "price": 350,
     "unit": "piece",
-    "description": "",
-    "image": ""
+    "description": "Guthand is a traditional honey delicacy, known for its unique taste and rich nutrients, often enjoyed as a treat.",
+    "image": "https://via.placeholder.com/150"
   }
 ]

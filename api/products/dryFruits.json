@@ -5,8 +5,8 @@
     "label": "dryfruits",
     "price": 1400,
     "unit": "kg",
-    "description": "Fresh Mamra Badam",
-    "image": ""
+    "description": "Fresh Mamra Badam, known for its rich flavor and high nutritional value, is perfect for snacking and cooking.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
     "label": "dryfruits",
     "price": 1200,
     "unit": "kg",
-    "description": "Fresh Walnut Giri",
-    "image": ""
+    "description": "Fresh Walnut Giri, packed with omega-3 fatty acids, enhances brain function and is a healthy addition to meals.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 3,
@@ -23,8 +23,8 @@
     "label": "dryfruits",
     "price": 1100,
     "unit": "kg",
-    "description": "Fresh Cashews",
-    "image": ""
+    "description": "Fresh Cashews, rich in healthy fats and proteins, are perfect for snacking or as an ingredient in various dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 4,
@@ -32,8 +32,8 @@
     "label": "dryfruits",
     "price": 8400,
     "unit": "kg",
-    "description": " Fresh Razons",
-    "image": ""
+    "description": "Fresh Razons, celebrated for their unique flavor and health benefits, are a premium choice among dry fruits.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 5,
@@ -41,8 +41,8 @@
     "label": "dryfruits",
     "price": 800,
     "unit": "kg",
-    "description": " Fresh Berries",
-    "image": ""
+    "description": "Fresh Black Berries are juicy, sweet, and packed with antioxidants, making them a delicious and healthy snack.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 6,
@@ -50,8 +50,8 @@
     "label": "dryfruits",
     "price": 1000,
     "unit": "kg",
-    "description": "Fresh Blue Berry ",
-    "image": ""
+    "description": "Fresh Blue Berries are known for their sweet flavor and high levels of vitamins, perfect for smoothies and desserts.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 7,
@@ -59,8 +59,8 @@
     "label": "dryfruits",
     "price": 1100,
     "unit": "kg",
-    "description": "Crane Berry",
-    "image": ""
+    "description": "Fresh Crane Berries are tart and flavorful, often used in juices and jams, providing great health benefits.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 8,
@@ -68,8 +68,8 @@
     "label": "dryfruits",
     "price": 1000,
     "unit": "kg",
-    "description": "Fresh Peaches",
-    "image": ""
+    "description": "Fresh Peaches are juicy and sweet, perfect for snacking or adding a burst of flavor to various dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 9,
@@ -77,8 +77,8 @@
     "label": "dryfruits",
     "price": 1000,
     "unit": "kg",
-    "description": "Dry Mango",
-    "image": ""
+    "description": "Dry Mango is a delicious and nutritious treat, rich in vitamins and perfect for snacking or cooking.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 10,
@@ -86,8 +86,8 @@
     "label": "dryfruits",
     "price": 800,
     "unit": "kg",
-    "description": "Kiwi",
-    "image": ""
+    "description": "Kiwi, a tangy and nutrient-dense fruit, is great for boosting immunity and can be enjoyed fresh or in salads.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 11,
@@ -95,8 +95,8 @@
     "label": "dryfruits",
     "price": 800,
     "unit": "kg",
-    "description": "Appricots",
-    "image": ""
+    "description": "Appricots are sweet and rich in vitamins, perfect for snacking or adding to baked goods for extra flavor.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 12,
@@ -104,8 +104,8 @@
     "label": "dryfruits",
     "price": 1200,
     "unit": "kg",
-    "description": "Pistachios",
-    "image": ""
+    "description": "Pistachios are deliciously crunchy, high in protein, and a healthy snack option enjoyed around the world.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 13,
@@ -113,8 +113,8 @@
     "label": "dryfruits",
     "price": 1100,
     "unit": "kg",
-    "description": "Honey Roasted ",
-    "image": ""
+    "description": "Honey Roasted Mussli is a delightful blend of crunchy nuts and honey, perfect for breakfast or a sweet snack.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 14,
@@ -122,8 +122,8 @@
     "label": "dryfruits",
     "price": 1000,
     "unit": "kg",
-    "description": "Mixed Dry Fruits",
-    "image": ""
+    "description": "Mixed Dry Fruits offer a variety of flavors and textures, making them a convenient and healthy snack option.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 15,
@@ -131,8 +131,8 @@
     "label": "dryfruits",
     "price": 700,
     "unit": "kg",
-    "description": "Fresh Munnaia",
-    "image": ""
+    "description": "Fresh Munnaia is a unique and flavorful fruit, enjoyed for its taste and nutritional benefits in various dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 16,
@@ -140,7 +140,7 @@
     "label": "dryfruits",
     "price": 700,
     "unit": "kg",
-    "description": "Fresh Dried Cherries",
-    "image": ""
+    "description": "Fresh Dried Cherries are sweet and tangy, making them a delightful addition to snacks, salads, and desserts.",
+    "image": "https://via.placeholder.com/150"
   }
 ]

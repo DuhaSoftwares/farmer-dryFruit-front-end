@@ -5,8 +5,8 @@
     "label": "spices",
     "price": 300,
     "unit": "gm",
-    "description": "Fresh Saffron",
-    "image": ""
+    "description": "Fresh Saffron, known as the world's most expensive spice, adds a rich flavor and vibrant color to dishes.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 2,
@@ -14,8 +14,8 @@
     "label": "spices",
     "price": 30,
     "unit": "gm",
-    "description": "Fresh Shilajit",
-    "image": ""
+    "description": "Fresh Shilajit, a potent herbal remedy from the Himalayas, is renowned for its rejuvenating and energy-boosting properties.",
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 3,
@@ -23,7 +23,7 @@
     "label": "spices",
     "price": 250,
     "unit": "",
-    "description": "Fresh Kehwa Masala",
-    "image": ""
+    "description": "Fresh Kehwa Masala is a traditional Kashmiri blend of spices used to make aromatic tea, known for its warmth and flavor.",
+    "image": "https://via.placeholder.com/150"
   }
 ]
