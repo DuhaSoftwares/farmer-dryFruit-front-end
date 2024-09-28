@@ -14,6 +14,10 @@ import { BestsellerComponent } from './components/main/bestseller/bestseller.com
 import { FactsComponent } from './components/main/facts/facts.component';
 import { TestimonialComponent } from './components/main/testimonial/testimonial.component';
 import { FooterComponent } from './components/internal/footer/footer.component';
+import { ShopComponent } from './components/main/shop/shop.component';
+import { SingleProductComponent } from './components/main/single-product/single-product.component';
+import { CartComponent } from './components/main/cart/cart.component';
+import { NotFoundComponent } from './components/main/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { FooterComponent } from './components/internal/footer/footer.component';
     FactsComponent,
     TestimonialComponent,
     FooterComponent,
+    ShopComponent,
+    SingleProductComponent,
+    CartComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
