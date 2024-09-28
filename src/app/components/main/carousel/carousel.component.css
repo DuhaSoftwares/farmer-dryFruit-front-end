@@ -1,0 +1,11 @@
+.owl-next {
+  position: absolute;
+  top: -8px;
+  right: 88px;
+  //   color: var(--bs-primary);
+  color: red;
+  padding: 5px 25px;
+  border: 1px solid var(--bs-secondary);
+  border-radius: 20px;
+  transition: 0.5s;
+}
