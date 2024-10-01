@@ -18,6 +18,7 @@ import { ShopComponent } from './components/main/shop/shop.component';
 import { SingleProductComponent } from './components/main/single-product/single-product.component';
 import { CartComponent } from './components/main/cart/cart.component';
 import { NotFoundComponent } from './components/main/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { NotFoundComponent } from './components/main/not-found/not-found.compone
     CartComponent,
     NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
