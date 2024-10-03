@@ -17,7 +17,7 @@ export class ProductsService {
   }
 
   getProductsByCategoryId(categoryId: string): Observable<any> {
-    const url = `${environment.apiBaseUrl}/category/${categoryId}`; // Pass categoryId in the path
+    const url = `${environment.apiBaseUrl}/products/category/${categoryId}`; // Pass categoryId in the path
     return this.http.get<any>(url);
   }
 }
