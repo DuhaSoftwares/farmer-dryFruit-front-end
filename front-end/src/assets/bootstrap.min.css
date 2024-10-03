@@ -3702,7 +3702,7 @@ fieldset:disabled .btn {
   width: 100%;
 }
 .tab-content > .tab-pane {
-  display: none;
+  display: block;
 }
 .tab-content > .active {
   display: block;
