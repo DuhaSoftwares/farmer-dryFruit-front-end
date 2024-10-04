@@ -4,7 +4,8 @@ const productController = require('../controllers/product-controller'); // Ensur
 
 // Route for getting all products
 router.get('/', productController.getAllProducts);
-
+// Route to get a product by ID
+router.get('/:id', productController.getProductById);
 // Route for getting products by category
 router.get('/category/:categoryId', productController.getProductsByCategory);
 

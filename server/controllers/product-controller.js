@@ -51,7 +51,33 @@ exports.getAllProducts = async (req, res) => {
         res.status(500).json({ error: 'Error fetching products' });
     }
 };
+exports.getProductById = async (req, res) => {
+    try {
+        const productId = req.params.id;
+        const product = await Product.findById(productId).populate('category');
 
+        if (!product) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        try {
+            const base64Image = await getBase64Image(product.image); // Read image as Base64
+            res.json({
+                ...product.toObject(),
+                image: base64Image // Replace image path with Base64 string
+            });
+        } catch (err) {
+            console.error(`Error converting image for product ID ${product._id}:`, err);
+            res.json({
+                ...product.toObject(),
+                image: null // Set image to null if an error occurs
+            });
+        }
+    } catch (err) {
+        console.error('Error fetching product:', err);
+        res.status(500).json({ error: 'Error fetching product' });
+    }
+};
 // Get products by category
 exports.getProductsByCategory = async (req, res) => {
     try {
