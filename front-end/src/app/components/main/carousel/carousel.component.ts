@@ -1,13 +1,20 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { environment } from 'src/app/environments/environment';
+import { Product } from 'src/app/models/product.model';
+import { ProductsService } from 'src/app/services/products.service';
 declare var $: any;
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent implements AfterViewInit {
-  // @Input() carouselItems: any[] = [];
-
+export class CarouselComponent implements OnInit, AfterViewInit {
+  constructor(private productService: ProductsService) {}
+  products: Product[] = [];
+  ngOnInit(): void {
+    this.getProductsByCategoryId();
+  }
   ngAfterViewInit(): void {
     this.initializeCarousel();
   }
@@ -31,5 +38,20 @@ export class CarouselComponent implements AfterViewInit {
         },
       },
     });
+  }
+
+  getProductsByCategoryId(): void {
+    this.products = [];
+    this.productService
+      .getProductsByCategoryId(environment.carouselCategory)
+      .subscribe(
+        (data) => {
+          this.products = data;
+          console.log(data);
+        },
+        (error) => {
+          console.error('Error fetching products', error);
+        }
+      );
   }
 }

@@ -12,12 +12,18 @@ export class ProductsService {
   getAllProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${environment.apiBaseUrl}/products`);
   }
+
   getAllCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${environment.apiBaseUrl}/categories`);
   }
 
-  getProductsByCategoryId(categoryId: string): Observable<any> {
+  getProductsByCategoryId(categoryId: string): Observable<Product[]> {
     const url = `${environment.apiBaseUrl}/products/category/${categoryId}`; // Pass categoryId in the path
-    return this.http.get<any>(url);
+    return this.http.get<Product[]>(url);
+  }
+
+  getProductById(id: string): Observable<Product> {
+    const url = `${environment.apiBaseUrl}/products/${id}`;
+    return this.http.get<Product>(url);
   }
 }

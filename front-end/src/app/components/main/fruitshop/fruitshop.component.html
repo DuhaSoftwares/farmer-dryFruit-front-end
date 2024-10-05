@@ -93,10 +93,13 @@
                   class="col-md-6 col-lg-4 col-xl-3"
                   *ngFor="let item of products"
                 >
-                  <div class="rounded position-relative fruite-item">
+                  <div
+                    class="rounded position-relative fruite-item"
+                    (click)="getProductById(item._id)"
+                  >
                     <div class="fruite-img">
                       <img
-                        src="assets/img/fruite-item-1.jpg"
+                        [src]="item.image"
                         class="img-fluid w-100 rounded-top"
                         alt=""
                       />
