@@ -142,7 +142,7 @@ const saveImage = (base64String, fileName) => {
 // Create a product
 exports.createProduct = async (req, res) => {
     try {
-        const { name, description, price, category, image, units } = req.body; // Include units here
+        const { name, description, price, category, image, units,isBestSelling } = req.body; // Include units here
 
         // Check if the category exists by ID
         const categoryExists = await Category.findById(category);
@@ -166,7 +166,8 @@ exports.createProduct = async (req, res) => {
             price,
             category,
             image: path.join(__dirname, '../uploads', fileName), // Use the file path where the image is saved
-            units // Include the units field
+            units, // Include the units field
+            isBestSelling 
         });
         await product.save();
         res.status(201).json(product);
