@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category, Product } from 'src/app/models/product.model';
+import { CommonService } from 'src/app/services/common.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -8,8 +10,13 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./fruitshop.component.css'],
 })
 export class FruitshopComponent {
-  constructor(private productService: ProductsService) {}
+  constructor(
+    private productService: ProductsService,
+    private router: Router,
+    private commonService: CommonService
+  ) {}
   products: Product[] = [];
+  bestSellingProducts: Product[] = [];
   categories: Category[] = [];
 
   ngOnInit(): void {
@@ -21,6 +28,11 @@ export class FruitshopComponent {
     this.productService.getAllProducts().subscribe(
       (products) => {
         this.products = products;
+        const bestSellingProducts = products.filter(
+          (product) => product.isBestSelling
+        );
+
+        this.commonService.setBestSellingProducts(bestSellingProducts);
       },
       (error) => {
         console.error('Error fetching products:', error);
@@ -31,7 +43,10 @@ export class FruitshopComponent {
     this.productService.getAllCategories().subscribe(
       (category) => {
         this.categories = category;
-        console.log(this.categories);
+        // Check if categories data is valid before sending it
+        if (this.categories && this.categories.length > 0) {
+          this.commonService.setCategories(category);
+        }
       },
       (error) => {
         console.error('Error fetching products:', error);
@@ -47,6 +62,17 @@ export class FruitshopComponent {
       },
       (error) => {
         console.error('Error fetching products', error);
+      }
+    );
+  }
+
+  getProductById(id: string) {
+    this.productService.getProductById(id).subscribe(
+      (data) => {
+        this.router.navigate(['single-product', id]);
+      },
+      (error) => {
+        console.error('Error fetching product data', error);
       }
     );
   }
