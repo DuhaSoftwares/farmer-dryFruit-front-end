@@ -4,6 +4,9 @@ const productController = require('../controllers/product-controller'); // Ensur
 
 // Route for getting all products
 router.get('/', productController.getAllProducts);
+// Example route for total count of products
+router.get('/count', productController.getTotalProductCount);
+
 // Route to get a product by ID
 router.get('/:id', productController.getProductById);
 // Route for getting products by category

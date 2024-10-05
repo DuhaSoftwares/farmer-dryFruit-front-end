@@ -110,6 +110,32 @@ exports.getCartItemsBySkiptop = async (req, res) => {
     }
 };
 
+// Get total count of cart items for a specific session ID
+// Get total cart items count by session ID
+exports.getTotalCartItemsCount = async (req, res) => {
+    try {
+        // Extract sessionId from request parameters or body
+        const sessionId = req.params.sessionId || req.body.sessionId;
+
+        if (!sessionId) {
+            return res.status(400).json({ error: 'Session ID is required' });
+        }
+
+        // Count total items for the specific sessionId
+        const totalCount = await Cart.aggregate([
+            { $match: { sessionId } },
+            { $group: { _id: null, totalItems: { $sum: "$quantity" } } }
+        ]);
+
+        const count = totalCount.length > 0 ? totalCount[0].totalItems : 0;
+
+        res.json({ totalCount: count });
+    } catch (err) {
+        console.error('Error fetching total cart items count:', err);
+        res.status(500).json({ error: 'Error fetching total cart items count' });
+    }
+};
+
 
 // Optional: Clear the cart
 exports.clearCart = async (req, res) => {

@@ -10,7 +10,8 @@ router.post('/add', cartController.addToCart);
 router.get('/items', cartController.getCartItems);
 // Route to get all cart items
 router.get('/odata', cartController.getCartItemsBySkiptop);
-
+// Route to get total cart items count
+router.get('/count/:sessionId', cartController.getTotalCartItemsCount);
 // Optional: Route to clear the cart (if needed)
 router.delete('/clear', cartController.clearCart);
 
