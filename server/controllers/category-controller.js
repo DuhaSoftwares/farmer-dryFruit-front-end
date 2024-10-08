@@ -3,11 +3,11 @@ const Category = require('../models/categoryModel');
 // Create Category
 exports.createCategory = async (req, res) => {
   try {
-    const { name, description } = req.body;
-    if (!name || !description) {
-      return res.status(400).json({ error: 'Name and description are required' });
+    const { name, } = req.body;
+    if (!name) {
+      return res.status(400).json({ error: 'Name is required' });
     }
-    const category = new Category({ name, description });
+    const category = new Category({name});
     await category.save();
     res.status(201).json(category);
   } catch (err) {

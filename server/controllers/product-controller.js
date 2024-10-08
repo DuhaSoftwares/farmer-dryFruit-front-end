@@ -1,7 +1,78 @@
 const Product = require("../models/productModel");
 const Category = require("../models/categoryModel");
-const fs = require('fs');
+const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
+
+// File type map for validation
+const FILE_TYPE_MAP = {
+     'image/png': 'png',
+    'image/jpeg': 'jpeg',
+    'image/jpg': 'jpg',
+    'image/jfif': 'jfif',
+    'image/webp': 'webp',
+    'image/gif': 'gif' // Add any other types if neede
+};
+
+// Multer storage configuration
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const isValid = FILE_TYPE_MAP[file.mimetype];
+        const uploadError = isValid ? null : new Error('invalid image type');
+        cb(uploadError, path.join(__dirname, '../public/uploads'));
+    },
+    filename: function (req, file, cb) {
+        const fileName = file.originalname.split(' ').join('-');
+        const extension = FILE_TYPE_MAP[file.mimetype];
+        cb(null, `${fileName}-${Date.now()}.${extension}`);
+    }
+});
+
+const uploadOptions = multer({ storage: storage });
+
+// Create a product
+exports.createProduct = async (req, res) => {
+    uploadOptions.single('image')(req, res, async (err) => {
+        if (err) {
+            return res.status(400).send(err.message);
+        }
+        
+        try {
+            const { name, description, price, category, units, isBestSelling } = req.body;
+
+            const categoryExists = await Category.findById(category);
+            if (!categoryExists) {
+                return res.status(400).json({ error: 'Category not found' });
+            }
+
+            const file = req.file;  // Retrieve the uploaded file
+            if (!file) return res.status(400).send('No image in the request');
+
+            const fileName = file.filename;
+            const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
+
+            const product = new Product({
+                name,
+                description,
+                price,
+                category,
+                image: `${basePath}${fileName}`, // Use the uploaded file name
+                units,
+                isBestSelling
+            });
+
+            await product.save();
+            res.status(201).json(product);
+        } catch (err) {
+            console.error('Error creating product:', err);
+            res.status(400).json({ error: 'Error creating product' });
+        }
+    });
+};
+
+
+
+
 
 // Function to read an image file and convert it to Base64
 const getBase64Image = (filePath) => {
@@ -134,62 +205,12 @@ exports.getProductById = async (req, res) => {
     }
 };
 
-// Function to decode Base64 string and save it as a file
-const saveImage = (base64String, fileName) => {
-    return new Promise((resolve, reject) => {
-        const base64Data = base64String.replace(/^data:image\/\w+;base64,/, "");
-        const filePath = path.join(__dirname, '../uploads', fileName); // Specify your upload path
 
-        fs.writeFile(filePath, base64Data, 'base64', (err) => {
-            if (err) {
-                reject(new Error('Error saving image file')); // Provide a specific error message
-            } else {
-                resolve(filePath); // Return the saved file path
-            }
-        });
-    });
-};
 
-// Create a product
-exports.createProduct = async (req, res) => {
-    try {
-        const { name, description, price, category, image, units,isBestSelling } = req.body; // Include units here
 
-        // Check if the category exists by ID
-        const categoryExists = await Category.findById(category);
-        if (!categoryExists) {
-            return res.status(400).json({ error: 'Category not found' });
-        }
-
-        // Process Base64 image string
-        if (!image) {
-            return res.status(400).json({ error: 'Image not provided' });
-        }
-
-        // Save the image file
-        const fileName = `${Date.now()}-${name.replace(/\s+/g, '-')}.jpg`; // Generate a unique file name
-        await saveImage(image, fileName); // Save the image as a file
-
-        // Create a new product
-        const product = new Product({
-            name,
-            description,
-            price,
-            category,
-            image: path.join(__dirname, '../uploads', fileName), // Use the file path where the image is saved
-            units, // Include the units field
-            isBestSelling 
-        });
-        await product.save();
-        res.status(201).json(product);
-    } catch (err) {
-        console.error('Error creating product:', err);
-        res.status(400).json({ error: 'Error creating product' });
-    }
-};
 
 // Update a product
-exports.updateProduct = async (req, res) => {
+exports.updateProduct =   async (req, res) => {
     try {
         const updatedProduct = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!updatedProduct) {
