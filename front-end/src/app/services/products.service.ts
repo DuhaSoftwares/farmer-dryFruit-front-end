@@ -26,4 +26,10 @@ export class ProductsService {
     const url = `${environment.apiBaseUrl}/products/${id}`;
     return this.http.get<Product>(url);
   }
+
+  getTotalCartItemsCount(sessionId: string): Observable<number> {
+    return this.http.get<number>(
+      `${environment.apiBaseUrl}/count/${sessionId}`
+    );
+  }
 }

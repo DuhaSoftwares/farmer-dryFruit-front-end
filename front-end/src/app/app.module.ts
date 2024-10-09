@@ -19,6 +19,8 @@ import { SingleProductComponent } from './components/main/single-product/single-
 import { CartComponent } from './components/main/cart/cart.component';
 import { NotFoundComponent } from './components/main/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PrivacyComponent } from './components/main/privacy/privacy.component';
+import { ContactComponent } from './components/main/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SingleProductComponent,
     CartComponent,
     NotFoundComponent,
+    PrivacyComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

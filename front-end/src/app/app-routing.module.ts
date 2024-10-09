@@ -5,6 +5,8 @@ import { SingleProductComponent } from './components/main/single-product/single-
 import { ShopComponent } from './components/main/shop/shop.component';
 import { CartComponent } from './components/main/cart/cart.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { PrivacyComponent } from './components/main/privacy/privacy.component';
+import { ContactComponent } from './components/main/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent,
   },
   {
     path: 'shop',
@@ -28,13 +34,15 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule],
-  providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy }, // Use PathLocationStrategy
-  ],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
 })
 export class AppRoutingModule {}
