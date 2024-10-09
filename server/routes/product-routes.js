@@ -5,12 +5,12 @@ const productController = require('../controllers/product-controller'); // Ensur
 // Route for getting all products
 router.get('/', productController.getAllProducts);
 // Example route for total count of products
-router.get('/count', productController.getTotalProductCount);
+router.get('/count', productController.getProductsCount );
 
 // Route to get a product by ID
-router.get('/:id', productController.getProductById);
+router.get('/:id', productController.getProductById );
 // Route for getting products by category
-router.get('/category/:categoryId', productController.getProductsByCategory);
+router.get('/category/:categoryId', productController.getProductsByCategoryId);
 
 // Route for creating a new product (no multer needed)
 router.post('/', productController.createProduct);

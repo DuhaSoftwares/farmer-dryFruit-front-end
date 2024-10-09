@@ -70,135 +70,22 @@ exports.createProduct = async (req, res) => {
     });
 };
 
-
-
-
-
-// Function to read an image file and convert it to Base64
-const getBase64Image = (filePath) => {
-    return new Promise((resolve, reject) => {
-        // Check if the file exists
-        fs.stat(filePath, (err) => {
-            if (err) {
-                return reject(new Error('File not found or inaccessible'));
-            }
-
-            fs.readFile(filePath, (err, data) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    const base64Image = data.toString('base64');
-                    const extension = path.extname(filePath).slice(1); // Get the file extension (without the dot)
-                    const mimeType = `image/${extension}`; // Construct MIME type
-                    resolve(`data:${mimeType};base64,${base64Image}`); // Return the Base64 string
-                }
-            });
-        });
-    });
-};
-
-// Get all products
 exports.getAllProducts = async (req, res) => {
     try {
         const products = await Product.find().populate('category');
-        const productsWithBase64Images = await Promise.all(products.map(async (product) => {
-            try {
-                const base64Image = await getBase64Image(product.image); // Read image as Base64
-                return {
-                    ...product.toObject(), // Convert to plain object
-                    image: base64Image // Replace image path with Base64 string
-                };
-            } catch (err) {
-                console.error(`Error converting image for product ID ${product._id}:`, err);
-                return {
-                    ...product.toObject(),
-                    image: null // Set image to null if an error occurs
-                };
-            }
-        }));
-        res.json(productsWithBase64Images);
+        res.status(200).json(products);
     } catch (err) {
         console.error('Error fetching products:', err);
         res.status(500).json({ error: 'Error fetching products' });
     }
 };
 
-// Get total count of products
-exports.getTotalProductCount = async (req, res) => {
-    try {
-        const totalProducts = await Product.countDocuments();
-        res.json({ totalProducts });
-    } catch (err) {
-        console.error('Error counting products:', err);
-        res.status(500).json({ error: 'Error counting products' });
-    }
-};
-exports.getProductById = async (req, res) => {
-    try {
-        const productId = req.params.id;
-        const product = await Product.findById(productId).populate('category');
 
-        if (!product) {
-            return res.status(404).json({ error: 'Product not found' });
-        }
-
-        try {
-            const base64Image = await getBase64Image(product.image); // Read image as Base64
-            res.json({
-                ...product.toObject(),
-                image: base64Image // Replace image path with Base64 string
-            });
-        } catch (err) {
-            console.error(`Error converting image for product ID ${product._id}:`, err);
-            res.json({
-                ...product.toObject(),
-                image: null // Set image to null if an error occurs
-            });
-        }
-    } catch (err) {
-        console.error('Error fetching product:', err);
-        res.status(500).json({ error: 'Error fetching product' });
-    }
-};
-// Get products by category
-exports.getProductsByCategory = async (req, res) => {
-    try {
-        const products = await Product.find({ category: req.params.categoryId }).populate('category');
-        const productsWithBase64Images = await Promise.all(products.map(async (product) => {
-            try {
-                const base64Image = await getBase64Image(product.image); // Read image as Base64
-                return {
-                    ...product.toObject(), // Convert to plain object
-                    image: base64Image // Replace image path with Base64 string
-                };
-            } catch (err) {
-                console.error(`Error converting image for product ID ${product._id}:`, err);
-                return {
-                    ...product.toObject(),
-                    image: null // Set image to null if an error occurs
-                };
-            }
-        }));
-        res.json(productsWithBase64Images);
-    } catch (err) {
-        console.error('Error fetching products by category:', err);
-        res.status(500).json({ error: 'Error fetching products by category' });
-    }
-};
-
-// Get product by ID
 exports.getProductById = async (req, res) => {
     try {
         const product = await Product.findById(req.params.id).populate('category');
-        if (!product) {
-            return res.status(404).json({ error: 'Product not found' });
-        }
-        const base64Image = await getBase64Image(product.image); // Read image as Base64
-        const productWithBase64Image = {
-            ...product.toObject(), // Convert to plain object
-            image: base64Image // Replace image path with Base64 string
-        };
-        res.json(productWithBase64Image);
+        if (!product) return res.status(404).json({ error: 'Product not found' });
+        res.status(200).json(product);
     } catch (err) {
         console.error('Error fetching product by ID:', err);
         res.status(500).json({ error: 'Error fetching product by ID' });
@@ -206,31 +93,98 @@ exports.getProductById = async (req, res) => {
 };
 
 
-
-
-
-// Update a product
-exports.updateProduct =   async (req, res) => {
+exports.getProductsCount = async (req, res) => {
     try {
-        const updatedProduct = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!updatedProduct) {
-            return res.status(404).json({ error: 'Product not found' });
-        }
-        res.json(updatedProduct);
+        const count = await Product.countDocuments();
+        res.status(200).json({ count });
     } catch (err) {
-        console.error('Error updating product:', err);
-        res.status(500).json({ error: 'Error updating product' });
+        console.error('Error fetching product count:', err);
+        res.status(500).json({ error: 'Error fetching product count' });
     }
 };
 
-// Delete a product
+
+exports.getProductsByPagination = async (req, res) => {
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    try {
+        const products = await Product.find().skip(skip).limit(limit).populate('category');
+        res.status(200).json(products);
+    } catch (err) {
+        console.error('Error fetching products with pagination:', err);
+        res.status(500).json({ error: 'Error fetching products with pagination' });
+    }
+};
+
+
+exports.getProductsByCategoryId = async (req, res) => {
+    try {
+        const products = await Product.find({ category: req.params.categoryId }).populate('category');
+        res.status(200).json(products);
+    } catch (err) {
+        console.error('Error fetching products by category:', err);
+        res.status(500).json({ error: 'Error fetching products by category' });
+    }
+};
+
+
+exports.updateProduct = async (req, res) => {
+    uploadOptions.single('image')(req, res, async (err) => {
+        if (err) return res.status(400).send(err.message);
+
+        try {
+            const { name, description, price, category, units, isBestSelling } = req.body;
+
+            const categoryExists = await Category.findById(category);
+            if (!categoryExists) return res.status(400).json({ error: 'Category not found' });
+
+            let imagePath;
+            if (req.file) {
+                const file = req.file;
+                const fileName = file.filename;
+                const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
+                imagePath = `${basePath}${fileName}`;
+            }
+
+            const updatedProduct = await Product.findByIdAndUpdate(
+                req.params.id,
+                {
+                    name,
+                    description,
+                    price,
+                    category,
+                    units,
+                    isBestSelling,
+                    image: imagePath ? imagePath : undefined
+                },
+                { new: true }
+            );
+
+            if (!updatedProduct) return res.status(404).json({ error: 'Product not found' });
+
+            res.status(200).json(updatedProduct);
+        } catch (err) {
+            console.error('Error updating product:', err);
+            res.status(400).json({ error: 'Error updating product' });
+        }
+    });
+};
+
+
 exports.deleteProduct = async (req, res) => {
     try {
-        const deletedProduct = await Product.findByIdAndDelete(req.params.id);
-        if (!deletedProduct) {
-            return res.status(404).json({ error: 'Product not found' });
-        }
-        res.json({ message: 'Product deleted successfully' });
+        const product = await Product.findByIdAndRemove(req.params.id);
+        if (!product) return res.status(404).json({ error: 'Product not found' });
+
+        // Delete associated image file
+        const filePath = path.join(__dirname, `../public/uploads/${product.image.split('/').pop()}`);
+        fs.unlink(filePath, (err) => {
+            if (err) console.error('Error deleting image:', err);
+        });
+
+        res.status(200).json({ message: 'Product deleted successfully' });
     } catch (err) {
         console.error('Error deleting product:', err);
         res.status(500).json({ error: 'Error deleting product' });
