@@ -37,4 +37,26 @@ export class CommonService {
   setCategories(categories: Category[]): void {
     this.categoriesSource.next(categories);
   }
+  private storageKey = 'ProductIds';
+  addToLocalStorageIfNotPresent(id: string): boolean {
+    // Get existing IDs from local storage
+    const idsString = localStorage.getItem(this.storageKey);
+    const ids: string[] = idsString ? JSON.parse(idsString) : [];
+
+    // Check if ID already exists
+    if (ids.includes(id)) {
+      alert(`ID ${id} is already present in local storage.`);
+      return false;
+    }
+
+    // Add new ID to the array and update local storage
+    ids.push(id);
+    localStorage.setItem(this.storageKey, JSON.stringify(ids));
+    return true;
+  }
+
+  getStoredProductIds(): string[] {
+    const idsString = localStorage.getItem(this.storageKey);
+    return idsString ? JSON.parse(idsString) : [];
+  }
 }

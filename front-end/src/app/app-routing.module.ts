@@ -4,7 +4,11 @@ import { HomeComponent } from './components/main/home/home.component';
 import { SingleProductComponent } from './components/main/single-product/single-product.component';
 import { ShopComponent } from './components/main/shop/shop.component';
 import { CartComponent } from './components/main/cart/cart.component';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import {
+  HashLocationStrategy,
+  LocationStrategy,
+  PathLocationStrategy,
+} from '@angular/common';
 import { PrivacyComponent } from './components/main/privacy/privacy.component';
 import { ContactComponent } from './components/main/contact/contact.component';
 
@@ -43,6 +47,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule],
-  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
+  // providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
 })
 export class AppRoutingModule {}

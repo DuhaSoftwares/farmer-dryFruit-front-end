@@ -9,7 +9,7 @@ import { CommonService } from 'src/app/services/common.service';
 })
 export class BestsellerComponent {
   bestSellingProducts: Product[] = [];
-  constructor(private commonService: CommonService) {}
+  constructor(public commonService: CommonService) {}
 
   ngOnInit(): void {
     // Subscribe to the bestSellingProducts observable

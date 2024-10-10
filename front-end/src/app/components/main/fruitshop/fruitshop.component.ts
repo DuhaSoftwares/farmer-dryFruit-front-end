@@ -13,7 +13,7 @@ export class FruitshopComponent {
   constructor(
     private productService: ProductsService,
     private router: Router,
-    private commonService: CommonService
+    public commonService: CommonService
   ) {}
   products: Product[] = [];
   bestSellingProducts: Product[] = [];

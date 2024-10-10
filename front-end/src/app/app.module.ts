@@ -21,6 +21,7 @@ import { NotFoundComponent } from './components/main/not-found/not-found.compone
 import { HttpClientModule } from '@angular/common/http';
 import { PrivacyComponent } from './components/main/privacy/privacy.component';
 import { ContactComponent } from './components/main/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { ContactComponent } from './components/main/contact/contact.component';
     PrivacyComponent,
     ContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -11,7 +11,7 @@ import { CommonService } from 'src/app/services/common.service';
 export class SingleProductComponent {
   constructor(
     private route: ActivatedRoute,
-    private commonService: CommonService
+    public commonService: CommonService
   ) {}
   categories: Category[] = [];
   product!: Product | null;
@@ -54,7 +54,6 @@ export class SingleProductComponent {
     this.commonService.categories$.subscribe(
       (categories: Category[]) => {
         this.categories = categories;
-        console.log(categories);
       },
       (error) => {
         console.error('Error receiving categories:', error);

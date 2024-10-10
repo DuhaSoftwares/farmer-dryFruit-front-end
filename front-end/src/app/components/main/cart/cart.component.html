@@ -1,5 +1,5 @@
 <!-- Cart Page Start -->
-<div class="container-fluid py-5">
+<div class="container-fluid py-5 mt-5">
   <div class="container py-5">
     <div class="table-responsive">
       <table class="table">
@@ -14,7 +14,36 @@
           </tr>
         </thead>
         <tbody id="cart-items">
-          <!-- Cart items will be dynamically inserted here -->
+          <tr *ngFor="let item of cartItems">
+            <td>
+              <img
+                [src]="item.image"
+                class="img-fluid rounded-top w-50"
+                alt=""
+              />
+            </td>
+            <td>{{ item.name }}</td>
+            <td>${{ item.price }}</td>
+            <td>
+              <input
+                type="number"
+                class="border-0 border-bottom rounded me-1 py-3 mb-4"
+                [(ngModel)]="item.quantity"
+                min="1"
+                max="10"
+              />
+            </td>
+            <td>${{ item.price * item.quantity }}</td>
+            <td>
+              <button
+                class="btn btn-danger rounded-pill px-4 py-3 text-white"
+                type="button"
+                (click)="removeProductId(item._id)"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

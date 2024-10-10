@@ -7,6 +7,7 @@ export interface Product {
   category: any;
   image: string;
   isBestSelling: boolean;
+  quantity: number;
 }
 
 export interface Category {
