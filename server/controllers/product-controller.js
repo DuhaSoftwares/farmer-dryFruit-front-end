@@ -143,7 +143,16 @@ exports.getProductsByPagination = async (req, res) => {
     }
 };
 
-
+// Get All Categories
+exports.getCategories = async (req, res) => {
+  try {
+    const categories = await Category.find();
+    res.json(categories);
+  } catch (err) {
+    console.error('Error fetching categories:', err); // Log error for debugging
+    res.status(500).json({ error: 'Failed to fetch categories. ' + err.message });
+  }
+};
 exports.getProductsByCategoryId = async (req, res) => {
     try {
         const products = await Product.find({ category: req.params.categoryId }).populate('category');
