@@ -10,7 +10,10 @@ router.get('/count', productController.getProductsCount );
 // GET http://localhost:3000/api/products?page=2&limit=5
 router.get('/page', productController.getProductsByPagination );
 // Route to get a product by ID
-router.get('/:id', productController.getProductById );
+router.get('/:id', productController.getProductById);
+//get all product by Ids
+router.post('/getProductsByIds', productController.getProductsByIds );
+
 // Route for getting products by category
 router.get('/category/:categoryId', productController.getProductsByCategoryId);
 

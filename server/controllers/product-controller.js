@@ -92,6 +92,31 @@ exports.getProductById = async (req, res) => {
     }
 };
 
+exports.getProductsByIds = async (req, res) => {
+    try {
+        // Assuming you send an array of product IDs in the request body
+        const { productIds } = req.body;
+
+        // Ensure that productIds is provided and is an array
+        if (!productIds || !Array.isArray(productIds)) {
+            return res.status(400).json({ error: 'Invalid productIds. Expected an array.' });
+        }
+
+        // Fetch the products whose _id is in the provided array
+        const products = await Product.find({ _id: { $in: productIds } }).populate('category');
+
+        // Check if products are found
+        if (products.length === 0) {
+            return res.status(404).json({ error: 'No products found' });
+        }
+
+        res.status(200).json(products);
+    } catch (err) {
+        console.error('Error fetching products by IDs:', err);
+        res.status(500).json({ error: 'Error fetching products by IDs' });
+    }
+};
+
 
 exports.getProductsCount = async (req, res) => {
     try {
