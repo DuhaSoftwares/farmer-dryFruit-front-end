@@ -8,9 +8,10 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./topnav.component.css'],
 })
 export class TopnavComponent {
-  constructor(private commonService: CommonService) {}
+  constructor(public commonService: CommonService) {}
   itemsInCart: number = 0;
   ngOnInit(): void {
     this.itemsInCart = this.commonService.getStoredProductIds.length;
+    alert(this.itemsInCart)
   }
 }
