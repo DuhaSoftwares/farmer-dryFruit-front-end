@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { environment } from 'src/app/environments/environment';
 import { Product } from 'src/app/models/product.model';
 import { CommonService } from 'src/app/services/common.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -29,11 +29,10 @@ export class CartComponent {
         (response: any) => {
           this.cartItems = response;
           this.cartItems = response.map((item: any) => ({
-          ...item,
-          quantity: item.quantity || 1 // Set quantity to 0 if it's not provided
-        }));
-      this.calculateTotalPrice()
-          
+            ...item,
+            quantity: item.quantity || 1, // Set quantity to 0 if it's not provided
+          }));
+          this.calculateTotalPrice();
         },
         (error) => {
           console.error('Error fetching cart items:', error);
@@ -57,67 +56,72 @@ export class CartComponent {
 
     // Step 3: Update localStorage with the modified array
     localStorage.setItem('ProductIds', JSON.stringify(updatedProductIds));
-
+    Swal.fire({
+      icon: 'success',
+      title: 'Removed from Cart!',
+      text: `Item has been removed from your cart.`,
+      timer: 1500,
+      showConfirmButton: false,
+    });
     this.fetchCartItems();
+    this.commonService.updateItemCount();
   }
 
-
-   incrementQuantity(item: any): void {
-     item.quantity++;
-      this.calculateTotalPrice()
-     
+  incrementQuantity(item: any): void {
+    item.quantity++;
+    this.calculateTotalPrice();
   }
 
   // Function to decrement quantity, ensuring it doesn't go below 1
   decrementQuantity(item: any): void {
     if (item.quantity > 1) {
       item.quantity--;
-      this.calculateTotalPrice()
+      this.calculateTotalPrice();
     }
   }
 
-   calculateTotalPrice(): void {
-    this.totalPrice = this.cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  calculateTotalPrice(): void {
+    this.totalPrice = this.cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
   }
 
+  // Function to send the cart data (products and total price) to the backend
+  submitCart(): void {
+    const cartData = {
+      items: this.cartItems.map((item) => ({
+        productId: item._id,
+        name: item.name,
+        quantity: item.quantity,
+        price: item.price,
+      })),
+      totalPrice: this.totalPrice,
+    };
 
-   // Function to send the cart data (products and total price) to the backend
- submitCart(): void {
-  const cartData = {
-    items: this.cartItems.map(item => ({
-      productId: item._id,
-      name: item.name,
-      quantity: item.quantity,
-      price: item.price
-    })),
-    totalPrice: this.totalPrice
-  };
+    // Format the message for WhatsApp
+    const message = this.createWhatsAppMessage(cartData);
 
-  // Format the message for WhatsApp
-  const message = this.createWhatsAppMessage(cartData);
-  
- // Replace <YOUR_PHONE_NUMBER> with the actual phone number (in international format)
-  const phoneNumber = '<YOUR_PHONE_NUMBER>'; // e.g., '1234567890' for +1 (234) 567-8900
-  const whatsappUrl = `https://wa.me/${environment.phoneNumber}?text=${encodeURIComponent(message)}`;
+    // Replace <YOUR_PHONE_NUMBER> with the actual phone number (in international format)
+    const phoneNumber = '<YOUR_PHONE_NUMBER>'; // e.g., '1234567890' for +1 (234) 567-8900
+    const whatsappUrl = `https://wa.me/${
+      environment.phoneNumber
+    }?text=${encodeURIComponent(message)}`;
 
-  // Open the WhatsApp URL in a new tab
-  window.open(whatsappUrl, '_blank');
+    // Open the WhatsApp URL in a new tab
+    window.open(whatsappUrl, '_blank');
+  }
 
-  
-}
+  // Function to create a formatted message for WhatsApp
+  private createWhatsAppMessage(cartData: any): string {
+    let message = 'Here are the details of my cart:\n\n';
 
-// Function to create a formatted message for WhatsApp
-private createWhatsAppMessage(cartData: any): string {
-  let message = 'Here are the details of my cart:\n\n';
+    cartData.items.forEach((item: Product) => {
+      message += `Product Name: ${item.name}, Quantity: ${item.quantity}, Price: $${item.price}\n`;
+    });
 
-  cartData.items.forEach((item: Product) => {
-    message += `Product Name: ${item.name}, Quantity: ${item.quantity}, Price: $${item.price}\n`;
-  });
+    message += `\nTotal Price: $${cartData.totalPrice}`;
 
-  message += `\nTotal Price: $${cartData.totalPrice}`;
-  
-  return message;
-}
-
-
+    return message;
+  }
 }

@@ -11,7 +11,12 @@ export class TopnavComponent {
   constructor(public commonService: CommonService) {}
   itemsInCart: number = 0;
   ngOnInit(): void {
-    this.itemsInCart = this.commonService.getStoredProductIds.length;
-    alert(this.itemsInCart)
+    this.getCartLength();
+  }
+
+  getCartLength() {
+    this.commonService.itemCount$.subscribe((count) => {
+      this.itemsInCart = count;
+    });
   }
 }

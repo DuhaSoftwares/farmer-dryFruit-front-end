@@ -30,7 +30,7 @@
               {{ product.description | slice : 0 : 100 }}
             </p>
 
-            <div class="input-group quantity mb-5" style="width: 100px">
+            <!-- <div class="input-group quantity mb-5" style="width: 100px">
               <div class="input-group-btn">
                 <button
                   class="btn btn-sm btn-minus rounded-circle bg-light border"
@@ -50,7 +50,7 @@
                   <i class="fa fa-plus"></i>
                 </button>
               </div>
-            </div>
+            </div> -->
             <a
               (click)="commonService.addToLocalStorageIfNotPresent(product._id)"
               class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"

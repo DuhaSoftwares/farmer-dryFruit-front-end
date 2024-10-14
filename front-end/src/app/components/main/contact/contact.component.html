@@ -26,23 +26,62 @@
           </div>
         </div>
         <div class="col-lg-7">
-          <form action="" class="">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="">
             <input
+              formControlName="name"
               type="text"
               class="w-100 form-control border-0 py-3 mb-4"
               placeholder="Your Name"
             />
+            <div
+              *ngIf="name?.invalid && (name?.touched || name?.dirty)"
+              class="text-danger"
+            >
+              <small *ngIf="name?.errors?.['required']"
+                >Name is required.</small
+              >
+              <small *ngIf="name?.errors?.['minlength']"
+                >Name must be at least 3 characters long.</small
+              >
+            </div>
+
             <input
+              formControlName="email"
               type="email"
               class="w-100 form-control border-0 py-3 mb-4"
               placeholder="Enter Your Email"
             />
+            <div
+              *ngIf="email?.invalid && (email?.touched || email?.dirty)"
+              class="text-danger"
+            >
+              <small *ngIf="email?.errors?.['required']"
+                >Email is required.</small
+              >
+              <small *ngIf="email?.errors?.['email']"
+                >Enter a valid email.</small
+              >
+            </div>
+
             <textarea
+              formControlName="message"
               class="w-100 form-control border-0 mb-4"
               rows="5"
               cols="10"
               placeholder="Your Message"
             ></textarea>
+            <div
+              *ngIf="message?.invalid && (message?.touched || message?.dirty)"
+              class="text-danger"
+            >
+              <small *ngIf="message?.errors?.['required']"
+                >Message is required.</small
+              >
+              <small *ngIf="message?.errors?.['minlength']"
+                >Message must be at least 10 characters long.</small
+              >
+            </div>
+
             <button
               class="w-100 btn form-control border-secondary py-3 bg-white text-primary"
               type="submit"
