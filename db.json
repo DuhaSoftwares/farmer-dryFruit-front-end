@@ -1,0 +1,119 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "name": "Clothing Collections",
+      "image": "https://i.postimg.cc/Xqmwr12c/clothing.webp",
+      "link": "#sellers"
+    },
+    {
+      "id": 2,
+      "name": "Shoes Spring",
+      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "link": "#sellers"
+    },
+    {
+      "id": 3,
+      "name": "Accessories",
+      "image": "https://i.postimg.cc/MHv7KJYp/access.webp",
+      "link": "#sellers"
+    }
+  ],
+  "topSales": [
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "price": 37.24,
+      "colors": ["red", "blue", "white"],
+      "rating": 3
+    },
+    {
+      "name": "PS England Jacket",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2
+    },
+      {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "price": 37.24,
+      "colors": ["red", "blue", "white"],
+      "rating": 3
+    },
+    {
+      "name": "PS England Jacket",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2
+    }
+  ],
+  "newArrivals": [
+    {
+      "name": "PS England T-Shirt",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 10.23,
+      "colors": ["blank", "blue", "brown"],
+      "rating": 5
+    },
+     {
+      "name": "PS England T-Shirt",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 10.23,
+      "colors": ["blank", "blue", "brown"],
+      "rating": 5
+    },
+     {
+      "name": "PS England T-Shirt",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 10.23,
+      "colors": ["blank", "blue", "brown"],
+      "rating": 5
+    },
+     {
+      "name": "PS England T-Shirt",
+      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "price": 10.23,
+      "colors": ["blank", "blue", "brown"],
+      "rating": 5
+    }
+  ],
+  "hotSales": [
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "price": 43.67,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5
+    },
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "price": 43.67,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5
+    },
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "price": 43.67,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5
+    },
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "price": 43.67,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5
+    },
+    {
+      "name": "PS England Shoes",
+      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "price": 43.67,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5
+    }
+  ]
+}
