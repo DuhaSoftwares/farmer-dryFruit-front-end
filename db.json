@@ -4,116 +4,161 @@
       "id": 1,
       "name": "Clothing Collections",
       "image": "https://i.postimg.cc/Xqmwr12c/clothing.webp",
-      "link": "#sellers"
+      "link": "#sellers",
+      "units": 100,
+      "description": "A wide range of clothing items for all seasons."
     },
     {
       "id": 2,
       "name": "Shoes Spring",
       "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
-      "link": "#sellers"
+      "link": "#sellers",
+      "units": 50,
+      "description": "Stylish and comfortable spring shoes."
     },
     {
       "id": 3,
       "name": "Accessories",
       "image": "https://i.postimg.cc/MHv7KJYp/access.webp",
-      "link": "#sellers"
+      "link": "#sellers",
+      "units": 200,
+      "description": "Trendy accessories for every occasion."
     }
   ],
   "topSales": [
     {
+      "id": 1,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
       "price": 37.24,
       "colors": ["red", "blue", "white"],
-      "rating": 3
+      "rating": 3,
+      "units": 20,
+      "description": "High-quality shoes with great comfort."
     },
     {
+      "id": 2,
       "name": "PS England Jacket",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 17.24,
       "colors": ["green", "grey", "brown"],
-      "rating": 2
+      "rating": 2,
+      "units": 15,
+      "description": "Warm and stylish jacket for colder days."
     },
-      {
+    {
+      "id": 3,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
       "price": 37.24,
       "colors": ["red", "blue", "white"],
-      "rating": 3
+      "rating": 3,
+      "units": 20,
+      "description": "High-quality shoes with great comfort."
     },
     {
+      "id": 4,
       "name": "PS England Jacket",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 17.24,
       "colors": ["green", "grey", "brown"],
-      "rating": 2
+      "rating": 2,
+      "units": 15,
+      "description": "Warm and stylish jacket for colder days."
     }
   ],
   "newArrivals": [
     {
+      "id": 1,
       "name": "PS England T-Shirt",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 10.23,
-      "colors": ["blank", "blue", "brown"],
-      "rating": 5
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "units": 30,
+      "description": "Comfortable and trendy t-shirt."
     },
-     {
+    {
+      "id": 2,
       "name": "PS England T-Shirt",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 10.23,
-      "colors": ["blank", "blue", "brown"],
-      "rating": 5
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "units": 30,
+      "description": "Comfortable and trendy t-shirt."
     },
-     {
+    {
+      "id": 3,
       "name": "PS England T-Shirt",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 10.23,
-      "colors": ["blank", "blue", "brown"],
-      "rating": 5
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "units": 30,
+      "description": "Comfortable and trendy t-shirt."
     },
-     {
+    {
+      "id": 4,
       "name": "PS England T-Shirt",
       "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
       "price": 10.23,
-      "colors": ["blank", "blue", "brown"],
-      "rating": 5
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "units": 30,
+      "description": "Comfortable and trendy t-shirt."
     }
   ],
   "hotSales": [
     {
+      "id": 1,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
-      "rating": 5
+      "rating": 5,
+      "units": 10,
+      "description": "Durable and stylish shoes for all occasions."
     },
     {
+      "id": 2,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
-      "rating": 5
+      "rating": 5,
+      "units": 10,
+      "description": "Durable and stylish shoes for all occasions."
     },
     {
+      "id": 3,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
-      "rating": 5
+      "rating": 5,
+      "units": 10,
+      "description": "Durable and stylish shoes for all occasions."
     },
     {
+      "id": 4,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
-      "rating": 5
+      "rating": 5,
+      "units": 10,
+      "description": "Durable and stylish shoes for all occasions."
     },
     {
+      "id": 5,
       "name": "PS England Shoes",
       "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
-      "rating": 5
+      "rating": 5,
+      "units": 10,
+      "description": "Durable and stylish shoes for all occasions."
     }
   ]
 }

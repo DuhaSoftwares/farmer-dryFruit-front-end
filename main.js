@@ -53,7 +53,7 @@ function populateProducts(products, containerSelector) {
     <div class="best-p1">
       <div class="image-container">
         <img src="${product.image}" alt="${product.name}">
-        <i class="bi bi-eye eye-icon" data-tooltip="View"></i>
+        <i class="bi bi-eye eye-icon" data-tooltip="View" onclick="viewProduct('${product.id}', '${product.name}', '${product.image}', '${product.price}', '${product.description}', '${product.rating}', '${product.colors.join(',')}')"></i>
       </div>
       <div class="best-p1-txt">
         <div class="name-of-p">
@@ -83,4 +83,8 @@ function getRatingStars(rating) {
     stars += i < rating ? "<i class='bi bi-star-fill'></i>" : "<i class='bi bi-star'></i>";
   }
   return stars;
+}
+// Function to view the product details
+function viewProduct(id, name, image, price, description, rating, colors) {
+    window.location.href = `singleProduct.html?id=${id}&name=${encodeURIComponent(name)}&image=${encodeURIComponent(image)}&price=${price}&description=${encodeURIComponent(description)}&rating=${rating}&colors=${encodeURIComponent(colors)}`;
 }
