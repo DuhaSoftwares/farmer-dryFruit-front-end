@@ -1,164 +1,165 @@
+
 {
   "collections": [
     {
       "id": 1,
-      "name": "Clothing Collections",
-      "image": "https://i.postimg.cc/Xqmwr12c/clothing.webp",
+      "name": "Apricots",
+      "image": "./assets/apricot.png",
       "link": "#sellers",
       "units": 100,
-      "description": "A wide range of clothing items for all seasons."
+      "description": "Delicious dried apricots, rich in flavor."
     },
     {
       "id": 2,
-      "name": "Shoes Spring",
-      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "name": "Black Dried Sultanas",
+      "image": "./assets/black-dried-sultanas.jpg",
       "link": "#sellers",
       "units": 50,
-      "description": "Stylish and comfortable spring shoes."
+      "description": "Sweet and chewy black sultanas."
     },
     {
       "id": 3,
-      "name": "Accessories",
-      "image": "https://i.postimg.cc/MHv7KJYp/access.webp",
+      "name": "Blueberries",
+      "image": "./assets/blueberry.jpg",
       "link": "#sellers",
       "units": 200,
-      "description": "Trendy accessories for every occasion."
+      "description": "Premium dried blueberries for snacks."
     }
   ],
   "topSales": [
     {
       "id": 1,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "name": "Cranberry",
+      "image": "./assets/crane berry.png",
       "price": 37.24,
       "colors": ["red", "blue", "white"],
       "rating": 3,
       "units": 20,
-      "description": "High-quality shoes with great comfort."
+      "description": "Tangy cranberries, perfect for baking."
     },
     {
       "id": 2,
-      "name": "PS England Jacket",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Kiwi",
+      "image": "./assets/kiwi.png",
       "price": 17.24,
-      "colors": ["green", "grey", "brown"],
+      "colors": [""],
       "rating": 2,
       "units": 15,
-      "description": "Warm and stylish jacket for colder days."
+      "description": "Dried kiwi slices with a tart taste."
     },
     {
       "id": 3,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/8CmBZH5N/shoes.webp",
+      "name": "Kehwa Masala",
+      "image": "./assets/kehwa masala.png",
       "price": 37.24,
       "colors": ["red", "blue", "white"],
       "rating": 3,
       "units": 20,
-      "description": "High-quality shoes with great comfort."
+      "description": "Traditional kehwa mix for a warming drink."
     },
     {
       "id": 4,
-      "name": "PS England Jacket",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
       "price": 17.24,
       "colors": ["green", "grey", "brown"],
       "rating": 2,
       "units": 15,
-      "description": "Warm and stylish jacket for colder days."
+      "description": "Nutritious muesli with honey flavor."
     }
   ],
   "newArrivals": [
     {
       "id": 1,
-      "name": "PS England T-Shirt",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Saffron Honey",
+      "image": "./assets/saffron honey.png",
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
       "units": 30,
-      "description": "Comfortable and trendy t-shirt."
+      "description": "Pure honey infused with saffron."
     },
     {
       "id": 2,
-      "name": "PS England T-Shirt",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Wild Honey",
+      "image": "./assets/wild honey.png",
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
       "units": 30,
-      "description": "Comfortable and trendy t-shirt."
+      "description": "Natural honey from wildflowers."
     },
     {
       "id": 3,
-      "name": "PS England T-Shirt",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Almonds",
+      "image": "./assets/almonds.png",
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
       "units": 30,
-      "description": "Comfortable and trendy t-shirt."
+      "description": "Crunchy and nutritious almonds."
     },
     {
       "id": 4,
-      "name": "PS England T-Shirt",
-      "image": "https://i.postimg.cc/76X9ZV8m/Screenshot_from_2022-06-03_18-45-12.png",
+      "name": "Walnut Giri",
+      "image": "./assets/walnut giri.png",
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
       "units": 30,
-      "description": "Comfortable and trendy t-shirt."
+      "description": "Fresh walnut kernels, perfect for snacking."
     }
   ],
   "hotSales": [
     {
       "id": 1,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "name": "Saffron Hair Serum",
+      "image": "./assets/saffron hair serum.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "units": 10,
-      "description": "Durable and stylish shoes for all occasions."
+      "description": "Nourishing hair serum with saffron."
     },
     {
       "id": 2,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "name": "Saffron Infused Oil",
+      "image": "./assets/saffron infured oil.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "units": 10,
-      "description": "Durable and stylish shoes for all occasions."
+      "description": "Premium oil infused with saffron."
     },
     {
       "id": 3,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "name": "Pisti",
+      "image": "./assets/pisti.jpg",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "units": 10,
-      "description": "Durable and stylish shoes for all occasions."
+      "description": "Delicious pistachio-based sweet treat."
     },
     {
       "id": 4,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "name": "Shilajit",
+      "image": "./assets/shilajit.png",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "units": 10,
-      "description": "Durable and stylish shoes for all occasions."
+      "description": "Natural Shilajit for vitality and energy."
     },
     {
       "id": 5,
-      "name": "PS England Shoes",
-      "image": "https://i.postimg.cc/jS7pSQLf/na4.png",
+      "name": "Dried Peach",
+      "image": "./assets/peachdry.jpg",
       "price": 43.67,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "units": 10,
-      "description": "Durable and stylish shoes for all occasions."
+      "description": "Sweet and tangy dried peach slices."
     }
   ]
 }
