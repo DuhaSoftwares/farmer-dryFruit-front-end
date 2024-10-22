@@ -15,7 +15,11 @@ body {
     width: 90%;
     margin: 0 auto;
 }
-
+ .error-message {
+     color: red;
+     font-size: 14px;
+     margin-top: 5px;
+ }
 
 /* //........top text ........// */
 
