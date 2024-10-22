@@ -4,7 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
-    <link rel="stylesheet" href="sp.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -42,125 +43,101 @@
         </div>
       </div>
     </nav>
-    <!-- product start -->
-    <div class="singleProductContainer">
-      <div class="half">
-        <img
-          id="main-image"
-          src="https://i.postimg.cc/8CmBZH5N/shoes.webp"
-          width="100%"
-          height="70%"
-          alt="Product Image"
-        />
-      </div>
-      <div class="half">
-        <div class="product p-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <div
-              class="d-flex align-items-center"
-              onclick="window.history.back();"
-            >
-              <i class="fa fa-long-arrow-left"></i>
-              <span class="ml-1">Back</span>
-            </div>
-            <!-- <i class="fa fa-shopping-cart text-muted"></i> -->
-          </div>
-          <div class="mt-4 mb-3">
-            <span class="text-uppercase text-muted brand" id="product-brand"
-              >apple</span
-            >
-            <h5 class="text-uppercase" id="product-name">rayondshoes</h5>
-            <div class="price d-flex flex-row align-items-center">
-              <span class="act-price" id="product-price">₹ 7777</span>
-              <div class="ml-2">
-                <small class="dis-price" id="product-discount-price"
-                  >₹767</small
-                >
-                <span id="discount-off" class="discount">₹5454</span>
-              </div>
-            </div>
-          </div>
-          <p class="about" id="product-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            voluptas, sequi eos provident porro exercitationem et. Neque eaque
-            expedita rerum deserunt deleniti pariatur perspiciatis quasi laborum
-            officia debitis? Enim, eius?
-          </p>
-          <!-- <div class="sizes mt-5">
-            <h6 class="text-uppercase">Size</h6>
-            <label class="radio">
-              <input type="radio" name="size" value="S" checked />
-              <span>S</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="M" />
-              <span>M</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="L" />
-              <span>L</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XL" />
-              <span>XL</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XXL" />
-              <span>XXL</span>
-            </label>
-          </div> -->
-          <div class="cart mt-4 align-items-center">
-            <button class="btn btn-danger addtocart text-uppercase mr-2 px-4">
-              Add to cart
-            </button>
-          </div>
+    <!-- make a acart  -->
+
+    <section id="cart">
+      <div class="container">
+        <h2>Your Cart</h2>
+        <div class="table-responsive">
+          <table id="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <tr>
+                <td>
+                  <img
+                    src="https://i.postimg.cc/jS7pSQLf/na4.png"
+                    alt="PS England Shoes"
+                    width="50"
+                  />
+                </td>
+                <td>PS England Shoes</td>
+                <td>$37.24</td>
+                <td>
+                  <button class="quantity-btn" onclick="changeQuantity(1, -1)">
+                    -
+                  </button>
+                  <span>1</span>
+                  <button class="quantity-btn" onclick="changeQuantity(1, 1)">
+                    +
+                  </button>
+                </td>
+                <td>$37.24</td>
+                <td><button onclick="removeItem(1)">Remove</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://i.postimg.cc/fbnB2yfj/na1.png"
+                    alt="PS England T-Shirt"
+                    width="50"
+                  />
+                </td>
+                <td>PS England T-Shirt</td>
+                <td>$10.23</td>
+                <td>
+                  <button class="quantity-btn" onclick="changeQuantity(2, -1)">
+                    -
+                  </button>
+                  <span>1</span>
+                  <button class="quantity-btn" onclick="changeQuantity(2, 1)">
+                    +
+                  </button>
+                </td>
+                <td>$10.23</td>
+                <td><button onclick="removeItem(2)">Remove</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://i.postimg.cc/zD02zJq8/na2.png"
+                    alt="PS England Bag"
+                    width="50"
+                  />
+                </td>
+                <td>PS England Bag</td>
+                <td>$9.28</td>
+                <td>
+                  <button class="quantity-btn" onclick="changeQuantity(3, -1)">
+                    -
+                  </button>
+                  <span>1</span>
+                  <button class="quantity-btn" onclick="changeQuantity(3, 1)">
+                    +
+                  </button>
+                </td>
+                <td>$9.28</td>
+                <td><button onclick="removeItem(3)">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cart-summary">
+          <h3>Total: $<span id="cart-total">56.75</span></h3>
+          <button id="checkout-btn">Checkout</button>
         </div>
       </div>
-    </div>
-    <!-- product end -->
+    </section>
 
-    <script>
-      // Function to parse URL query parameters
-      function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return {
-          name: params.get("name"),
-          image: params.get("image"),
-          price: params.get("price"),
-          description: params.get("description"),
-          rating: params.get("rating"),
-          colors: params.get("colors") ? params.get("colors").split(",") : [],
-        };
-      }
-
-      // Load product details dynamically
-      document.addEventListener("DOMContentLoaded", function () {
-        const product = getQueryParams();
-
-        // Update product image
-        document.getElementById("main-image").src = product.image;
-
-        // Update product name
-        document.getElementById("product-name").textContent = product.name;
-
-        // Update product brand (You can set this from your data source if needed)
-        document.getElementById("product-brand").textContent = "Brand Name"; // Set a static brand or retrieve from query params
-
-        // Update product price
-        document.getElementById("product-price").textContent =
-          "$" + product.price;
-
-        // Update product description
-        document.getElementById("product-description").textContent =
-          product.description;
-
-        // Update discount price and discount percentage if needed
-        const discountPrice = parseFloat(product.price) * 1.5; // Example for discount price
-        document.getElementById("product-discount-price").textContent =
-          "$" + discountPrice.toFixed(2);
-        document.getElementById("discount-off").textContent = "40% OFF"; // Adjust this as needed based on your logic
-      });
-    </script>
+    <!--  -->
 
     <section id="sellers">
       <div class="seller container">
@@ -339,6 +316,6 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="./main.js"></script>
+    <script defer src="./cart.js"></script>
   </body>
 </html>

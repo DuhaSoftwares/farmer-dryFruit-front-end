@@ -1,0 +1,140 @@
+#cart {
+  padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#cart h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--light-black);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+#cart-table th,
+#cart-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#cart-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: var(--light-black);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#cart-table img {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.quantity-btn {
+  background-color: #f0f0f0;
+  border: none;
+  color: var(--light-black);
+  font-size: 16px;
+  /* width: 30px;
+  height: 30px; */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+  background-color: #e0e0e0;
+}
+
+#cart-table td:nth-child(4) span {
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+#cart-table button {
+  background-color: #ff3c78;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#cart-table button:hover {
+  background-color: #e62e6b;
+}
+
+.cart-summary {
+  text-align: right;
+}
+
+.cart-summary h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--light-black);
+}
+
+#checkout-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkout-btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  #cart {
+    padding: 20px 0;
+  }
+
+  #cart-table th,
+  #cart-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .quantity-btn {
+    width: 25px;
+    /* height: 25px; */
+    font-size: 14px;
+  }
+
+  #cart-table img {
+    width: 60px;
+  }
+
+  .cart-summary h3 {
+    font-size: 20px;
+  }
+
+  #checkout-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
