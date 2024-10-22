@@ -22,6 +22,7 @@ $(".menu-items a").click(function () {
 });
 
 // Fetch data from db.json
+// Fetch data from db.json
 fetch("./db.json")
   .then((response) => response.json())
   .then((data) => {
@@ -34,9 +35,7 @@ fetch("./db.json")
 
 // Function to populate collections section
 function populateCollections(collections) {
-  const collectionContainer = document.querySelector(
-    "#collection .collections"
-  );
+  const collectionContainer = document.querySelector("#collection .collections");
   collectionContainer.innerHTML = collections
     .map(
       (collection) => `
@@ -46,8 +45,7 @@ function populateCollections(collections) {
         <p>${collection.name}</p>
         <button><a href="${collection.link}">SHOP NOW</a></button>
       </div>
-    </div>
-  `
+    </div>`
     )
     .join("");
 }
@@ -85,12 +83,11 @@ function populateProducts(products, containerSelector) {
               .join("")}
           </div>
         </div>
-        <div class="buy-now">
-          <button>Buy Now</button>
+        <div class="add-to-cart">
+          <button onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}','${product.quantity}')">Add to Cart</button>
         </div>
       </div>
-    </div>
-  `
+    </div>`
     )
     .join("");
 }
@@ -106,6 +103,7 @@ function getRatingStars(rating) {
   }
   return stars;
 }
+
 // Function to view the product details
 function viewProduct(id, name, image, price, description, rating, colors) {
   window.location.href = `singleProduct.html?id=${id}&name=${encodeURIComponent(
@@ -116,6 +114,60 @@ function viewProduct(id, name, image, price, description, rating, colors) {
     description
   )}&rating=${rating}&colors=${encodeURIComponent(colors)}`;
 }
+
+// Function to add products to the cart
+function addToCart(id, name, price, image,quantity) {
+  // Get the current cart from localStorage (if any)
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Check if the product is already in the cart
+  const isProductInCart = cart.some((product) => product.id === id);
+
+  if (isProductInCart) {
+    alert("Item already added to the cart.");
+  } else {
+    // Add new product to the cart
+    const newProduct = {
+      id: id,
+      name: name,
+      price: price,
+      image: image,
+      quantity: quantity, // Add quantity key in case you need it
+    };
+    cart.push(newProduct);
+
+    // Update the cart in localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+    //  updateCartCount() 
+    // Alert and confirm addition to the cart
+    alert("Item added to the cart successfully.");
+  }
+}
+// Function to update cart count
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalCount = cart.reduce((count, item) => count + item.quantity, 0);
+  document.querySelector("#cart-count").textContent = totalCount;
+}
+// Function to load cart data on the cart page
+function loadCartItems() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartContainer = document.getElementById("cart-container");
+  
+  if (cart.length === 0) {
+    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+  } else {
+    cartContainer.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}" />
+        <p>${item.name}</p>
+        <p>Price: $${item.price}</p>
+        <p>Quantity: ${item.quantity}</p>
+      </div>
+    `).join("");
+  }
+}
+
 // send to whats app//
 document.getElementById('sendBtn').addEventListener('click', function() {
     // Clear previous error messages
@@ -150,7 +202,7 @@ document.getElementById('sendBtn').addEventListener('click', function() {
 
     // If all validations pass, send the message to WhatsApp
     if (isValid) {
-        const whatsappNumber = 'YOUR_WHATSAPP_NUMBER'; // Replace with your WhatsApp number
+        const whatsappNumber = '9541270349'; // Replace with your WhatsApp number
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
             'Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message
         )}`;

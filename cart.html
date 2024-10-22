@@ -45,97 +45,37 @@
     </nav>
     <!-- make a acart  -->
 
-    <section id="cart">
-      <div class="container">
-        <h2>Your Cart</h2>
-        <div class="table-responsive">
-          <table id="cart-table">
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="cart-items">
-              <tr>
-                <td>
-                  <img
-                    src="https://i.postimg.cc/jS7pSQLf/na4.png"
-                    alt="PS England Shoes"
-                    width="50"
-                  />
-                </td>
-                <td>PS England Shoes</td>
-                <td>$37.24</td>
-                <td>
-                  <button class="quantity-btn" onclick="changeQuantity(1, -1)">
-                    -
-                  </button>
-                  <span>1</span>
-                  <button class="quantity-btn" onclick="changeQuantity(1, 1)">
-                    +
-                  </button>
-                </td>
-                <td>$37.24</td>
-                <td><button onclick="removeItem(1)">Remove</button></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://i.postimg.cc/fbnB2yfj/na1.png"
-                    alt="PS England T-Shirt"
-                    width="50"
-                  />
-                </td>
-                <td>PS England T-Shirt</td>
-                <td>$10.23</td>
-                <td>
-                  <button class="quantity-btn" onclick="changeQuantity(2, -1)">
-                    -
-                  </button>
-                  <span>1</span>
-                  <button class="quantity-btn" onclick="changeQuantity(2, 1)">
-                    +
-                  </button>
-                </td>
-                <td>$10.23</td>
-                <td><button onclick="removeItem(2)">Remove</button></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://i.postimg.cc/zD02zJq8/na2.png"
-                    alt="PS England Bag"
-                    width="50"
-                  />
-                </td>
-                <td>PS England Bag</td>
-                <td>$9.28</td>
-                <td>
-                  <button class="quantity-btn" onclick="changeQuantity(3, -1)">
-                    -
-                  </button>
-                  <span>1</span>
-                  <button class="quantity-btn" onclick="changeQuantity(3, 1)">
-                    +
-                  </button>
-                </td>
-                <td>$9.28</td>
-                <td><button onclick="removeItem(3)">Remove</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cart-summary">
-          <h3>Total: $<span id="cart-total">56.75</span></h3>
-          <button id="checkout-btn">Checkout</button>
-        </div>
-      </div>
-    </section>
+<section id="cart">
+  <div class="container">
+    <h2>Your Cart</h2>
+    <div class="table-responsive">
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Cart items will be dynamically populated here -->
+        </tbody>
+      </table>
+    </div>
+    <div class="cart-summary">
+      <h3>Total: $<span id="cart-total">0.00</span></h3>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+    <div id="pagination" class="pagination">
+      <!-- Pagination buttons will be dynamically populated here -->
+    </div>
+  </div>
+</section>
+
+
 
     <!--  -->
 
@@ -164,10 +104,10 @@
                   <i class="bx bxs-circle blue"></i>
                 </div>
               </div>
-              <div class="buy-now">
+              <div class="add-to-cart">
                 <button>
                   <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Buy Now</a
+                    >Add to Cart</a
                   >
                 </button>
               </div>
@@ -194,10 +134,10 @@
                   <i class="bx bxs-circle brown"></i>
                 </div>
               </div>
-              <div class="buy-now">
+              <div class="add-to-cart">
                 <button>
                   <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Buy Now</a
+                    >Add to Cart</a
                   >
                 </button>
               </div>
@@ -224,10 +164,10 @@
                   <i class="bx bxs-circle blue"></i>
                 </div>
               </div>
-              <div class="buy-now">
+              <div class="add-to-cart">
                 <button>
                   <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Buy Now</a
+                    >Add to Cart</a
                   >
                 </button>
               </div>
@@ -254,10 +194,10 @@
                   <i class="bx bxs-circle brown"></i>
                 </div>
               </div>
-              <div class="buy-now">
+              <div class="add-to-cart">
                 <button>
                   <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Buy Now</a
+                    >Add to Cart</a
                   >
                 </button>
               </div>

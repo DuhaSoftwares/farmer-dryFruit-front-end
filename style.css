@@ -652,7 +652,7 @@ body {
     background-color: #000;
 }
 
-.best-seller .buy-now a {
+.best-seller .add-to-cart a {
     text-decoration: none;
     color: var(--white);
 }
@@ -661,7 +661,7 @@ body {
     color: #f05e8a;
 }
 
-.best-seller .buy-now button,
+.best-seller .add-to-cart button,
 .best-seller .add-cart button {
     padding: 10px 15px;
     margin-top: 5px;
@@ -677,13 +677,13 @@ body {
     transition: 0.5s;
 }
 
-.best-seller .buy-now button:hover,
+.best-seller .add-to-cart button:hover,
 .best-seller .add-cart button:hover {
     background-color: var(--white);
     font-weight: 600;
 }
 
-.best-seller .buy-now button:hover a,
+.best-seller .add-to-cart button:hover a,
 .best-seller .add-cart button:hover a {
     color: #f05e8a;
 }
