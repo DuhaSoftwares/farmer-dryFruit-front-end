@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
   </head>
 
   <body>
@@ -32,10 +34,10 @@
           <span class="line line3"></span>
         </div>
         <ul class="menu-items">
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Shop</a></li>
-          <li><a href="#news">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <!-- <li><a href="">Contact</a></li> -->
         </ul>
         <div class="logo">
           <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="" />
@@ -67,48 +69,21 @@
           </div>
           <div class="mt-4 mb-3">
             <span class="text-uppercase text-muted brand" id="product-brand"
-              >apple</span
+              ></span
             >
-            <h5 class="text-uppercase name" id="product-name">rayondshoes</h5>
+            <h5 class="text-uppercase name" id="product-name"></h5>
             <div class="price d-flex flex-row align-items-center">
-              <span class="act-price" id="product-price">₹ 7777</span>
+              <span class="act-price" id="product-price">₹ </span>
               <div class="ml-2">
                 <small class="dis-price" id="product-discount-price"
-                  >₹767</small
+                  >₹</small
                 >
-                <span id="discount-off" class="discount">₹5454</span>
+                <span id="discount-off" class="discount">₹</span>
               </div>
             </div>
           </div>
           <p class="about" id="product-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            voluptas, sequi eos provident porro exercitationem et. Neque eaque
-            expedita rerum deserunt deleniti pariatur perspiciatis quasi laborum
-            officia debitis? Enim, eius?
           </p>
-          <!-- <div class="sizes mt-5">
-            <h6 class="text-uppercase">Size</h6>
-            <label class="radio">
-              <input type="radio" name="size" value="S" checked />
-              <span>S</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="M" />
-              <span>M</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="L" />
-              <span>L</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XL" />
-              <span>XL</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XXL" />
-              <span>XXL</span>
-            </label>
-          </div> -->
           <div class="cart mt-4 align-items-center">
             <button class="btn btn-danger addtocart text-uppercase mr-2 px-4">
               Add to cart
@@ -119,175 +94,13 @@
     </div>
     <!-- product end -->
 
-    <!-- <script>
-      // Function to parse URL query parameters
-      function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return {
-          name: params.get("name"),
-          image: params.get("image"),
-          price: params.get("price"),
-          description: params.get("description"),
-          rating: params.get("rating"),
-          colors: params.get("colors") ? params.get("colors").split(",") : [],
-        };
-      }
 
-      // Load product details dynamically
-      document.addEventListener("DOMContentLoaded", function () {
-        const product = getQueryParams();
-
-        // Update product image
-        document.getElementById("main-image").src = product.image;
-
-        // Update product name
-        document.getElementById("product-name").textContent = product.name;
-
-        // Update product brand (You can set this from your data source if needed)
-        document.getElementById("product-brand").textContent = "Brand Name"; // Set a static brand or retrieve from query params
-
-        // Update product price
-        document.getElementById("product-price").textContent =
-          "$" + product.price;
-
-        // Update product description
-        document.getElementById("product-description").textContent =
-          product.description;
-
-        // Update discount price and discount percentage if needed
-        const discountPrice = parseFloat(product.price) * 1.5; // Example for discount price
-        document.getElementById("product-discount-price").textContent =
-          "$" + discountPrice.toFixed(2);
-        document.getElementById("discount-off").textContent = "40% OFF"; // Adjust this as needed based on your logic
-      });
-    </script> -->
 
     <section id="sellers">
-      <div class="seller container">
-        <h2>Hot Sales</h2>
-        <div class="best-seller">
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England Shoes</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;37.24
-                <div class="colors">
-                  <i class="bx bxs-circle grey"></i>
-                  <i class="bx bxs-circle black"></i>
-                  <i class="bx bxs-circle blue"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England T-Shirt</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;10.23
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle blue"></i>
-                  <i class="bx bxs-circle brown"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England T-Shirt</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;15.24
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle red"></i>
-                  <i class="bx bxs-circle blue"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England Bag</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-              </div>
-              <div class="price">
-                &dollar;09.28
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle grey"></i>
-                  <i class="bx bxs-circle brown"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="new-arrivals" class="seller container">
+      <h2>New Arrivals</h2>
+      <div class="best-seller"></div>
+    </div>
     </section>
     <footer>
       <div class="footer-container container">
@@ -339,6 +152,7 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="./main.js"></script>
+    <!-- <script defer src="./main.js"></script> -->
+        <script deffer src="./singleProduct.js"></script>
   </body>
 </html>

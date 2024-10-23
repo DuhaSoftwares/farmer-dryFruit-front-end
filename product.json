@@ -1,0 +1,108 @@
+{
+  "topSales": [
+    {
+      "id": 4,
+      "name": "Cranberry",
+      "image": "./assets/crane berry.png",
+      "price": 37.24,
+      "colors": ["red", "blue", "white"],
+      "rating": 3,
+      "units": 20,
+      "description": "Tangy cranberries, perfect for baking.",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Kiwi",
+      "image": "./assets/kiwi.png",
+      "price": 17.24,
+      "colors": [""],
+      "rating": 2,
+      "units": 15,
+      "description": "Dried kiwi slices with a tart taste.",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Kehwa Masala",
+      "image": "./assets/kehwa masala.png",
+      "price": 37.24,
+      "colors": ["red", "blue", "white"],
+      "rating": 3,
+      "units": 20,
+      "description": "Traditional kehwa mix for a warming drink.",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+    ,
+    {
+      "id": 8,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+    ,
+    {
+      "id": 9,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+    ,
+    {
+      "id": 10,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+    ,
+    {
+      "id": 11,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+    ,
+    {
+      "id": 12,
+      "name": "Honey Muesli",
+      "image": "./assets/honeymuesli.jpg",
+      "price": 17.24,
+      "colors": ["green", "grey", "brown"],
+      "rating": 2,
+      "units": 15,
+      "description": "Nutritious muesli with honey flavor.",
+      "quantity": 1
+    }
+  ]
+}

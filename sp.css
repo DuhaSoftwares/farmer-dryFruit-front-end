@@ -841,3 +841,61 @@ iframe {
     margin-bottom: 0px;
   }
 }
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip styling */
+.eye-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.eye-icon:hover::after {
+  opacity: 1;
+}
+
+/* Hide the eye icon initially on large screens (lg and above) */
+@media (min-width: 992px) {
+  .eye-icon {
+    opacity: 0;
+  }
+
+  /* Show the eye icon on hover for larger screens */
+  .image-container:hover .eye-icon {
+    opacity: 1;
+  }
+}
+
+/* On small and medium screens (below 992px), always show the icon */
+@media (max-width: 991.98px) {
+  .eye-icon {
+    opacity: 1;
+    top: 50px;
+  }
+}
