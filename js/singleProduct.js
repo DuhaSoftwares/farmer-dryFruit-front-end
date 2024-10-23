@@ -66,7 +66,7 @@
             $("#checkbox").prop("checked", false);
           });
 
-          fetch("./json/newArivals.json")
+          fetch("./newArivals.json")
             .then((response) => response.json())
             .then((data) => {
               populateProducts(data.newArrivals, "#new-arrivals .best-seller");
