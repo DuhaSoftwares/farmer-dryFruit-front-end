@@ -68,7 +68,7 @@
 
           // Fetch data from db.json
           // Fetch data from db.json
-          fetch("./newArivals.json")
+          fetch("../json/newArivals.json")
             .then((response) => response.json())
             .then((data) => {
               populateProducts(data.newArrivals, "#new-arrivals .best-seller");

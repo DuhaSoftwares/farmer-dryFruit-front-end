@@ -1,118 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Fetch cart items from localStorage
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const itemsPerPage = 8; // Number of items per page
-  let currentPage = 1;
-
-  // Function to populate cart items
-  function populateCart() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    cartItemsContainer.innerHTML = ""; // Clear previous content
-
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, cart.length);
-    const itemsToDisplay = cart.slice(startIndex, endIndex);
-
-    itemsToDisplay.forEach((item) => {
-      const row = document.createElement("tr");
-      row.setAttribute("data-id", item.id);
-
-      row.innerHTML = `
-        <td>
-          <img src="${item.image}" alt="${item.name}" width="50">
-        </td>
-        <td>${item.name}</td>
-        <td>$${item.price.toFixed(2)}</td>
-        <td>
-          <button class="quantity-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
-          <span>${item.quantity}</span>
-          <button class="quantity-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
-        </td>
-        <td>$${(item.price * item.quantity).toFixed(2)}</td>
-        <td><button onclick="removeItem(${item.id})">Remove</button></td>
-      `;
-      
-      cartItemsContainer.appendChild(row);
-    });
-
-    // Update the cart total after populating items
-    updateTotal();
-
-    // Render pagination
-    renderPagination();
-  }
-
-  // Function to change the quantity of an item
-  window.changeQuantity = function (id, change) {
-    const item = cart.find((item) => item.id === id);
-    if (item) {
-      item.quantity = Math.max(1, item.quantity + change); // Ensure quantity stays >= 1
-
-      // Update the cart in localStorage
-      localStorage.setItem("cart", JSON.stringify(cart));
-
-      // Repopulate the cart after changing quantity
-      populateCart();
-    }
-  };
-
-  // Function to remove an item from the cart
-  window.removeItem = function (id) {
-    const itemIndex = cart.findIndex((item) => item.id === id);
-    if (itemIndex > -1) {
-      cart.splice(itemIndex, 1);
-
-      // Update the cart in localStorage
-      localStorage.setItem("cart", JSON.stringify(cart));
-
-      // Repopulate the cart after removing item
-      populateCart();
-    }
-  };
-
-  // Function to update the total cost of the cart
-  function updateTotal() {
-    const totalSpan = document.getElementById("cart-total");
-    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    totalSpan.textContent = total.toFixed(2);
-  }
-
-  // Function to render pagination
-  function renderPagination() {
-    const paginationContainer = document.getElementById("pagination");
-    paginationContainer.innerHTML = ""; // Clear previous pagination
-
-    const totalPages = Math.ceil(cart.length / itemsPerPage);
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = document.createElement("button");
-      pageButton.textContent = i;
-      pageButton.className = "pagination-btn";
-      pageButton.onclick = () => {
-        currentPage = i;
-        populateCart();
-      };
-      paginationContainer.appendChild(pageButton);
-    }
-  }
-
-  // Checkout button click handler
-  document.getElementById("checkout-btn").addEventListener("click", () => {
-    if (cart.length > 0) {
-      const total = document.getElementById("cart-total").textContent;
-      const whatsappNumber = '9541270349';
-      const itemDetails = cart.map(item => `${item.name} (x${item.quantity}): $${(item.price * item.quantity).toFixed(2)}`).join('\n');
-      const message = `Checkout:\n${itemDetails}\nTotal: $${total}`;
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-    } else {
-      alert("Your cart is empty.");
-    }
-  });
-
-  // Populate the cart on page load
-  populateCart();
-})
-//populate products
 $(document).ready(function () {
   $("a").on("click", function (event) {
     if (this.hash !== "") {
@@ -138,13 +23,32 @@ $(".menu-items a").click(function () {
 
 // Fetch data from db.json
 // Fetch data from db.json
-fetch("./newArivals.json")
+fetch("../json/db.json")
   .then((response) => response.json())
   .then((data) => {
+    populateCollections(data.collections);
+    populateProducts(data.topSales, "#sellers .best-seller");
     populateProducts(data.newArrivals, "#new-arrivals .best-seller");
+    populateProducts(data.hotSales, "#hot-sales .best-seller");
   })
   .catch((error) => console.error("Error:", error));
 
+// Function to populate collections section
+function populateCollections(collections) {
+  const collectionContainer = document.querySelector("#collection .collections");
+  collectionContainer.innerHTML = collections
+    .map(
+      (collection) => `
+    <div class="content">
+      <img src="${collection.image}" alt="${collection.name}" />
+      <div class="img-content">
+        <p>${collection.name}</p>
+        <button><a href="${collection.link}">SHOP NOW</a></button>
+      </div>
+    </div>`
+    )
+    .join("");
+}
 
 // Function to populate products in any section (reusable for top sales, new arrivals, etc.)
 function populateProducts(products, containerSelector) {
@@ -263,3 +167,74 @@ function loadCartItems() {
     `).join("");
   }
 }
+
+// send to whats app//
+document.getElementById('sendBtn').addEventListener('click', function() {
+    // Clear previous error messages
+    clearErrors();
+
+    // Get the values from the input fields
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Validation flags
+    let isValid = true;
+
+    // Validate name (minimum 3 characters)
+    if (name.length < 3) {
+        document.getElementById('nameError').textContent = 'Name must be at least 3 characters long.';
+        isValid = false;
+    }
+
+    // Validate email using a basic regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        isValid = false;
+    }
+
+    // Validate message (non-empty)
+    if (message.trim() === '') {
+        document.getElementById('messageError').textContent = 'Message cannot be empty.';
+        isValid = false;
+    }
+
+    // If all validations pass, send the message to WhatsApp
+    if (isValid) {
+        const whatsappNumber = '9541270349'; // Replace with your WhatsApp number
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            'Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message
+        )}`;
+        window.open(whatsappURL, '_blank');
+    }
+});
+
+// Function to clear error messages dynamically when the user types
+function clearErrors() {
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('messageError').textContent = '';
+}
+
+// Event listeners to clear individual errors when the input is corrected
+document.getElementById('name').addEventListener('input', function() {
+    if (this.value.length >= 3) {
+        document.getElementById('nameError').textContent = '';
+    }
+});
+
+document.getElementById('email').addEventListener('input', function() {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailPattern.test(this.value)) {
+        document.getElementById('emailError').textContent = '';
+    }
+});
+
+document.getElementById('message').addEventListener('input', function() {
+    if (this.value.trim() !== '') {
+        document.getElementById('messageError').textContent = '';
+    }
+});
+
+
