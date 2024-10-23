@@ -23,7 +23,7 @@ $(".menu-items a").click(function () {
 
 // Fetch data from db.json
 // Fetch data from db.json
-fetch("../json/product.json")
+fetch("/json/product.json")
   .then((response) => response.json())
   .then((data) => {
     populateProducts(data.topSales, "#sellers .best-seller")
