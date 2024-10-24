@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
   window.changeQuantity = function (id, change) {
     const item = cart.find((item) => item.id === id);
     if (item) {
-     const currentQuantity = parseInt(item.quantity, 10) || 1;
+      const currentQuantity = parseInt(item.quantity, 1) || 1;
 
-     // Adjust the quantity and ensure it's not less than 1
-     item.quantity = Math.max(1, currentQuantity + change);
+      // Adjust the quantity and ensure it's not less than 1
+      item.quantity = Math.max(1, currentQuantity + change);
 
       // Log for debugging to see the current quantity before updating localStorage
       console.log(`Item ID: ${id}, Updated Quantity: ${item.quantity}`);
