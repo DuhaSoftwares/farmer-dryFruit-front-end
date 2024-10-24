@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       item.quantity = Math.max(1, currentQuantity + change);
 
       // Log for debugging to see the current quantity before updating localStorage
-      console.log(`Item ID: ${id}, Updated Quantity: ${item.quantity}`);
+      // console.log(`Item ID: ${id}, Updated Quantity: ${item.quantity}`);
 
       // Update the cart in localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
