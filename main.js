@@ -184,73 +184,75 @@ function loadCartItems() {
 }
 
 // send to whats app//
-document.getElementById("sendBtn").addEventListener("click", function () {
-  // Clear previous error messages
-  clearErrors();
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    // Clear previous error messages
+    // clearErrors();
+    event.preventDefault();
+    // Get the values from the input fields
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-  // Get the values from the input fields
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+    // Validation flags
+    let isValid = true;
 
-  // Validation flags
-  let isValid = true;
+    // Validate name (minimum 3 characters)
+    // if (name.length < 3) {
+    //   document.getElementById("nameError").textContent =
+    //     "Name must be at least 3 characters long.";
+    //   isValid = false;
+    // }
 
-  // Validate name (minimum 3 characters)
-  if (name.length < 3) {
-    document.getElementById("nameError").textContent =
-      "Name must be at least 3 characters long.";
-    isValid = false;
-  }
+    // Validate email using a basic regex
+    // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!emailPattern.test(email)) {
+    //   document.getElementById("emailError").textContent =
+    //     "Please enter a valid email address.";
+    //   isValid = false;
+    // }
 
-  // Validate email using a basic regex
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    document.getElementById("emailError").textContent =
-      "Please enter a valid email address.";
-    isValid = false;
-  }
+    // Validate message (non-empty)
+    // if (message.trim() === "") {
+    //   document.getElementById("messageError").textContent =
+    //     "Message cannot be empty.";
+    //   isValid = false;
+    // }
 
-  // Validate message (non-empty)
-  if (message.trim() === "") {
-    document.getElementById("messageError").textContent =
-      "Message cannot be empty.";
-    isValid = false;
-  }
+    // If all validations pass, send the message to WhatsApp
+    if (isValid) {
+      const whatsappNumber = "9541270349"; // Replace with your WhatsApp number
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        "Name: " + name + "\nEmail: " + email + "\nMessage: " + message
+      )}`;
+      window.open(whatsappURL, "_blank");
+    }
+  });
 
-  // If all validations pass, send the message to WhatsApp
-  if (isValid) {
-    const whatsappNumber = "9541270349"; // Replace with your WhatsApp number
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      "Name: " + name + "\nEmail: " + email + "\nMessage: " + message
-    )}`;
-    window.open(whatsappURL, "_blank");
-  }
-});
-
-// Function to clear error messages dynamically when the user types
-function clearErrors() {
-  document.getElementById("nameError").textContent = "";
-  document.getElementById("emailError").textContent = "";
-  document.getElementById("messageError").textContent = "";
-}
+// // Function to clear error messages dynamically when the user types
+// function clearErrors() {
+//   document.getElementById("nameError").textContent = "";
+//   document.getElementById("emailError").textContent = "";
+//   document.getElementById("messageError").textContent = "";
+// }
 
 // Event listeners to clear individual errors when the input is corrected
-document.getElementById("name").addEventListener("input", function () {
-  if (this.value.length >= 3) {
-    document.getElementById("nameError").textContent = "";
-  }
-});
+// document.getElementById("name").addEventListener("input", function () {
+//   if (this.value.length >= 3) {
+//     document.getElementById("nameError").textContent = "";
+//   }
+// });
 
-document.getElementById("email").addEventListener("input", function () {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailPattern.test(this.value)) {
-    document.getElementById("emailError").textContent = "";
-  }
-});
+// document.getElementById("email").addEventListener("input", function () {
+//   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   if (emailPattern.test(this.value)) {
+//     document.getElementById("emailError").textContent = "";
+//   }
+// });
 
-document.getElementById("message").addEventListener("input", function () {
-  if (this.value.trim() !== "") {
-    document.getElementById("messageError").textContent = "";
-  }
-});
+// document.getElementById("message").addEventListener("input", function () {
+//   if (this.value.trim() !== "") {
+//     document.getElementById("messageError").textContent = "";
+//   }
+// });

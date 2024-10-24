@@ -148,17 +148,17 @@
                             <p>HW95+C9C, Lorem ipsum dolor sit.<br>411014</p>
                         </div>
                         <div class="form-details">
-                            <input type="text" name="name" id="name" placeholder="Name" required>
-                            <span id="nameError" class="error-message"></span> <!-- Error message for name -->
+                            <input minlength="3" max="50" type="text" name="name" id="name" placeholder="Please Enter Your Name" required>
+                           
 
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                            <span id="emailError" class="error-message"></span> <!-- Error message for email -->
+                            <input type="email" name="email" id="email" placeholder="Please Enter Your Email" required>
+                            
 
-                            <textarea name="message" id="message" cols="52" rows="7" placeholder="Message"
+                        <textarea minlength="5" name="message" id="message" cols="52" rows="7" placeholder="Please Write Your Message Here"
                                 required></textarea>
-                            <span id="messageError" class="error-message"></span> <!-- Error message for message -->
+                           
 
-                            <button type="button" id="sendBtn">SEND MESSAGE</button>
+                            <button type="submit" id="sendBtn">SEND MESSAGE</button>
                         </div>
                     </div>
                 </form>
