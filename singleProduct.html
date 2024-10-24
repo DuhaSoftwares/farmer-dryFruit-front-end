@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -72,9 +73,10 @@
         <p class="about" id="product-description">
         </p>
         <div class="cart mt-4 align-items-center">
-          <button class="btn btn-danger addtocart text-uppercase mr-2 px-4">
-            Add to cart
-          </button>
+      <button class="btn btn-danger addtocart text-uppercase mr-2 px-4"
+        onclick="addToCart('${product.id}', '${product.name}', '${product.price}', '${product.image}', 1)">
+        Add to Cart
+      </button>
         </div>
       </div>
     </div>
