@@ -105,7 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     } else {
-      alert("Your cart is empty.");
+          Swal.fire({
+      icon: "error",
+      title: "Alert",
+      text: "Your cart is empty.",
+    });
     }
   });
 
@@ -220,7 +224,11 @@ function addToCart(id, name, price, image,quantity) {
   const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
-    alert("Item already added to the cart.");
+       Swal.fire({
+      icon: "error",
+      title: "Alert",
+      text: "Item already in cart",
+    });
   } else {
     // Add new product to the cart
     const newProduct = {
@@ -236,7 +244,11 @@ function addToCart(id, name, price, image,quantity) {
     localStorage.setItem("cart", JSON.stringify(cart));
     //  updateCartCount() 
     // Alert and confirm addition to the cart
-    alert("Item added to the cart successfully.");
+        Swal.fire({
+      icon: "success",
+      title: "Sucesss",
+      text: "Item added to cart successfully",
+    });
   }
 }
 // Function to update cart count

@@ -26,13 +26,15 @@ $(".menu-items a").click(function () {
 fetch("./product.json")
   .then((response) => response.json())
   .then((data) => {
-    populateProducts(data.topSales, "#sellers .best-seller")
+    populateProducts(data.topSales, "#sellers .best-seller");
   })
   .catch((error) => console.error("Error:", error));
 
 // Function to populate collections section
 function populateCollections(collections) {
-  const collectionContainer = document.querySelector("#collection .collections");
+  const collectionContainer = document.querySelector(
+    "#collection .collections"
+  );
   collectionContainer.innerHTML = collections
     .map(
       (collection) => `
@@ -81,7 +83,9 @@ function populateProducts(products, containerSelector) {
           </div>
         </div>
         <div class="add-to-cart">
-          <button onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}','${product.quantity}')">Add to Cart</button>
+          <button onclick="addToCart(${product.id}, '${product.name}', ${
+        product.price
+      }, '${product.image}','${product.quantity}')">Add to Cart</button>
         </div>
       </div>
     </div>`
@@ -113,7 +117,7 @@ function viewProduct(id, name, image, price, description, rating, colors) {
 }
 
 // Function to add products to the cart
-function addToCart(id, name, price, image,quantity) {
+function addToCart(id, name, price, image, quantity) {
   // Get the current cart from localStorage (if any)
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -121,7 +125,11 @@ function addToCart(id, name, price, image,quantity) {
   const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
-    alert("Item already added to the cart.");
+    Swal.fire({
+      icon: "error",
+      title: "Alert",
+      text: "Item already in cart",
+    });
   } else {
     // Add new product to the cart
     const newProduct = {
@@ -135,9 +143,13 @@ function addToCart(id, name, price, image,quantity) {
 
     // Update the cart in localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    //  updateCartCount() 
+    //  updateCartCount()
     // Alert and confirm addition to the cart
-    alert("Item added to the cart successfully.");
+    Swal.fire({
+      icon: "success",
+      title: "Sucesss",
+      text: "Item added to cart successfully",
+    });
   }
 }
 // Function to update cart count
@@ -150,17 +162,21 @@ function updateCartCount() {
 function loadCartItems() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const cartContainer = document.getElementById("cart-container");
-  
+
   if (cart.length === 0) {
     cartContainer.innerHTML = "<p>Your cart is empty.</p>";
   } else {
-    cartContainer.innerHTML = cart.map(item => `
+    cartContainer.innerHTML = cart
+      .map(
+        (item) => `
       <div class="cart-item">
         <img src="${item.image}" alt="${item.name}" />
         <p>${item.name}</p>
         <p>Price: $${item.price}</p>
         <p>Quantity: ${item.quantity}</p>
       </div>
-    `).join("");
+    `
+      )
+      .join("");
   }
 }
