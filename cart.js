@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Confirm order before redirecting
       Swal.fire({
         title: "Confirm Order",
-        text: `You are about to checkout:\nTotal: $${total}`,
+        text: `\nTotal Amount: $${total}`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Yes, proceed!",
