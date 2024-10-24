@@ -1,344 +1,131 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
-    <link rel="stylesheet" href="sp.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <section class="top-txt">
-      <div class="head container">
-        <div class="head-txt">
-          <p>Free shipping, 30-day return or refund guarantee.</p>
-        </div>
-        <div class="sing_in_up">
-          <a href="# ">SIGN IN</a>
-          <a href="# ">SIGN UP</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KongPosh</title>
+  <link rel="stylesheet" href="./styles/sp.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <section class="top-txt">
+    <div class="head container">
+      <div class="head-txt">
+        <p>Free shipping, 30-day return or refund guarantee.</p>
       </div>
-    </section>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <input type="checkbox" name="" id="checkbox" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <ul class="menu-items">
-          <li><a href="#home">Home</a></li>
-          <li><a href="products.html">Shop</a></li>
-          <li><a href="#news">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="logo">
-          <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="" />
-        </div>
+      <div class="sing_in_up">
+        <a href="# "><i class="bi bi-instagram"></i></a>
+        <a href="# "><i class="bi bi-facebook"></i></a>
+        <a href="# "><i class="bi bi-envelope-at-fill"></i></a>
       </div>
-    </nav>
-    <!-- product start -->
-    <div class="singleProductContainer">
-      <div class="half1">
-        <img
-          id="main-image"
-          src="https://i.postimg.cc/8CmBZH5N/shoes.webp"
-          width="100%"
-          height="70%"
-          alt="Product Image"
-        />
+    </div>
+  </section>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <input type="checkbox" name="" id="checkbox" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
       </div>
-      <div class="half2">
-        <div class="product p-4">
-          <div class="d-flex justify-content-between align-items-center">
-            <div
-              class="d-flex align-items-center"
-              onclick="window.history.back();"
-            >
-              <i class="fa fa-long-arrow-left"></i>
-              <span class="ml-1">Back</span>
+      <ul class="menu-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <!-- <li><a href="">Contact</a></li> -->
+      </ul>
+      <div class="logo">
+        <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="" />
+      </div>
+    </div>
+  </nav>
+  <!-- product start -->
+  <div class="singleProductContainer">
+    <div class="half1">
+      <img id="main-image" src="https://i.postimg.cc/8CmBZH5N/shoes.webp" width="100%" height="70%"
+        alt="Product Image" />
+    </div>
+    <div class="half2">
+      <div class="product p-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center" onclick="window.history.back();">
+            <i class="fa fa-long-arrow-left"></i>
+            <span class="ml-1">Back</span>
+          </div>
+          <!-- <i class="fa fa-shopping-cart text-muted"></i> -->
+        </div>
+        <div class="mt-4 mb-3">
+          <span class="text-uppercase text-muted brand" id="product-brand"></span>
+          <h5 class="text-uppercase name" id="product-name"></h5>
+          <div class="price d-flex flex-row align-items-center">
+            <span class="act-price" id="product-price">₹ </span>
+            <div class="ml-2">
+              <small class="dis-price" id="product-discount-price">₹</small>
+              <span id="discount-off" class="discount">₹</span>
             </div>
-            <!-- <i class="fa fa-shopping-cart text-muted"></i> -->
           </div>
-          <div class="mt-4 mb-3">
-            <span class="text-uppercase text-muted brand" id="product-brand"
-              >apple</span
-            >
-            <h5 class="text-uppercase name" id="product-name">rayondshoes</h5>
-            <div class="price d-flex flex-row align-items-center">
-              <span class="act-price" id="product-price">₹ 7777</span>
-              <div class="ml-2">
-                <small class="dis-price" id="product-discount-price"
-                  >₹767</small
-                >
-                <span id="discount-off" class="discount">₹5454</span>
-              </div>
-            </div>
-          </div>
-          <p class="about" id="product-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            voluptas, sequi eos provident porro exercitationem et. Neque eaque
-            expedita rerum deserunt deleniti pariatur perspiciatis quasi laborum
-            officia debitis? Enim, eius?
-          </p>
-          <!-- <div class="sizes mt-5">
-            <h6 class="text-uppercase">Size</h6>
-            <label class="radio">
-              <input type="radio" name="size" value="S" checked />
-              <span>S</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="M" />
-              <span>M</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="L" />
-              <span>L</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XL" />
-              <span>XL</span>
-            </label>
-            <label class="radio">
-              <input type="radio" name="size" value="XXL" />
-              <span>XXL</span>
-            </label>
-          </div> -->
-          <div class="cart mt-4 align-items-center">
-            <button class="btn btn-danger addtocart text-uppercase mr-2 px-4">
-              Add to cart
-            </button>
-          </div>
+        </div>
+        <p class="about" id="product-description">
+        </p>
+        <div class="cart mt-4 align-items-center">
+          <button class="btn btn-danger addtocart text-uppercase mr-2 px-4">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
-    <!-- product end -->
-
-    <!-- <script>
-      // Function to parse URL query parameters
-      function getQueryParams() {
-        const params = new URLSearchParams(window.location.search);
-        return {
-          name: params.get("name"),
-          image: params.get("image"),
-          price: params.get("price"),
-          description: params.get("description"),
-          rating: params.get("rating"),
-          colors: params.get("colors") ? params.get("colors").split(",") : [],
-        };
-      }
-
-      // Load product details dynamically
-      document.addEventListener("DOMContentLoaded", function () {
-        const product = getQueryParams();
-
-        // Update product image
-        document.getElementById("main-image").src = product.image;
-
-        // Update product name
-        document.getElementById("product-name").textContent = product.name;
-
-        // Update product brand (You can set this from your data source if needed)
-        document.getElementById("product-brand").textContent = "Brand Name"; // Set a static brand or retrieve from query params
-
-        // Update product price
-        document.getElementById("product-price").textContent =
-          "$" + product.price;
-
-        // Update product description
-        document.getElementById("product-description").textContent =
-          product.description;
-
-        // Update discount price and discount percentage if needed
-        const discountPrice = parseFloat(product.price) * 1.5; // Example for discount price
-        document.getElementById("product-discount-price").textContent =
-          "$" + discountPrice.toFixed(2);
-        document.getElementById("discount-off").textContent = "40% OFF"; // Adjust this as needed based on your logic
-      });
-    </script> -->
-
-    <section id="sellers">
-      <div class="seller container">
-        <h2>Hot Sales</h2>
-        <div class="best-seller">
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/jS7pSQLf/na4.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England Shoes</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;37.24
-                <div class="colors">
-                  <i class="bx bxs-circle grey"></i>
-                  <i class="bx bxs-circle black"></i>
-                  <i class="bx bxs-circle blue"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/fbnB2yfj/na1.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England T-Shirt</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;10.23
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle blue"></i>
-                  <i class="bx bxs-circle brown"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/RhVP7YQk/hs1.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England T-Shirt</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-                <i class="bx bxs-star"></i>
-              </div>
-              <div class="price">
-                &dollar;15.24
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle red"></i>
-                  <i class="bx bxs-circle blue"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="best-p1">
-            <img src="https://i.postimg.cc/zD02zJq8/na2.png" alt="img" />
-            <div class="best-p1-txt">
-              <div class="name-of-p">
-                <p>PS England Bag</p>
-              </div>
-              <div class="rating">
-                <i class="bx bxs-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-                <i class="bx bx-star"></i>
-              </div>
-              <div class="price">
-                &dollar;09.28
-                <div class="colors">
-                  <i class="bx bxs-circle blank"></i>
-                  <i class="bx bxs-circle grey"></i>
-                  <i class="bx bxs-circle brown"></i>
-                </div>
-              </div>
-              <div class="add-to-cart">
-                <button>
-                  <a href="https://codepen.io/sanketbodke/full/mdprZOq"
-                    >Add to Cart</a
-                  >
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+  <!-- product end -->
+  <section id="sellers">
+    <div id="new-arrivals" class="seller container">
+      <h2>New Arrivals</h2>
+      <div class="best-seller"></div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container container">
+      <div class="content_1">
+        <img src="https://i.postimg.cc/htGyQ4JB/footer-logo.png" alt="logo">
+        <p>The customer is at the heart of our<br>unique business model, which includes<br>design.</p>
+        <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards">
       </div>
-    </section>
-    <footer>
-      <div class="footer-container container">
-        <div class="content_1">
-          <img src="https://i.postimg.cc/htGyQ4JB/footer-logo.png" alt="logo" />
-          <p>
-            The customer is at the heart of our<br />unique business model,
-            which includes<br />design.
-          </p>
-          <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
-        </div>
-        <div class="content_2">
-          <h4>SHOPPING</h4>
-          <a href="#sellers">Clothing Store</a>
-          <a href="#sellers">Trending Shoes</a>
-          <a href="#sellers">Accessories</a>
-          <a href="#sellers">Sale</a>
-        </div>
-        <div class="content_3">
-          <h4>SHOPPING</h4>
-          <a href="./contact.html">Contact Us</a>
-          <a href="https://payment-method-sb.netlify.app/" target="_blank"
-            >Payment Method</a
-          >
-          <a href="https://delivery-status-sb.netlify.app/" target="_blank"
-            >Delivery</a
-          >
-          <a href="https://codepen.io/sandeshbodake/full/Jexxrv" target="_blank"
-            >Return and Exchange</a
-          >
-        </div>
-        <div class="content_4">
-          <h4>NEWLETTER</h4>
-          <p>
-            Be the first to know about new<br />arrivals, look books, sales &
-            promos!
-          </p>
-          <div class="f-mail">
-            <input type="email" placeholder="Your Email" />
-            <i class="bx bx-envelope"></i>
-          </div>
-          <hr />
-        </div>
+      <div class="content_2">
+        <h4>SHOPPING</h4>
+        <a href="#sellers">Clothing Store</a>
+        <a href="#sellers">Trending Shoes</a>
+        <a href="#sellers">Accessories</a>
+        <a href="#sellers">Sale</a>
       </div>
-      <div class="f-design">
-        <div class="f-design-txt container">
-          <p>Design and Code by code.sanket</p>
-        </div>
+      <div class="content_3">
+        <h4>SHOPPING</h4>
+        <a href="#contact">Contact Us</a>
+        <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
+        <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery</a>
+        <a href="https://codepen.io/sandeshbodake/full/Jexxrv" target="_blank">Return and Exchange</a>
       </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="./main.js"></script>
-  </body>
+      <div class="content_4">
+        <h4>NEWLETTER</h4>
+        <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+        <div class="f-mail">
+          <input type="email" placeholder="Your Email">
+          <i class='bx bx-envelope'></i>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="f-design">
+      <div class="f-design-txt container">
+        <p>Design and Developed By <a href="">Musaib</a> and All rights Reserved By <a
+            href="https://duhasoftwares.com/" target="_blank">Duha-Softwares</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script deffer src="./singleProduct.js"></script>
+</body>
+
 </html>
