@@ -17,42 +17,55 @@ document.addEventListener("DOMContentLoaded", function () {
       const row = document.createElement("tr");
       row.setAttribute("data-id", item.id);
 
+      // Ensure item price is a number
+      const price = parseFloat(item.price) || 0;
+
       row.innerHTML = `
         <td>
           <img src="${item.image}" alt="${item.name}" width="50">
         </td>
         <td>${item.name}</td>
-        <td>$${item.price.toFixed(2)}</td>
+        <td>$${price.toFixed(2)}</td>
         <td>
-          <button class="quantity-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
+          <button class="quantity-btn" onclick="changeQuantity(${
+            item.id
+          }, -1)">-</button>
           <span>${item.quantity}</span>
-          <button class="quantity-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+          <button class="quantity-btn" onclick="changeQuantity(${
+            item.id
+          }, 1)">+</button>
         </td>
-        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+        <td>$${(price * item.quantity).toFixed(2)}</td>
         <td><button onclick="removeItem(${item.id})">Remove</button></td>
       `;
-      
+
       cartItemsContainer.appendChild(row);
     });
 
     // Update the cart total after populating items
     updateTotal();
-
-    // Render pagination
-    renderPagination();
   }
 
+  // Function to change the quantity of an item
   // Function to change the quantity of an item
   window.changeQuantity = function (id, change) {
     const item = cart.find((item) => item.id === id);
     if (item) {
-      item.quantity = Math.max(1, item.quantity + change); // Ensure quantity stays >= 1
+     const currentQuantity = parseInt(item.quantity, 10) || 1;
+
+     // Adjust the quantity and ensure it's not less than 1
+     item.quantity = Math.max(1, currentQuantity + change);
+
+      // Log for debugging to see the current quantity before updating localStorage
+      console.log(`Item ID: ${id}, Updated Quantity: ${item.quantity}`);
 
       // Update the cart in localStorage
       localStorage.setItem("cart", JSON.stringify(cart));
 
       // Repopulate the cart after changing quantity
       populateCart();
+    } else {
+      console.error("Item not found in the cart.");
     }
   };
 
@@ -73,50 +86,58 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update the total cost of the cart
   function updateTotal() {
     const totalSpan = document.getElementById("cart-total");
-    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const total = cart.reduce(
+      (sum, item) => sum + (parseFloat(item.price) || 0) * item.quantity,
+      0
+    );
     totalSpan.textContent = total.toFixed(2);
-  }
-
-  // Function to render pagination
-  function renderPagination() {
-    const paginationContainer = document.getElementById("pagination");
-    paginationContainer.innerHTML = ""; // Clear previous pagination
-
-    const totalPages = Math.ceil(cart.length / itemsPerPage);
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = document.createElement("button");
-      pageButton.textContent = i;
-      pageButton.className = "pagination-btn";
-      pageButton.onclick = () => {
-        currentPage = i;
-        populateCart();
-      };
-      paginationContainer.appendChild(pageButton);
-    }
   }
 
   // Checkout button click handler
   document.getElementById("checkout-btn").addEventListener("click", () => {
     if (cart.length > 0) {
       const total = document.getElementById("cart-total").textContent;
-      const whatsappNumber = '9541270349';
-      const itemDetails = cart.map(item => `${item.name} (x${item.quantity}): $${(item.price * item.quantity).toFixed(2)}`).join('\n');
+      const whatsappNumber = "9541270349";
+      const itemDetails = cart
+        .map(
+          (item) =>
+            `${item.name} (x${item.quantity}): $${(
+              parseFloat(item.price) * item.quantity
+            ).toFixed(2)}`
+        )
+        .join("\n");
       const message = `Checkout:\n${itemDetails}\nTotal: $${total}`;
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        message
+      )}`;
+
+      // Confirm order before redirecting
+      Swal.fire({
+        title: "Confirm Order",
+        text: `You are about to checkout:\n${itemDetails}\nTotal: $${total}`,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, proceed!",
+        cancelButtonText: "No, cancel!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open(whatsappUrl, "_blank");
+        }
+      });
     } else {
-          Swal.fire({
-      icon: "error",
-      title: "Alert",
-      text: "Your cart is empty.",
-    });
+      Swal.fire({
+        icon: "error",
+        title: "Alert",
+        text: "Your cart is empty.",
+      });
     }
   });
 
   // Populate the cart on page load
   populateCart();
-})
-//populate products
+});
+
+// Populate products
 $(document).ready(function () {
   $("a").on("click", function (event) {
     if (this.hash !== "") {
@@ -134,21 +155,19 @@ $(document).ready(function () {
       );
     }
   });
+
+  $(".menu-items a").click(function () {
+    $("#checkbox").prop("checked", false);
+  });
+
+  // Fetch data from db.json
+  fetch("./newArivals.json")
+    .then((response) => response.json())
+    .then((data) => {
+      populateProducts(data.newArrivals, "#new-arrivals .best-seller");
+    })
+    .catch((error) => console.error("Error:", error));
 });
-
-$(".menu-items a").click(function () {
-  $("#checkbox").prop("checked", false);
-});
-
-// Fetch data from db.json
-// Fetch data from db.json
-fetch("./newArivals.json")
-  .then((response) => response.json())
-  .then((data) => {
-    populateProducts(data.newArrivals, "#new-arrivals .best-seller");
-  })
-  .catch((error) => console.error("Error:", error));
-
 
 // Function to populate products in any section (reusable for top sales, new arrivals, etc.)
 function populateProducts(products, containerSelector) {
@@ -173,7 +192,7 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-          &dollar;${product.price}
+          &dollar;${parseFloat(product.price).toFixed(2)}
           <div class="colors">
             ${product.colors
               .map(
@@ -184,7 +203,11 @@ function populateProducts(products, containerSelector) {
           </div>
         </div>
         <div class="add-to-cart">
-          <button onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}','${product.quantity}')">Add to Cart</button>
+          <button onclick="addToCart(${product.id}, '${
+        product.name
+      }', ${parseFloat(product.price).toFixed(2)}, '${product.image}','${
+        product.quantity
+      }')">Add to Cart</button>
         </div>
       </div>
     </div>`
@@ -208,15 +231,15 @@ function getRatingStars(rating) {
 function viewProduct(id, name, image, price, description, rating, colors) {
   window.location.href = `singleProduct.html?id=${id}&name=${encodeURIComponent(
     name
-  )}&image=${encodeURIComponent(
-    image
-  )}&price=${price}&description=${encodeURIComponent(
+  )}&image=${encodeURIComponent(image)}&price=${parseFloat(price).toFixed(
+    2
+  )}&description=${encodeURIComponent(
     description
   )}&rating=${rating}&colors=${encodeURIComponent(colors)}`;
 }
 
 // Function to add products to the cart
-function addToCart(id, name, price, image,quantity) {
+function addToCart(id, name, price, image, quantity) {
   // Get the current cart from localStorage (if any)
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -224,54 +247,30 @@ function addToCart(id, name, price, image,quantity) {
   const isProductInCart = cart.some((product) => product.id === id);
 
   if (isProductInCart) {
-       Swal.fire({
+    Swal.fire({
       icon: "error",
       title: "Alert",
-      text: "Item already in cart",
+      text: "Item already in the cart.",
     });
   } else {
-    // Add new product to the cart
+    // Create a new product object and add it to the cart
     const newProduct = {
       id: id,
       name: name,
-      price: price,
+      price: parseFloat(price), // Ensure price is a number
       image: image,
-      quantity: quantity, // Add quantity key in case you need it
+      quantity: quantity || 1, // Default quantity to 1 if not provided
     };
+
     cart.push(newProduct);
 
-    // Update the cart in localStorage
+    // Save the updated cart to localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    //  updateCartCount() 
-    // Alert and confirm addition to the cart
-        Swal.fire({
+
+    Swal.fire({
       icon: "success",
-      title: "Sucesss",
-      text: "Item added to cart successfully",
+      title: "Added to Cart",
+      text: `${name} has been added to your cart!`,
     });
-  }
-}
-// Function to update cart count
-function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const totalCount = cart.reduce((count, item) => count + item.quantity, 0);
-  document.querySelector("#cart-count").textContent = totalCount;
-}
-// Function to load cart data on the cart page
-function loadCartItems() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const cartContainer = document.getElementById("cart-container");
-  
-  if (cart.length === 0) {
-    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
-  } else {
-    cartContainer.innerHTML = cart.map(item => `
-      <div class="cart-item">
-        <img src="${item.image}" alt="${item.name}" />
-        <p>${item.name}</p>
-        <p>Price: $${item.price}</p>
-        <p>Quantity: ${item.quantity}</p>
-      </div>
-    `).join("");
   }
 }
