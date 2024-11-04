@@ -75,7 +75,7 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-          &dollar;${product.price}
+          ₹${product.price}
           <div class="colors">
             ${product.colors
               .map(
@@ -174,7 +174,7 @@ function loadCartItems() {
       <div class="cart-item">
         <img src="${item.image}" alt="${item.name}" />
         <p>${item.name}</p>
-        <p>Price: $${item.price}</p>
+        <p>Price: ₹${item.price}</p>
         <p>Quantity: ${item.quantity}</p>
       </div>
     `
