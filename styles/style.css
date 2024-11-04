@@ -54,6 +54,7 @@ body {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.945);
   margin: 0 10px;
+  font-size: 16px;
 }
 
 /* //........ Navbar ........// */
@@ -82,7 +83,10 @@ body {
 .navbar img {
   margin-left: 3rem;
 }
-
+    .navbar-container .logo img {
+      right: 15px;
+      max-height: 60px;
+    }
 .menu-items {
   order: 2;
   display: flex;
@@ -215,7 +219,7 @@ body {
     position: absolute;
     top: 10px;
     right: 15px;
-    margin-top: 8px;
+    max-height: 50px;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
@@ -264,12 +268,15 @@ body {
   top: 37%;
   left: 5%;
 }
+/* .home_txt .collection{
+  font-size: 30px;
+} */
 
 .home_txt p {
   color: var(--primary-color);
   font-weight: 600;
   padding-bottom: 20px;
-  letter-spacing: 1.5px;
+  letter-spacing: .5px;
 }
 
 .home_txt h2 {
@@ -632,7 +639,12 @@ body {
   height: 370px;
   /* border: 2px solid black; */
 }
-
+.home_img{
+  .homeImg{
+    height: 550px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
 .seller .best-p1 img {
   height: 250px;
   width: 250px;
@@ -1127,12 +1139,16 @@ iframe {
 
 @media (max-width: 500px) {
   .head {
-    display: none;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.945);
+  padding: 10px 0;
+  font-size: 14px;
   }
 
   .top-txt .head p,
   .top-txt .head a {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .home_txt h2,
@@ -1142,7 +1158,7 @@ iframe {
 
   .home_txt {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 5%;
     font-size: 12px;
   }
@@ -1198,12 +1214,17 @@ iframe {
 
 @media (min-width: 501px) and (max-width: 768px) {
   .head {
-    display: none;
+       display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, 0.945);
+      /* padding: 10px 0; */
+      font-size: 14px;
   }
 
   .top-txt .head p,
   .top-txt .head a {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .home_txt h2,
@@ -1213,7 +1234,7 @@ iframe {
 
   .home_txt {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 5%;
     font-size: 12px;
   }
@@ -1275,6 +1296,22 @@ iframe {
 /* //....... Media Queries For Contact .......// */
 
 @media (max-width: 500px) {
+      .home_txt h2,
+        .home_txt .home_label p {
+          font-size: 0.6rem;
+          font-weight: 500;
+          line-height: 11px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          color: var(--light-black);
+          display: block !important;
+        }
+  .home_img {
+      .homeImg {
+        height: 350px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    }
   .form {
     display: flex;
     flex-direction: column;
@@ -1297,6 +1334,12 @@ iframe {
 }
 
 @media (min-width: 501px) and (max-width: 768px) {
+  .home_img {
+      .homeImg {
+        height: 400px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    }
   .form {
     display: flex;
     flex-direction: column;
