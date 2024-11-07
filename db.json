@@ -1,180 +1,171 @@
 {
   "collections": [
-    {
-      "id": 1,
-      "name": "Apricots",
-      "image": "./assets/apricot.png",
-      "link": "#sellers",
-      "units": 100,
-      "description": "Delicious dried apricots, rich in flavor.",
-       "quantity": 1
-    },
-    {
-      "id": 2,
-      "name": "Black Dried Sultanas",
-      "image": "./assets/black-dried-sultanas.jpg",
-      "link": "#sellers",
-      "units": 50,
-      "description": "Sweet and chewy black sultanas.",
-       "quantity": 1
-    },
-    {
-      "id": 3,
-      "name": "Blueberries",
-      "image": "./assets/blueberry.jpg",
-      "link": "#sellers",
-      "units": 200,
-      "description": "Premium dried blueberries for snacks.",
-       "quantity": 1
-    }
-  ],
+  {
+    "id": 1,
+    "name": "Dried Apricots",
+    "image": "./assets/apricot.png",
+    "link": "#sellers",
+    "unit": 100,
+    "description": "Dried apricots packed with flavor and natural sweetness. A perfect snack to support your health with antioxidants, vitamins, and dietary fiber.",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Black Dried Sultanas",
+    "image": "./assets/black-dried-sultanas.jpg",
+    "link": "#sellers",
+    "unit": 50,
+    "description": "Sweet and chewy black sultanas, rich in natural sugars and essential nutrients. Ideal for snacking, baking, or adding to salads for extra flavor.",
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Dried Blueberries",
+    "image": "./assets/blueberry.jpg",
+    "link": "#sellers",
+    "unit": 200,
+    "description": "Premium dried blueberries packed with antioxidants. A perfect snack to boost your energy, promote brain health, and satisfy your sweet cravings.",
+    "quantity": 1
+  }
+]
+,
   "topSales": [
-    {
-      "id": 4,
-      "name": "Acacia honey",
-      "image": "./assets/topSales/Acacia honey 550 per.webp",
-      "price": 550,
-      "colors": ["red", "blue", "white"],
-      "rating": 3,
-      "units": 20,
-      "description": "Tangy cranberries, perfect for baking.",
-      "quantity": 1
-    },
-    {
-      "id": 5,
-      "name": "Face scrub",
-      "image": "./assets/topSales/Face scrub 450rs.webp",
-      "price": 450,
-      "colors": [""],
-      "rating": 2,
-      "units": 15,
-      "description": "Dried kiwi slices with a tart taste.",
-      "quantity": 1
-    },
-    {
-      "id": 6,
-      "name": "Face wash",
-      "image": "./assets/topSales/Face wash 500rs per piece.webp",
-      "price": 500,
-      "colors": ["red", "blue", "white"],
-      "rating": 3,
-      "units": 20,
-      "description": "Traditional kehwa mix for a warming drink.",
-      "quantity": 1
-    },
-    {
-      "id": 7,
-      "name": "Honey roasted museli",
-      "image": "./assets/topSales/Honey roasted museli 1100rs per kg.webp",
-      "price": 1100,
-      "colors": ["green", "grey", "brown"],
-      "rating": 2,
-      "units": 15,
-      "description": "Nutritious muesli with honey flavor.",
-      "quantity": 1
-    }
+  {
+    "id": 4,
+    "name": "Acacia Honey",
+    "image": "./assets/topSales/Acacia honey 550 per.webp",
+    "price": 550,
+    "colors": ["red", "blue", "white"],
+    "rating": 3,
+    "unit": "500 g",
+    "description": "Pure acacia honey with a mild and sweet flavor. Known for its natural antibacterial properties, this honey is perfect for sweetening your drinks, spreads, or adding to desserts.",
+    "quantity": 1
+  },
+  {
+    "id": 5,
+    "name": "Face Scrub",
+    "image": "./assets/topSales/Face scrub 450rs.webp",
+    "price": 450,
+    "colors": [""],
+    "rating": 2,
+    "unit": "15 g",
+    "description": "A rejuvenating face scrub made with natural ingredients to cleanse and exfoliate, leaving your skin feeling fresh and radiant. Ideal for all skin types.",
+    "quantity": 1
+  },
+  {
+    "id": 6,
+    "name": "Face Wash",
+    "image": "./assets/topSales/Face wash 500rs per piece.webp",
+    "price": 500,
+    "colors": ["red", "blue", "white"],
+    "rating": 3,
+    "unit": "20 ml",
+    "description": "Gentle face wash with natural herbs, perfect for daily cleansing. Removes impurities and helps maintain a healthy, glowing complexion.",
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "name": "Honey Roasted Muesli",
+    "image": "./assets/topSales/Honey roasted museli 1100rs per kg.webp",
+    "price": 1100,
+    "colors": ["green", "grey", "brown"],
+    "rating": 2,
+    "unit": "1 kg",
+    "description": "Crunchy and nutritious honey roasted muesli made with premium ingredients, perfect for a healthy breakfast or snack to start your day.",
+    "quantity": 1
+  }
+
   ],
   "newArrivals": [
-    {
-      "id": 8,
-      "name": "Kashmiri kesar",
-      "image": "./assets/topSales/Kashmiri kesar 300rs per gram.webp",
-      "price": 300,
-      "colors": ["black", "blue", "brown"],
-      "rating": 5,
-      "units": 30,
-      "description": "Pure honey infused with saffron.",
-      "quantity": 1
-    },
-    {
-      "id": 9,
-      "name": "Kesari milk masala",
-      "image": "./assets/topSales/Kesari milk masala 350rs per.webp",
-      "price": 350,
-      "colors": ["black", "blue", "brown"],
-      "rating": 5,
-      "units": 30,
-      "description": "Natural honey from wildflowers.",
-      "quantity": 1
-    },
-    {
-      "id": 10,
-      "name": "Mongra saffron",
-      "image": "./assets/topSales/Mongra saffron 300rs per gram.webp",
-      "price": 300,
-      "colors": ["black", "blue", "brown"],
-      "rating": 5,
-      "units": 30,
-      "description": "Crunchy and nutritious almonds.",
-      "quantity": 1
-    },
-    {
-      "id": 11,
-      "name": "Rose water edible",
-      "image": "./assets/topSales/Rose water edible 300 per.webp",
-      "price": 300,
-      "colors": ["black", "blue", "brown"],
-      "rating": 5,
-      "units": 30,
-      "description": "Fresh walnut kernels, perfect for snacking.",
-      "quantity": 1
-    }
-  ],
+  {
+    "id": 8,
+    "name": "Kashmiri Kesar",
+    "image": "./assets/topSales/Kashmiri kesar 300rs per gram.webp",
+    "price": 300,
+    "colors": ["black", "blue", "brown"],
+    "rating": 5,
+    "unit": "1 gram",
+    "description": "Premium Kashmiri saffron known for its rich color and distinct flavor. Ideal for enhancing the taste and aroma of your dishes, desserts, and beverages while providing health benefits like boosting immunity.",
+    "quantity": 1
+  },
+  {
+    "id": 9,
+    "name": "Kesari Milk Masala",
+    "image": "./assets/topSales/Kesari milk masala 350rs per.webp",
+    "price": 350,
+    "colors": ["black", "blue", "brown"],
+    "rating": 5,
+    "unit": "30 g",
+    "description": "A fragrant blend of saffron and spices, perfect for preparing rich and aromatic Kesari milk. Offers a comforting and healthy drink with natural antioxidants and calming properties.",
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "name": "Mongra Saffron",
+    "image": "./assets/topSales/Mongra saffron 300rs per gram.webp",
+    "price": 300,
+    "colors": ["black", "blue", "brown"],
+    "rating": 5,
+    "unit": "1 gram",
+    "description": "High-quality Mongra saffron known for its purity and potent flavor. A must-have ingredient to elevate your cooking and beverages, providing numerous health benefits such as aiding digestion and improving mood.",
+    "quantity": 1
+  },
+  {
+    "id": 11,
+    "name": "Edible Rose Water",
+    "image": "./assets/topSales/Rose water edible 300 per.webp",
+    "price": 300,
+    "colors": ["black", "blue", "brown"],
+    "rating": 5,
+    "unit": "30 ml",
+    "description": "Pure, edible rose water that adds a delicate fragrance and flavor to your dishes, desserts, and drinks. Known for its cooling properties, it helps with skin rejuvenation and digestion.",
+    "quantity": 1
+  }
+],
   "hotSales": [
-    {
-      "id": 12,
-      "name": "Saffron cream ",
-      "image": "./assets/topSales/Saffron cream 400rs per piece.webp",
-      "price": 400,
-      "colors": ["grey", "black", "blue"],
-      "rating": 5,
-      "units": 10,
-      "description": "Nourishing hair serum with saffron.",
-      "quantity": 1
-    },
-    {
-      "id": 13,
-      "name": "Saffron face serum",
-      "image": "./assets/topSales/Saffron face serum 750 per.webp",
-      "price": 750,
-      "colors": ["grey", "black", "blue"],
-      "rating": 5,
-      "units": 10,
-      "description": "Premium oil infused with saffron.",
-      "quantity": 1
-    },
-    {
-      "id": 14,
-      "name": "Saffron facial kit",
-      "image": "./assets/topSales/Saffron facial kit 1600rs.webp",
-      "price": 1600,
-      "colors": ["grey", "black", "blue"],
-      "rating": 5,
-      "units": 10,
-      "description": "Delicious pistachio-based sweet treat.",
-      "quantity": 1
-    },
-    {
-      "id": 15,
-      "name": "Saffron honey",
-      "image": "./assets/topSales/Saffron honey 600rs per piece.webp",
-      "price": 600,
-      "colors": ["grey", "black", "blue"],
-      "rating": 5,
-      "units": 10,
-      "description": "Natural Shilajit for vitality and energy.",
-      "quantity": 1
-    },
-    {
-      "id": 16,
-      "name": "Dried Peach",
-      "image": "./assets/peachdry.jpg",
-      "price": 43.67,
-      "colors": ["grey", "black", "blue"],
-      "rating": 5,
-      "units": 10,
-      "description": "Sweet and tangy dried peach slices.",
-      "quantity": 1
-    }
-  ]
+  {
+    "id": 12,
+    "name": "Cranberries",
+    "image": "./assets/crane berry.png",
+    "price": 37.24,
+    "colors": ["red", "blue", "white"],
+    "rating": 3,
+    "unit": "20 g",
+    "description": "Tangy and delicious dried cranberries, perfect for baking, salads, or snacking. Rich in antioxidants, they support urinary tract health and boost immunity.",
+    "quantity": 1
+  },
+  {
+    "id": 13,
+    "name": "Dried Kiwi",
+    "image": "./assets/kiwi.png",
+    "price": 17.24,
+    "colors": [""],
+    "rating": 2,
+    "unit": "15 g",
+    "description": "Tart and sweet dried kiwi slices, packed with vitamins and fiber. Great for snacking or adding to trail mixes and smoothies for a healthy boost.",
+    "quantity": 1
+  },
+  {
+    "id": 14,
+    "name": "Kehwa Masala",
+    "image": "./assets/kehwa masala.png",
+    "price": 37.24,
+    "colors": ["red", "blue", "white"],
+    "rating": 3,
+    "unit": "20 g",
+    "description": "Traditional Kashmiri Kehwa masala, a perfect blend of spices and saffron. Ideal for brewing a warm, soothing drink with rich flavors and health benefits like improved digestion.",
+    "quantity": 1
+  },
+  {
+    "id": 15,
+    "name": "Honey Muesli",
+    "image": "./assets/honeymuesli.jpg",
+    "price": 17.24,
+    "colors": ["green", "grey", "brown"],
+    "rating": 2,
+    "unit": "15 g",
+    "description": "Crunchy and nutritious muesli, sweetened with natural honey. A perfect, healthy breakfast option that boosts energy and provides a balanced source of fiber and antioxidants.",
+    "quantity": 1
+  }
+]
 }

@@ -7,7 +7,7 @@
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
-      "units": 30,
+      "unit": 30,
       "description": "Pure honey infused with saffron.",
       "quantity": 1
     },
@@ -18,7 +18,7 @@
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
-      "units": 30,
+      "unit": 30,
       "description": "Natural honey from wildflowers.",
       "quantity": 1
     },
@@ -29,7 +29,7 @@
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
-      "units": 30,
+      "unit": 30,
       "description": "Crunchy and nutritious almonds.",
       "quantity": 1
     },
@@ -40,7 +40,7 @@
       "price": 10.23,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
-      "units": 30,
+      "unit": 30,
       "description": "Fresh walnut kernels, perfect for snacking.",
       "quantity": 1
     }
