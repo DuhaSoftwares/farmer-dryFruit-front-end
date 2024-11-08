@@ -84,7 +84,7 @@
     "price": 300,
     "colors": ["black", "blue", "brown"],
     "rating": 5,
-    "unit": "1 gram",
+    "unit": "1 g",
     "description": "Premium Kashmiri saffron known for its rich color and distinct flavor. Ideal for enhancing the taste and aroma of your dishes, desserts, and beverages while providing health benefits like boosting immunity.",
     "quantity": 1
   },
@@ -106,7 +106,7 @@
     "price": 300,
     "colors": ["black", "blue", "brown"],
     "rating": 5,
-    "unit": "1 gram",
+    "unit": "1 g",
     "description": "High-quality Mongra saffron known for its purity and potent flavor. A must-have ingredient to elevate your cooking and beverages, providing numerous health benefits such as aiding digestion and improving mood.",
     "quantity": 1
   },
