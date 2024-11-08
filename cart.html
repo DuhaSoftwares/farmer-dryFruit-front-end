@@ -6,26 +6,44 @@
     <title>KongPosh</title>
     <link rel="stylesheet" href="./styles/cart.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
   </head>
 
   <body>
-    <section class=" top-txt ">
-      <div class="head container ">
-      <div class="head-txt">
-        <p>Contact us @ <a href="tel:+917006541433" target="_blank"><i class="bi bi-phone"></i> 7006541433</a> || <a
-            href="tel:+917051807964" target="_blank"><i class="bi bi-phone"></i> 7051807964</a></p>
-      </div>
-        <div class="sing_in_up">
-          <a href="https://www.instagram.com/kongposh.co.in?utm_source=qr&igsh=dDEybGEyN2NlaHpm" target="_blank"><i
-              class="bi bi-instagram"></i></a>
-          <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="mailto:kongposh06@gmail.com" target="_blank"><i class="bi bi-envelope-at-fill"></i></a>
+    <section class="top-txt">
+      <div class="head container">
+        <div class="head-txt">
+          <p>
+            Contact us @
+            <a href="tel:+917006541433" target="_blank">
+              <i class="bi bi-phone"></i> 7006541433
+            </a>
+            ||
+            <a href="tel:+917051807964" target="_blank">
+              <i class="bi bi-phone"></i> 7051807964
+            </a>
+          </p>
         </div>
-    
+        <div class="sign_in_up">
+          <a
+            href="https://www.instagram.com/kongposh.co.in?utm_source=qr&igsh=dDEybGEyN2NlaHpm"
+            target="_blank"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="mailto:kongposh06@gmail.com" target="_blank">
+            <i class="bi bi-envelope-at-fill"></i>
+          </a>
+        </div>
       </div>
     </section>
+
     <nav class="navbar">
       <div class="navbar-container">
         <input type="checkbox" name="" id="checkbox" />
@@ -47,97 +65,137 @@
     </nav>
     <!-- make a acart  -->
 
-<section id="cart">
-  <div class="container">
-    <h2>Your Cart</h2>
-    <div class="table-responsive">
-      <table id="cart-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="cart-items">
-          <!-- Cart items will be dynamically populated here -->
-        </tbody>
-      </table>
-    </div>
-    <div class="cart-summary">
-      <h3>Total: $<span id="cart-total">0.00</span></h3>
-      <button id="checkout-btn">Order Now</button>
-    </div>
-    <div id="pagination" class="pagination">
-      <!-- Pagination buttons will be dynamically populated here -->
-    </div>
-  </div>
-</section>
-    <section id="sellers">
-        <div id="new-arrivals" class="seller container">
-          <h2>New Arrivals</h2>
-          <div class="best-seller"></div>
+    <section id="cart">
+      <div class="container">
+        <h2>Your Cart</h2>
+        <div class="table-responsive">
+          <table id="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <!-- Cart items will be dynamically populated here -->
+            </tbody>
+          </table>
         </div>
+        <div class="cart-summary">
+          <h3>Total: ₹<span id="cart-total">0.00</span></h3>
+          <p>100 Rupees Shipping Charges Per Kg</p>
+          <button id="checkout-btn">Order Now</button>
+        </div>
+        <div id="pagination" class="pagination">
+          <!-- Pagination buttons will be dynamically populated here -->
+        </div>
+      </div>
     </section>
-  <footer>
-    <div class="footer-container container">
-      <div class="content_1">
-        <img src="https://i.postimg.cc/htGyQ4JB/footer-logo.png" alt="Kashmir Dry Fruits Logo">
-        <p>Bringing you the finest selection of premium Kashmiri dry fruits, known for their unmatched quality and
-          authenticity. Our commitment to quality ensures you experience the true essence of Kashmir in every bite.</p>
-        <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="Accepted Payment Methods">
+    <section id="sellers">
+      <div id="new-arrivals" class="seller container">
+        <h2>New Arrivals</h2>
+        <div class="best-seller"></div>
       </div>
-  
-      <div class="content_2">
-        <h4>SHOP OUR COLLECTION</h4>
-        <a href="#sellers">Kashmiri Walnuts</a>
-        <a href="#sellers">Almonds & Saffron</a>
-        <a href="#sellers">Dried Fruits & Berries</a>
-        <a href="#sellers">Gift Boxes</a>
-      </div>
-  
-      <div class="content_3">
-        <h4>SUPPORT</h4>
-        <a href="#contact">Contact Us</a>
-        <a href="https://payment-method-sb.netlify.app/" target="_blank">Payment Method</a>
-        <a href="https://delivery-status-sb.netlify.app/" target="_blank">Delivery Information</a>
-        <a href="https://codepen.io/sandeshbodake/full/Jexxrv" target="_blank">Return & Exchange</a>
-      </div>
-  
-      <div class="content_4">
-        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-        <p>Stay updated on our latest offerings of authentic Kashmiri dry fruits, seasonal collections, and exclusive
-          discounts!</p>
-        <div class="f-mail">
-          <input type="email" placeholder="Your Email">
-          <i class='bx bx-envelope'></i>
+    </section>
+    <footer>
+      <div class="footer-container container">
+        <div class="content_1">
+          <img
+            src="https://i.postimg.cc/htGyQ4JB/footer-logo.png"
+            alt="Kashmir Dry Fruits Logo"
+          />
+          <p>
+            Bringing you the finest selection of premium Kashmiri dry fruits,
+            known for their unmatched quality and authenticity. Our commitment
+            to quality ensures you experience the true essence of Kashmir in
+            every bite.
+          </p>
+          <img
+            src="https://i.postimg.cc/Nj9dgJ98/cards.png"
+            alt="Accepted Payment Methods"
+          />
         </div>
-        <hr>
+
+        <div class="content_2">
+          <h4>SHOP OUR COLLECTION</h4>
+          <a href="#sellers">Kashmiri Walnuts</a>
+          <a href="#sellers">Almonds & Saffron</a>
+          <a href="#sellers">Dried Fruits & Berries</a>
+          <a href="#sellers">Gift Boxes</a>
+        </div>
+
+        <div class="content_3">
+          <h4>SUPPORT</h4>
+          <a href="#contact">Contact Us</a>
+          <a href="https://payment-method-sb.netlify.app/" target="_blank"
+            >Payment Method</a
+          >
+          <a href="https://delivery-status-sb.netlify.app/" target="_blank"
+            >Delivery Information</a
+          >
+          <a href="https://codepen.io/sandeshbodake/full/Jexxrv" target="_blank"
+            >Return & Exchange</a
+          >
+        </div>
+
+        <div class="content_4">
+          <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+          <p>
+            Stay updated on our latest offerings of authentic Kashmiri dry
+            fruits, seasonal collections, and exclusive discounts!
+          </p>
+          <div class="f-mail">
+            <input type="email" placeholder="Your Email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <hr />
+        </div>
       </div>
-    </div>
-  
-    <div class="contact-info">
-      <div class="head-txt">
-        <p>Contact us <a href="tel:+919541270349"><i class="bi bi-phone"></i> 7006541433</a></p>
+
+      <div class="contact-info">
+        <div class="head-txt">
+          <p>
+            Contact us
+            <a href="tel:+917006541433" target="_blank">
+              <i class="bi bi-phone"></i> 7006541433
+            </a>
+            ||
+            <a href="tel:+917051807964" target="_blank">
+              <i class="bi bi-phone"></i> 7051807964
+            </a>
+          </p>
+        </div>
+        <div class="sign_in_up">
+          <a
+            href="https://www.instagram.com/kongposh.co.in?utm_source=qr&igsh=dDEybGEyN2NlaHpm"
+            target="_blank"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="mailto:kongposh06@gmail.com">
+            <i class="bi bi-envelope-at-fill"></i>
+          </a>
+        </div>
       </div>
-      <div class="sing_in_up">
-        <a href="https://www.instagram.com/kongposh.co.in?utm_source=qr&igsh=dDEybGEyN2NlaHpm" target="_blank"><i
-            class="bi bi-instagram"></i></a>
-        <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
-        <a href="mailto:kongposh06@gmail.com"><i class="bi bi-envelope-at-fill"></i></a>
+      <div class="f-design">
+        <div class="f-design-txt container">
+          <p>
+            Design and Developed By <a href="#">Musaib</a> | All rights reserved
+            by
+            <a href="https://duhasoftwares.com/" target="_blank"
+              >Duha-Softwares</a
+            >
+          </p>
+        </div>
       </div>
-    </div>
-  
-    <div class="f-design">
-      <div class="f-design-txt container">
-        <p>Design and Developed By <a href="#">Musaib</a> | All rights reserved by <a href="https://duhasoftwares.com/"
-            target="_blank">Duha-Softwares</a></p>
-      </div>
-    </div>
-  </footer>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="./cart.js"></script>

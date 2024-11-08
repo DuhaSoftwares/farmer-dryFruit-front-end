@@ -38,23 +38,55 @@ body {
 
 /* //........top text ........// */
 
+/* General styling for top-txt section */
 .top-txt {
-  background-color: var(--black);
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .head {
   display: flex;
   justify-content: space-between;
-  color: rgba(255, 255, 255, 0.945);
-  padding: 10px 0;
-  font-size: 14px;
+  align-items: center;
+  padding: 0 20px;
 }
 
-.head a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.945);
-  margin: 0 10px;
+/* Styling for the contact links */
+.head-txt p {
+  margin: 0;
   font-size: 16px;
+  color: #333;
+}
+
+.head-txt a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 600;
+}
+
+.head-txt a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for social media and email icons */
+.sign_in_up a {
+  color: #333;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.sign_in_up a:hover {
+  color: #007bff;
+}
+
+/* Hide on small devices */
+@media (max-width: 768px) {
+  .top-txt {
+    display: none;
+  }
 }
 
 /* //........ Navbar ........// */
@@ -83,10 +115,10 @@ body {
 .navbar img {
   margin-left: 3rem;
 }
-    .navbar-container .logo img {
-      right: 15px;
-      max-height: 60px;
-    }
+.navbar-container .logo img {
+  right: 15px;
+  max-height: 60px;
+}
 .menu-items {
   order: 2;
   display: flex;
@@ -276,7 +308,7 @@ body {
   color: var(--primary-color);
   font-weight: 600;
   padding-bottom: 20px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .home_txt h2 {
@@ -639,10 +671,11 @@ body {
   height: 370px;
   /* border: 2px solid black; */
 }
-.home_img{
-  .homeImg{
+.home_img {
+  .homeImg {
     height: 550px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
 }
 .seller .best-p1 img {
@@ -1139,11 +1172,11 @@ iframe {
 
 @media (max-width: 500px) {
   .head {
-  display: flex;
-  justify-content: space-between;
-  color: rgba(255, 255, 255, 0.945);
-  padding: 10px 0;
-  font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.945);
+    padding: 10px 0;
+    font-size: 14px;
   }
 
   .top-txt .head p,
@@ -1214,12 +1247,12 @@ iframe {
 
 @media (min-width: 501px) and (max-width: 768px) {
   .head {
-       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: rgba(255, 255, 255, 0.945);
-      /* padding: 10px 0; */
-      font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.945);
+    /* padding: 10px 0; */
+    font-size: 14px;
   }
 
   .top-txt .head p,
@@ -1286,6 +1319,73 @@ iframe {
     padding-top: 40px;
   }
 }
+/* General styling for contact-info container */
+.contact-info {
+  display: flex;
+
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: center;
+}
+
+/* Styling for the contact links */
+.contact-info .head-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info .head-txt p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info .head-txt a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 600;
+}
+
+.contact-info .head-txt a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for social media and email icons */
+
+.contact-info .sign_in_up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info .sign_in_up a {
+  color: #333;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.contact-info .sign_in_up a:hover {
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-info .head-txt,
+  .contact-info .sign_in_up {
+    margin-bottom: 8px;
+  }
+}
 
 @media (orientation: landscape) and (max-height: 500px) {
   .header {
@@ -1296,22 +1396,23 @@ iframe {
 /* //....... Media Queries For Contact .......// */
 
 @media (max-width: 500px) {
-      .home_txt h2,
-        .home_txt .home_label p {
-          font-size: 0.6rem;
-          font-weight: 500;
-          line-height: 11px;
-          letter-spacing: 1px;
-          font-weight: 600;
-          color: var(--light-black);
-          display: block !important;
-        }
+  .home_txt h2,
+  .home_txt .home_label p {
+    font-size: 0.6rem;
+    font-weight: 500;
+    line-height: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--light-black);
+    display: block !important;
+  }
   .home_img {
-      .homeImg {
-        height: 350px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      }
+    .homeImg {
+      height: 350px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
+  }
   .form {
     display: flex;
     flex-direction: column;
@@ -1335,11 +1436,12 @@ iframe {
 
 @media (min-width: 501px) and (max-width: 768px) {
   .home_img {
-      .homeImg {
-        height: 400px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      }
+    .homeImg {
+      height: 400px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
+  }
   .form {
     display: flex;
     flex-direction: column;

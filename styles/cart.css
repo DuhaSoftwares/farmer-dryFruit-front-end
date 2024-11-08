@@ -89,10 +89,14 @@
 
 .cart-summary h3 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: var(--light-black);
 }
-
+.cart-summary p {
+  color: var(--light-black);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 #checkout-btn {
   background-color: #4caf50;
   color: white;

@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${item.image}" alt="${item.name}" width="50">
         </td>
         <td>${item.name}</td>
-        <td>$${price.toFixed(2)}</td>
+        <td>₹${price.toFixed(2)}</td>
         <td>
           <button class="quantity-btn" onclick="changeQuantity(${
             item.id
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             item.id
           }, 1)">+</button>
         </td>
-        <td>$${(price * item.quantity).toFixed(2)}</td>
+        <td>₹${(price * item.quantity).toFixed(2)}</td>
         <td><button onclick="removeItem(${item.id})">Remove</button></td>
       `;
 
@@ -101,12 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemDetails = cart
         .map(
           (item) =>
-            `${item.name} (x${item.quantity}): $${(
+            `${item.name} (x${item.quantity}): ₹${(
               parseFloat(item.price) * item.quantity
             ).toFixed(2)}`
         )
         .join("\n");
-      const message = `Checkout:\n${itemDetails}\nTotal: $${total}`;
+      const message = `Checkout:\n${itemDetails}\nTotal: ₹${total}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         message
       )}`;
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Confirm order before redirecting
       Swal.fire({
         title: "Confirm Order",
-        text: `\nTotal Amount: $${total}`,
+        text: `\nTotal Amount: ₹${total}`,
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Yes, proceed!",
