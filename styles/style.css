@@ -253,7 +253,12 @@ body {
     right: 15px;
     max-height: 50px;
   }
-
+.content_1 img{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 300px;
+}
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
   }
@@ -1012,8 +1017,8 @@ footer {
 }
 
 .footer-container .content_1 img {
-  height: 25px;
-  width: 180px;
+  height: 70px;
+  width: 200px;
 }
 
 .footer-container {

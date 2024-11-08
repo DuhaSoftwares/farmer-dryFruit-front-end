@@ -192,14 +192,9 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-          &dollar;${parseFloat(product.price).toFixed(2)}
+           ₹${parseFloat(product.price).toFixed(2)}
           <div class="colors">
-            ${product.colors
-              .map(
-                (color) =>
-                  `<i class='bi bi-circle-fill' style='color:${color}'></i>`
-              )
-              .join("")}
+            <p> ${product.unit}</p>
           </div>
         </div>
         <div class="add-to-cart">
@@ -228,14 +223,14 @@ function getRatingStars(rating) {
 }
 
 // Function to view the product details
-function viewProduct(id, name, image, price, description, rating, colors) {
+function viewProduct(id, name, image, price, description, rating, unit) {
   window.location.href = `singleProduct.html?id=${id}&name=${encodeURIComponent(
     name
   )}&image=${encodeURIComponent(image)}&price=${parseFloat(price).toFixed(
     2
   )}&description=${encodeURIComponent(
     description
-  )}&rating=${rating}&colors=${encodeURIComponent(colors)}`;
+  )}&rating=${rating}&unit=${encodeURIComponent(unit)}`;
 }
 
 // Function to add products to the cart

@@ -72,14 +72,9 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-          &dollar;${product.price}
+          ₹${product.price}
           <div class="colors">
-            ${product.colors
-              .map(
-                (color) =>
-                  `<i class='bi bi-circle-fill' style='color:${color}'></i>`
-              )
-              .join("")}
+           <p>${product.unit}</p>
           </div>
         </div>
         <div class="add-to-cart">

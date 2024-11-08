@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("product-name").textContent = product.name;
 
   // Update product brand (You can set this from your data source if needed)
-  document.getElementById("product-brand").textContent = "Brand Name"; // Set a static brand or retrieve from query params
+  document.getElementById("product-brand").textContent = "Product"; // Set a static brand or retrieve from query params
 
   // Update product price
-  document.getElementById("product-price").textContent = "$" + product.price;
+  document.getElementById("product-price").textContent = "₹" + product.price;
 
   // Update product description
   document.getElementById("product-description").textContent =
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update discount price and discount percentage if needed
   const discountPrice = parseFloat(product.price) * 1.5; // Example for discount price
   document.getElementById("product-discount-price").textContent =
-    "$" + discountPrice.toFixed(2);
+    "₹" + discountPrice.toFixed(2);
   document.getElementById("discount-off").textContent = "40% OFF"; // Adjust this as needed based on your logic
 });
 
@@ -95,14 +95,9 @@ function populateProducts(products, containerSelector) {
                   ${getRatingStars(product.rating)}
                 </div>
                 <div class="price">
-                  &dollar;${product.price}
+                  ₹${product.price}
                   <div class="colors">
-                    ${product.colors
-                      .map(
-                        (color) =>
-                          `<i class='bi bi-circle-fill' style='color:${color}'></i>`
-                      )
-                      .join("")}
+                    <p>${product.unit}</p>
                   </div>
                 </div>
                 <div class="add-to-cart">
@@ -131,14 +126,14 @@ function getRatingStars(rating) {
 }
 
 // Function to view the product details
-function viewProduct(id, name, image, price, description, rating, colors) {
+function viewProduct(id, name, image, price, description, rating, unit) {
   window.location.href = `singleProduct.html?id=${id}&name=${encodeURIComponent(
     name
   )}&image=${encodeURIComponent(
     image
   )}&price=${price}&description=${encodeURIComponent(
     description
-  )}&rating=${rating}&colors=${encodeURIComponent(colors)}`;
+  )}&rating=${rating}&unit=${encodeURIComponent(unit)}`;
 }
 
 // Function to add products to the cart
