@@ -35,7 +35,7 @@
     },
     {
       "id": 7,
-      "name": "Honey Muesli (Standard)",
+      "name": "Honey Muesli",
       "image": "./assets/honeymuesli.jpg",
       "price": 17.24,
       "colors": ["green", "grey", "brown"],

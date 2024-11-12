@@ -72,10 +72,7 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-          ₹${product.price}
-          <div class="colors">
-           <p>${product.unit}</p>
-          </div>
+          ₹${product.price}/${product.unit}
         </div>
         <div class="add-to-cart">
           <button onclick="addToCart(${product.id}, '${product.name}', ${
