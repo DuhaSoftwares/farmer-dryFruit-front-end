@@ -2,8 +2,8 @@
   "collections": [
   {
     "id": 1,
-    "name": "Dried Apricots",
-    "image": "./assets/apricot.png",
+    "name": "Sellers Choice",
+    "image": "./assets/dr1.webp",
     "link": "#sellers",
     "unit": 100,
     "description": "Dried apricots packed with flavor and natural sweetness. A perfect snack to support your health with antioxidants, vitamins, and dietary fiber.",
@@ -11,18 +11,18 @@
   },
   {
     "id": 2,
-    "name": "Black Dried Sultanas",
-    "image": "./assets/black-dried-sultanas.jpg",
-    "link": "#sellers",
+    "name": "New Arivals",
+    "image": "./assets/dr2.webp",
+    "link": "#new-arrivals",
     "unit": 50,
     "description": "Sweet and chewy black sultanas, rich in natural sugars and essential nutrients. Ideal for snacking, baking, or adding to salads for extra flavor.",
     "quantity": 1
   },
   {
     "id": 3,
-    "name": "Dried Blueberries",
-    "image": "./assets/blueberry.jpg",
-    "link": "#sellers",
+    "name": "Hot Sales",
+    "image": "./assets/dr3.webp",
+    "link": "#hot-sales",
     "unit": 200,
     "description": "Premium dried blueberries packed with antioxidants. A perfect snack to boost your energy, promote brain health, and satisfy your sweet cravings.",
     "quantity": 1
@@ -102,7 +102,7 @@
   {
     "id": 10,
     "name": "Mongra Saffron",
-    "image": "./assets/topSales/Mongra saffron 300rs per gram.webp",
+    "image": "./assets/topSales/Media.jfif",
     "price": 300,
     "colors": ["black", "blue", "brown"],
     "rating": 5,
@@ -126,7 +126,7 @@
   {
     "id": 12,
     "name": "Cranberries",
-    "image": "./assets/crane berry.png",
+    "image": "./assets/topSales/crane berry 1200 kg.webp",
     "price": 37.24,
     "colors": ["red", "blue", "white"],
     "rating": 3,
@@ -137,7 +137,7 @@
   {
     "id": 13,
     "name": "Dried Kiwi",
-    "image": "./assets/kiwi.png",
+    "image": "./assets/kiwi.webp",
     "price": 17.24,
     "colors": [""],
     "rating": 2,
@@ -148,7 +148,7 @@
   {
     "id": 14,
     "name": "Kehwa Masala",
-    "image": "./assets/kehwa masala.png",
+    "image": "./assets/kehwa masala.webp",
     "price": 37.24,
     "colors": ["red", "blue", "white"],
     "rating": 3,
@@ -159,7 +159,7 @@
   {
     "id": 15,
     "name": "Honey Muesli",
-    "image": "./assets/honeymuesli.jpg",
+    "image": "./assets/topSales/honey roasted muesli 1200 kg.webp",
     "price": 17.24,
     "colors": ["green", "grey", "brown"],
     "rating": 2,

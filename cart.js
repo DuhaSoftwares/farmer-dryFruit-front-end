@@ -192,10 +192,8 @@ function populateProducts(products, containerSelector) {
           ${getRatingStars(product.rating)}
         </div>
         <div class="price">
-           ₹${parseFloat(product.price).toFixed(2)}
-          <div class="colors">
-            <p> ${product.unit}</p>
-          </div>
+           ₹${parseFloat(product.price).toFixed(2)}/${product.unit}
+         
         </div>
         <div class="add-to-cart">
           <button onclick="addToCart(${product.id}, '${

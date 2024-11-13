@@ -852,10 +852,10 @@ body {
 
 .l-news1 .news1-conte {
   position: absolute;
-  bottom: -60%;
+  bottom: -65%;
   left: 7%;
   background: var(--white);
-  padding: 25px;
+  padding: 15px;
 }
 
 .l-news2 {
@@ -866,10 +866,10 @@ body {
 
 .l-news2 .news2-conte {
   position: absolute;
-  bottom: -60%;
+  bottom: -65%;
   left: 7%;
   background: var(--white);
-  padding: 25px;
+  padding: 15px;
 }
 
 .l-news3 {
@@ -883,7 +883,7 @@ body {
   bottom: -60%;
   left: 7%;
   background: var(--white);
-  padding: 25px;
+  padding: 15px;
 }
 
 .l-news1 .news1-conte .date-news1 p {
@@ -893,10 +893,10 @@ body {
 }
 
 .l-news1 .news1-conte .date-news1 h4 {
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  font-weight: 600;
-  padding-bottom: 15px;
+  font-weight: 500;
+  padding-bottom: 3px;
 }
 
 .l-news1 .news1-conte .date-news1 a {
@@ -934,10 +934,10 @@ body {
 }
 
 .l-news2 .news2-conte .date-news2 h4 {
-  font-size: 18px;
-  text-align: center;
-  font-weight: 600;
-  padding-bottom: 15px;
+   font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 3px;
 }
 
 .l-news2 .news2-conte .date-news2 a {
@@ -975,10 +975,10 @@ body {
 }
 
 .l-news3 .news3-conte .date-news3 h4 {
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
-  font-weight: 600;
-  padding-bottom: 15px;
+  font-weight: 500;
+  padding-bottom: 3px;
 }
 
 .l-news3 .news3-conte .date-news3 a {
