@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("checkout-btn").addEventListener("click", () => {
     if (cart.length > 0) {
       const total = document.getElementById("cart-total").textContent;
-      const whatsappNumber = "9541270349";
+      const whatsappNumber = "7006541433";
       const itemDetails = cart
         .map(
           (item) =>

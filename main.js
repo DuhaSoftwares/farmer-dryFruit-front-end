@@ -192,11 +192,76 @@ document
 
     // If all validations pass, send the message to WhatsApp
     if (isValid) {
-      const whatsappNumber = "9541270349"; // Replace with your WhatsApp number
+      const whatsappNumber = "7006541433"; // Replace with your WhatsApp number
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         "Name: " + name + "\nEmail: " + email + "\nMessage: " + message
       )}`;
       window.open(whatsappURL, "_blank");
     }
   });
+// Review Section
 
+// Main.js
+
+// Array to hold reviews
+let reviews = [];
+
+// Function to load reviews from array
+function loadReviews() {
+  const reviewsContainer = document.getElementById("reviews-container");
+  reviewsContainer.innerHTML = ""; // Clear current reviews
+
+  // Loop through stored reviews and display them
+  reviews.forEach((review, index) => {
+    const reviewDiv = document.createElement("div");
+    reviewDiv.classList.add("review-item");
+    reviewDiv.innerHTML = `
+                    <div class="review-content">
+                        <div class="review-header">
+                            <h4>${review.name}</h4>
+                            <span>${new Date(
+                              review.date
+                            ).toLocaleDateString()}</span>
+                        </div>
+                        <p>${review.message}</p>
+                        <div class="review-rating">
+                            ${"★".repeat(review.rating)}${"☆".repeat(
+      5 - review.rating
+    )}
+                        </div>
+                    </div>
+                    <button class="delete-btn" onclick="deleteReview(${index})"><i class="bi bi-trash"></i> Delete</button>
+                `;
+    reviewsContainer.appendChild(reviewDiv);
+  });
+}
+
+// Handle Review Form Submission
+document.getElementById("review-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  const name = document.getElementById("review-name").value;
+  const message = document.getElementById("review-message").value;
+  const rating = parseInt(document.getElementById("rating").value);
+  const date = new Date().toISOString();
+
+  // Create a new review object
+  const newReview = { name, message, rating, date };
+
+  // Add the new review to the list
+  reviews.push(newReview);
+
+  // Reload reviews to display the new one
+  loadReviews();
+
+  // Clear the form fields
+  document.getElementById("review-form").reset();
+});
+
+function deleteReview(index) {
+  reviews.splice(index, 1); // Remove the review from the array
+  loadReviews(); // Reload the reviews
+}
+
+// Load reviews when the page is loaded
+window.onload = loadReviews;
