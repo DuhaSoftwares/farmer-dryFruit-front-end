@@ -47,7 +47,7 @@
     "image": "./assets/topSales/Face scrub 450rs.webp",
     "price": 450,
     "colors": [""],
-    "rating": 2,
+    "rating":4,
     "unit": "15 g",
     "description": "A rejuvenating face scrub made with natural ingredients to cleanse and exfoliate, leaving your skin feeling fresh and radiant. Ideal for all skin types.",
     "quantity": 1
@@ -69,7 +69,7 @@
     "image": "./assets/topSales/Honey roasted museli 1100rs per kg.webp",
     "price": 1100,
     "colors": ["green", "grey", "brown"],
-    "rating": 2,
+    "rating": 4,
     "unit": "1 kg",
     "description": "Crunchy and nutritious honey roasted muesli made with premium ingredients, perfect for a healthy breakfast or snack to start your day.",
     "quantity": 1

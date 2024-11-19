@@ -16,30 +16,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
-            <script type="application/ld+json">
-                      {
-                        "@context": "https://schema.org",
-                        "@type": "Product",
-                        "name": "KongPosh Premium Dry Fruits",
-                        "description": "Premium quality dry fruits from Kashmir.",
-                        "review": [
-                          {
-                            "@type": "Review",
-                            "author": {
-                              "@type": "Person",
-                              "name": "John Doe"
-                            },
-                            "reviewBody": "KongPosh offers the best dry fruits I've ever had. The almonds were fresh, and the saffron was top quality!",
-                            "reviewRating": {
-                              "@type": "Rating",
-                              "ratingValue": "5",
-                              "bestRating": "5"
-                            },
-                            "datePublished": "2024-11-17"
-                          }
-                        ]
-                      }
-                    </script>
+        
 </head>
 
 <body>
@@ -234,38 +211,15 @@
             
             </section>
 <!-- Review Section -->
-<!-- Review Form Section -->
-<section id="news">
-    <div class="news-heading">
-        <p>Our Happy Customers</p>
-        <h2>Reviews</h2>
-    </div>
-
-    <!-- Form to Submit Review -->
-    <div class="review-form-container">
-        <form id="review-form">
-            <input type="text" id="review-name" placeholder="Your Name" required>
-            <textarea id="review-message" placeholder="Write your review" required></textarea>
-            <div class="rating">
-                <label for="rating">Rating:</label>
-                <select id="rating">
-                    <option value="1">1 Star</option>
-                    <option value="2">2 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="4">4 Stars</option>
-                    <option value="5" selected>5 Stars</option>
-                </select>
-            </div>
-            <button type="submit">Submit Review</button>
-        </form>
-    </div>
-
-    <!-- Displaying the Reviews -->
-    <div class="l-news container" id="reviews-container">
-        <!-- Reviews will be displayed here dynamically -->
-    </div>
+<section class="review-section">
+    <h2>Customer Reviews</h2>
+    <form class="review-form" id="reviewForm">
+        <input type="text" id="reviewerName" placeholder="Your Name" required>
+        <textarea id="reviewText" rows="4" placeholder="Write your review here..." required></textarea>
+        <button type="submit">Submit Review</button>
+    </form>
+    <div class="review-list" id="reviewList"></div>
 </section>
-
             
 <footer>
     <div class="footer-container container">
