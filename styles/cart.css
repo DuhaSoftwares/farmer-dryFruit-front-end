@@ -142,3 +142,6 @@
     font-size: 14px;
   }
 }
+img {
+  border-radius: 12.5% !important;
+}

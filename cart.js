@@ -264,6 +264,8 @@ function addToCart(id, name, price, image, quantity) {
       icon: "success",
       title: "Added to Cart",
       text: `${name} has been added to your cart!`,
+    }).then(() => {
+      window.location.reload();
     });
   }
 }

@@ -9,7 +9,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
+img {
+  border-radius: 12.5% !important;
+}
 .container {
   max-width: 1200px;
   width: 90%;
@@ -253,13 +255,13 @@ body {
     right: 15px;
     max-height: 50px;
   }
-.content_1 img{
+  .content_1 img {
     position: absolute;
     /* top: 10px; */
     display: none;
     right: 15px;
     height: 300px;
-}
+  }
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0);
   }
@@ -935,10 +937,10 @@ body {
 }
 
 .l-news2 .news2-conte .date-news2 h4 {
-   font-size: 12px;
-    text-align: center;
-    font-weight: 500;
-    padding-bottom: 3px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 3px;
 }
 
 .l-news2 .news2-conte .date-news2 a {
@@ -1197,7 +1199,7 @@ iframe {
 
   .home_txt {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 5%;
     font-size: 12px;
   }

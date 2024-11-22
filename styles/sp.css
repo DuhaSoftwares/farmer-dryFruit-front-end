@@ -244,6 +244,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 .half1 {
   width: 50%;
@@ -842,7 +843,6 @@ iframe {
   }
 }
 
-
 .image-container {
   position: relative;
   display: inline-block;
@@ -879,10 +879,10 @@ iframe {
 .eye-icon:hover::after {
   opacity: 1;
 }
- .navbar-container .logo img {
-   right: 15px;
-   max-height: 60px;
- }
+.navbar-container .logo img {
+  right: 15px;
+  max-height: 60px;
+}
 
 /* Hide the eye icon initially on large screens (lg and above) */
 @media (min-width: 992px) {
@@ -905,15 +905,85 @@ iframe {
 }
 @media (max-width: 768px) {
   .navbar-container .logo img {
-      top: 2;
-      right: 10px;
-      max-height: 50px;
-    }
-}
-@media (max-width: 500px) {
-.navbar-container .logo img {
-  top: 2;
+    top: 2;
     right: 10px;
     max-height: 50px;
   }
+}
+@media (max-width: 500px) {
+  .navbar-container .logo img {
+    top: 2;
+    right: 10px;
+    max-height: 50px;
+  }
+}
+/* General styling for contact-info container */
+.contact-info {
+  display: flex;
+
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: center;
+}
+
+/* Styling for the contact links */
+.contact-info .head-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info .head-txt p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info .head-txt a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 600;
+}
+
+.contact-info .head-txt a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for social media and email icons */
+
+.contact-info .sign_in_up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info .sign_in_up a {
+  color: #333;
+  font-size: 20px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.contact-info .sign_in_up a:hover {
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-info .head-txt,
+  .contact-info .sign_in_up {
+    margin-bottom: 8px;
+  }
+}
+img {
+  border-radius: 12.5% !important;
 }

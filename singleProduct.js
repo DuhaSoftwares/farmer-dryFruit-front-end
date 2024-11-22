@@ -134,12 +134,15 @@ function viewProduct(id, name, image, price, description, rating, unit) {
 }
 
 // Function to add products to the cart
-function addToCart(id, name, price, image, quantity) {
+function addToCart() {
+  // Get the product details from query parameters
+  const product = getQueryParams();
+
   // Get the current cart from localStorage (if any)
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   // Check if the product is already in the cart
-  const isProductInCart = cart.some((product) => product.id === id);
+  const isProductInCart = cart.some((item) => item.id === product.id);
 
   if (isProductInCart) {
     Swal.fire({
@@ -150,31 +153,33 @@ function addToCart(id, name, price, image, quantity) {
   } else {
     // Add new product to the cart
     const newProduct = {
-      id: id,
-      name: name,
-      price: price,
-      image: image,
-      quantity: quantity, // Add quantity key in case you need it
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1, // Default quantity
     };
     cart.push(newProduct);
 
     // Update the cart in localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    //  updateCartCount()
+
     // Alert and confirm addition to the cart
     Swal.fire({
       icon: "success",
-      title: "Sucesss",
+      title: "Success",
       text: "Item added to cart successfully",
     });
   }
 }
+
 // Function to update cart count
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const totalCount = cart.reduce((count, item) => count + item.quantity, 0);
   document.querySelector("#cart-count").textContent = totalCount;
 }
+
 // Function to load cart data on the cart page
 function loadCartItems() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
