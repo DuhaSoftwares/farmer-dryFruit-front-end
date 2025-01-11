@@ -104,10 +104,10 @@
       "id": 13,
       "name": "Saffron Honey",
       "image": "./assets/saffron honey.webp",
-      "price": 1200,
+      "price": 850,
       "colors": ["black", "blue", "brown"],
       "rating": 5,
-      "unit": "kg",
+      "unit": "500 g",
       "description": "Pure honey infused with saffron.",
       "quantity": 1
     },
