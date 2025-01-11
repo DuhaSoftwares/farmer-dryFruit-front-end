@@ -1084,6 +1084,13 @@ footer {
   font-size: 14px;
   color: var(--grey);
 }
+.f-design-txt a {
+  color: #007bff;
+  font-weight: 600;
+  font-size: 16px ;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
 
 /* //........ contact ...... // */
 
