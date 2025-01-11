@@ -1,47 +1,48 @@
 {
   "newArrivals": [
-    {
-      "id": 8,
-      "name": "Saffron Honey",
-      "image": "./assets/saffron honey.webp",
-      "price": 1200,
-      "colors": ["black", "blue", "brown"],
+    
+      {
+      "id": 32,
+      "name": "Pistachio",
+      "image": "./assets/topSales/pistachu 1400 kg.webp",
+      "price": 1400,
+      "colors": ["grey", "black", "blue"],
       "rating": 5,
-      "unit": "kg",
-      "description": "Pure honey infused with saffron.",
+      "unit": "1 kg",
+      "description": "Fresh, crunchy pistachio kernels, rich in healthy fats, protein, and fiber. A great addition to your diet for improving heart health.",
       "quantity": 1
     },
     {
-      "id": 9,
-      "name": "White Honey",
-      "image": "./assets/white honey.jpg",
-      "price": 800,
-      "colors": ["black", "blue", "brown"],
+      "id": 40,
+      "name": "Cashew",
+      "image": "./assets/topSales/cashew 1150 kg.webp",
+      "price": 1150,
+      "colors": ["grey", "black", "blue"],
       "rating": 5,
-      "unit": "kg",
-      "description": "Natural honey from wildflowers.",
+      "unit": "1 kg",
+      "description": "Delicious and crunchy Cashew Nuts rich in healthy fats, vitamins, and minerals that support heart health, boost immunity, and enhance brain function. A great addition to salads or trail mixes.",
       "quantity": 1
     },
-    {
-      "id": 10,
-      "name": "Almonds Shell",
-      "image": "./assets/almonds.webp",
-      "price": 600,
-      "colors": ["black", "blue", "brown"],
+       {
+      "id": 20,
+      "name": "Saffron Cream",
+      "image": "./assets/topSales/Saffron cream 400rs per piece.webp",
+      "price": 400,
+      "colors": ["grey", "black", "blue"],
       "rating": 5,
-      "unit": "kg",
-      "description": "Crunchy and nutritious almonds.",
+      "unit": "per piece",
+      "description": "Luxurious cream infused with pure saffron, known for its nourishing and revitalizing properties. Enhances skin texture and promotes a radiant glow.",
       "quantity": 1
     },
-    {
-      "id": 11,
-      "name": "Walnut Shell",
-      "image": "./assets/walnut giri.webp",
-      "price": 600,
-      "colors": ["black", "blue", "brown"],
+  {
+      "id": 22,
+      "name": "Saffron Facial Kit",
+      "image": "./assets/topSales/Saffron facial kit 1600rs.webp",
+      "price": 1600,
+      "colors": ["grey", "black", "blue"],
       "rating": 5,
-      "unit": "kg",
-      "description": "Fresh walnut kernels, perfect for snacking.",
+      "unit": "1 kit",
+      "description": "Complete facial kit with saffron-based products to provide a glowing, radiant complexion. Perfect for a luxurious home spa experience.",
       "quantity": 1
     }
   ]

@@ -296,6 +296,7 @@ body {
 
 .dis-price {
   text-decoration: line-through;
+    text-decoration-color: gray;
   margin: 10px 0;
 }
 

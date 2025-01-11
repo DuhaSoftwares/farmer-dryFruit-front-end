@@ -21,21 +21,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update product name
   document.getElementById("product-name").textContent = product.name;
 
-  // Update product brand (You can set this from your data source if needed)
+  // Update product brand
   document.getElementById("product-brand").textContent = "Product"; // Set a static brand or retrieve from query params
 
   // Update product price
-  document.getElementById("product-price").textContent = "₹" + product.price;
+  const originalPrice = parseFloat(product.price);
+  document.getElementById("product-price").textContent =
+    "₹" + originalPrice.toFixed(2);
 
   // Update product description
   document.getElementById("product-description").textContent =
     product.description;
 
-  // Update discount price and discount percentage if needed
-  const discountPrice = parseFloat(product.price) * 1.5; // Example for discount price
+  // Calculate discount price by adding 40% to the original price
+  const discountPercentage = 20; // The percentage to add
+  const discountMultiplier = (100 + discountPercentage) / 100;
+  const discountPrice = originalPrice * discountMultiplier;
+
+  // Update discount price and discount percentage
   document.getElementById("product-discount-price").textContent =
     "₹" + discountPrice.toFixed(2);
-  document.getElementById("discount-off").textContent = "40% OFF"; // Adjust this as needed based on your logic
+  document.getElementById("discount-off").textContent =
+    " " + discountPercentage + "% OFF"; // Updated text for clarity
 });
 
 //  populate products
@@ -83,9 +90,7 @@ function populateProducts(products, containerSelector) {
                   product.id
                 }', '${product.name}', '${product.image}', '${
         product.price
-      }', '${product.description}', '${product.rating}', '${product.colors.join(
-        ","
-      )}')"></i>
+      }', '${product.description}', '${product.rating}')"></i>
               </div>
               <div class="best-p1-txt">
                 <div class="name-of-p">

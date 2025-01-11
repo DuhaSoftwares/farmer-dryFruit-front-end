@@ -62,7 +62,7 @@ function populateProducts(products, containerSelector) {
           product.id
         }', '${product.name}', '${product.image}', '${product.price}', '${
         product.description
-      }', '${product.rating}', '${product.colors.join(",")}')"></i>
+      }', '${product.rating}', '${product.colors}')"></i>
       </div>
       <div class="best-p1-txt">
         <div class="name-of-p">

@@ -1,7 +1,162 @@
 {
   "topSales": [
     {
+      "id": 2,
+      "name": "Dried Kiwi",
+      "image": "./assets/kiwi.webp",
+      "price": 800,
+      "colors": [""],
+      "rating": 4,
+      "unit": "1 kg",
+      "description": "Tart and sweet dried kiwi slices, packed with vitamins and fiber. Great for snacking or adding to trail mixes and smoothies for a healthy boost.",
+      "quantity": 1
+    },
+  
+    {
       "id": 4,
+      "name": "Honey Muesli",
+      "image": "./assets/topSales/hone roasted musli 1400 500g.webp",
+      "price": 1400,
+      "colors": ["green", "grey", "brown"],
+      "rating": 4,
+      "unit": "500 g",
+      "description": "Crunchy and nutritious muesli, sweetened with natural honey. A perfect, healthy breakfast option that boosts energy and provides a balanced source of fiber and antioxidants.",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Kashmiri Kesar",
+      "image": "./assets/topSales/Kashmiri kesar 300rs per gram.webp",
+      "price": 300,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 g",
+      "description": "Premium Kashmiri saffron known for its rich color and distinct flavor. Ideal for enhancing the taste and aroma of your dishes, desserts, and beverages while providing health benefits like boosting immunity.",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Kesari Milk Masala",
+      "image": "./assets/topSales/Kesari milk masala 350rs per.webp",
+      "price": 350,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "30 g",
+      "description": "A fragrant blend of saffron and spices, perfect for preparing rich and aromatic Kesari milk. Offers a comforting and healthy drink with natural antioxidants and calming properties.",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Mongra Saffron",
+      "image": "./assets/topSales/Media.jfif",
+      "price": 300,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 g",
+      "description": "High-quality Mongra saffron known for its purity and potent flavor. A must-have ingredient to elevate your cooking and beverages, providing numerous health benefits such as aiding digestion and improving mood.",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "Edible Rose Water",
+      "image": "./assets/topSales/Rose water edible 300 per.webp",
+      "price": 300,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "30 ml",
+      "description": "Pure, edible rose water that adds a delicate fragrance and flavor to your dishes, desserts, and drinks. Known for its cooling properties, it helps with skin rejuvenation and digestion.",
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "name": "Acacia Honey",
+      "image": "./assets/topSales/Acacia honey 550 per.webp",
+      "price": 550,
+      "colors": ["red", "blue", "white"],
+      "rating": 3,
+      "unit": "500 g",
+      "description": "Pure acacia honey with a mild and sweet flavor. Known for its natural antibacterial properties, this honey is perfect for sweetening your drinks, spreads, or adding to desserts.",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "name": "Face Scrub",
+      "image": "./assets/topSales/Face scrub 450rs.webp",
+      "price": 450,
+      "colors": [""],
+      "rating":4,
+      "unit": "15 g",
+      "description": "A rejuvenating face scrub made with natural ingredients to cleanse and exfoliate, leaving your skin feeling fresh and radiant. Ideal for all skin types.",
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "name": "Face Wash",
+      "image": "./assets/topSales/Face wash 500rs per piece.webp",
+      "price": 500,
+      "colors": ["red", "blue", "white"],
+      "rating": 3,
+      "unit": "20 ml",
+      "description": "Gentle face wash with natural herbs, perfect for daily cleansing. Removes impurities and helps maintain a healthy, glowing complexion.",
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "name": "Saffron Honey",
+      "image": "./assets/saffron honey.webp",
+      "price": 1200,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "kg",
+      "description": "Pure honey infused with saffron.",
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "name": "White Honey",
+      "image": "./assets/white honey.jpg",
+      "price": 800,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "500 g",
+      "description": "Natural honey from wildflowers.",
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "name": "Almonds Shell",
+      "image": "./assets/almonds.webp",
+      "price": 600,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Crunchy and nutritious almonds.",
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "name": "Walnut Shell",
+      "image": "./assets/walnut giri.webp",
+      "price": 600,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Fresh walnut kernels, perfect for snacking.",
+      "quantity": 1
+    },
+      {
+      "id": 3,
+      "name": "Kehwa Masala",
+      "image": "./assets/kehwa masala.webp",
+      "price": 250,
+      "colors": ["red", "blue", "white"],
+      "rating": 4,
+      "unit": "200 g",
+      "description": "Traditional Kashmiri Kehwa masala, a perfect blend of spices and saffron. Ideal for brewing a warm, soothing drink with rich flavors and health benefits like improved digestion.",
+      "quantity": 1
+    },
+    {
+      "id": 17,
       "name": "Cranberries",
       "image": "./assets/crane berry.webp",
       "price": 1200,
@@ -12,7 +167,7 @@
       "quantity": 1
     },
     {
-      "id": 6,
+      "id": 18,
       "name": "Kehwa Masala",
       "image": "./assets/kehwa masala.webp",
       "price": 250,
@@ -23,18 +178,7 @@
       "quantity": 1
     },
     {
-      "id": 7,
-      "name": "Honey Muesli",
-      "image": "./assets/topSales/honey roasted muesli 1200 kg.webp",
-      "price": 1100,
-      "colors": ["green", "grey", "brown"],
-      "rating": 3.5,
-      "unit": "1 kg",
-      "description": "Crunchy and nutritious muesli, sweetened with natural honey. A perfect, healthy breakfast option that boosts energy and provides a balanced source of fiber and antioxidants.",
-      "quantity": 1
-    },
-    {
-      "id": 8,
+      "id": 20,
       "name": "Saffron Cream",
       "image": "./assets/topSales/Saffron cream 400rs per piece.webp",
       "price": 400,
@@ -45,7 +189,7 @@
       "quantity": 1
     },
     {
-      "id": 9,
+      "id": 21,
       "name": "Saffron Face Serum",
       "image": "./assets/topSales/Saffron face serum 750 per.webp",
       "price": 750,
@@ -56,7 +200,7 @@
       "quantity": 1
     },
     {
-      "id": 10,
+      "id": 22,
       "name": "Saffron Facial Kit",
       "image": "./assets/topSales/Saffron facial kit 1600rs.webp",
       "price": 1600,
@@ -67,18 +211,18 @@
       "quantity": 1
     },
     {
-      "id": 11,
+      "id": 23,
       "name": "Saffron Honey",
-      "image": "/assets/saffron honey.webp",
-      "price": 600,
+      "image": "/assets/topSales/Saffron honey 600rs per piece.webp",
+      "price": 850,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
-      "unit": "250 g",
+      "unit": "500 g",
       "description": "Pure saffron-infused honey that combines the benefits of honey with the rich flavor and medicinal properties of saffron. Ideal for boosting immunity and energy.",
       "quantity": 1
     },
     {
-      "id": 12,
+      "id": 24,
       "name": "Dried Peach",
       "image": "./assets/topSales/peachdry-removebg-preview.webp",
       "price": 1000,
@@ -89,7 +233,7 @@
       "quantity": 1
     },
     {
-      "id": 13,
+      "id": 25,
       "name": "Almond Giri",
       "image": "./assets/topSales/almond giri 1400 kg.webp",
       "price": 1400,
@@ -100,10 +244,10 @@
       "quantity": 1
     },
     {
-      "id": 14,
+      "id": 26,
       "name": "Biryani Masala",
-      "image": "./assets/topSales/biryani-masala- 600 250g.webp",
-      "price": 600,
+      "image": "./assets/topSales/biryani masala 510 250g.webp",
+      "price": 510,
       "colors": ["grey", "black", "blue"],
       "rating": 5,
       "unit": "250 g",
@@ -111,7 +255,7 @@
       "quantity": 1
     },
     {
-      "id": 15,
+      "id": 27,
       "name": "Blueberry",
       "image": "./assets/topSales/blueberry 1200 kg.webp",
       "price": 1200,
@@ -122,7 +266,7 @@
       "quantity": 1
     },
     {
-      "id": 16,
+      "id": 28,
       "name": "Kashmiri Razma",
       "image": "./assets/topSales/kasmiri raazma 300 kg.webp",
       "price": 300,
@@ -133,7 +277,7 @@
       "quantity": 1
     },
     {
-      "id": 17,
+      "id": 29,
       "name": "Kastoori Deer",
       "image": "./assets/topSales/KastooriDeer 700 6ml.webp",
       "price": 700,
@@ -144,7 +288,7 @@
       "quantity": 1
     },
     {
-      "id": 18,
+      "id": 30,
       "name": "Kiwi",
       "image": "./assets/topSales/kiwi 1200 kg.webp",
       "price": 1200,
@@ -155,7 +299,7 @@
       "quantity": 1
     },
     {
-      "id": 19,
+      "id": 31,
       "name": "Masala Tikki",
       "image": "./assets/topSales/masala tikki 250 200g.webp",
       "price": 250,
@@ -166,7 +310,7 @@
       "quantity": 1
     },
     {
-      "id": 20,
+      "id": 32,
       "name": "Pistachio",
       "image": "./assets/topSales/pistachu 1400 kg.webp",
       "price": 1400,
@@ -175,229 +319,315 @@
       "unit": "1 kg",
       "description": "Fresh, crunchy pistachio kernels, rich in healthy fats, protein, and fiber. A great addition to your diet for improving heart health.",
       "quantity": 1
+    },
+    {
+      "id": 33,
+      "name": "Kashmiri Saffron Soap",
+      "image": "./assets/topSales/Raya-kashmiri-saffron-soap 250.webp",
+      "price": 250,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "per piece",
+      "description": "Luxurious Kashmiri Saffron Soap that nourishes and revitalizes the skin. Known for its anti-aging properties, this soap leaves your skin feeling soft, smooth, and radiant.",
+      "quantity": 1
+    },
+    {
+      "id": 34,
+      "name": "Yellow Peach",
+      "image": "./assets/topSales/yellow peach 1200 kg.webp",
+      "price": 1200,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Sweet and tangy dried yellow peaches, rich in vitamins and antioxidants. A delicious snack that supports skin health and promotes a healthy digestive system.",
+      "quantity": 1
+    },
+    {
+      "id": 36,
+      "name": "Almond Shell",
+      "image": "./assets/topSales/almond shell 500 kg.webp",
+      "price": 500,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Almond shells for use in various DIY projects, crafting, and organic gardening. A versatile product that can be used to create eco-friendly, sustainable goods.",
+      "quantity": 1
+    },
+    {
+      "id": 37,
+      "name": "Apricot",
+      "image": "./assets/topSales/apricot 1100 kg.webp",
+      "price": 1100,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Sweet, tangy, and highly nutritious dried apricots. Packed with vitamins and antioxidants, these apricots are great for boosting immunity and improving digestion.",
+      "quantity": 1
+    },
+    {
+      "id": 38,
+      "name": "Blackberry",
+      "image": "./assets/topSales/black berry 1100 kg.webp",
+      "price": 1100,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Rich, sweet dried blackberries that provide a burst of antioxidants, fiber, and essential vitamins. Ideal for snacking or adding to your morning cereal or yogurt.",
+      "quantity": 1
+    },
+    {
+      "id": 39,
+      "name": "Black Raisins",
+      "image": "./assets/topSales/black raisons 600 kg.webp",
+      "price": 600,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Premium Black Raisins packed with antioxidants and nutrients that promote heart health, improve digestion, and boost energy. Perfect for snacking or adding to your recipes.",
+      "quantity": 1
+    },
+    {
+      "id": 40,
+      "name": "Cashew",
+      "image": "./assets/topSales/cashew 1150 kg.webp",
+      "price": 1150,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Delicious and crunchy Cashew Nuts rich in healthy fats, vitamins, and minerals that support heart health, boost immunity, and enhance brain function. A great addition to salads or trail mixes.",
+      "quantity": 1
+    },
+    {
+      "id": 41,
+      "name": "Cherry",
+      "image": "./assets/topSales/cherry 1200 kg.webp",
+      "price": 1200,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Dried Cherries packed with vitamins and antioxidants that improve skin health, reduce inflammation, and support immune function. Enjoy them as a snack or mix into your morning oats.",
+      "quantity": 1
+    },
+    {
+      "id": 43,
+      "name": "Green Raisins",
+      "image": "./assets/topSales/green raisons 600 kg.webp",
+      "price": 600,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Green Raisins are a healthy snack rich in vitamins, minerals, and antioxidants that support digestive health, boost energy, and strengthen bones.",
+      "quantity": 1
+    },
+    {
+      "id": 44,
+      "name": "Honey Roasted Muesli",
+      "image": "./assets/topSales/hone roasted musli 1400 500g.webp",
+      "price": 1400,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "500 g",
+      "description": "A delicious blend of honey-roasted muesli, nuts, and fruits, perfect for a healthy breakfast or a mid-day snack. Rich in fiber and protein, it boosts metabolism and supports digestion.",
+      "quantity": 1
+    },
+    {
+      "id": 45,
+      "name": "Kehwa Raw",
+      "image": "./assets/topSales/kehwa raw 600 200g.webp",
+      "price": 600,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "200 g",
+      "description": "Raw Kehwa, a traditional Kashmiri herbal tea, made with green tea, saffron, and aromatic spices. Known for its soothing properties and ability to boost immunity.",
+      "quantity": 1
+    },
+    {
+      "id": 46,
+      "name": "Munakka (Dried Grapes)",
+      "image": "./assets/topSales/munakka 1100 kg.webp",
+      "price": 1100,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Munakka, or dried grapes, are packed with fiber, iron, and antioxidants that improve digestion, combat fatigue, and support healthy skin. A perfect addition to your diet.",
+      "quantity": 1
+    },
+    {
+      "id": 47,
+      "name": "Red Peaches",
+      "image": "./assets/topSales/read peach 1200 kg.webp",
+      "price": 1200,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Red Peaches are naturally sweet and rich in vitamins A and C, promoting skin health, improving digestion, and supporting immune function. Perfect for snacking or adding to desserts.",
+      "quantity": 1
+    },
+    {
+      "id": 48,
+      "name": "Rose Attar",
+      "image": "./assets/topSales/rose attar 400 6ml.webp",
+      "price": 400,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "6 ml",
+      "description": "Pure Rose Attar, a soothing fragrance oil, is made from high-quality rose petals. It’s known for its calming effects and is ideal for use in aromatherapy or as a personal fragrance.",
+      "quantity": 1
+    },
+    {
+      "id": 49,
+      "name": "Saffron Attar",
+      "image": "./assets/topSales/saffron attar 500 6ml.webp",
+      "price": 500,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "6 ml",
+      "description": "Saffron Attar is an exotic fragrance oil made from premium saffron, known for its therapeutic properties and calming effects on the mind. It’s a natural alternative to perfumes.",
+      "quantity": 1
+    },
+    {
+      "id": 50,
+      "name": "Saffron Attar",
+      "image": "./assets/topSales/saffron attar 700 per.webp",
+      "price": 700,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "per piece",
+      "description": "Premium Saffron Attar, derived from the finest saffron flowers, offers a luxurious and calming aroma. Perfect for relaxation, meditation, and enhancing the ambiance of any space.",
+      "quantity": 1
+    },
+    {
+      "id": 51,
+      "name": "Walnut Giri",
+      "image": "./assets/topSales/walnut giri 1200 kg.webp",
+      "price": 1200,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Walnut Giri (kernels) are rich in omega-3 fatty acids and antioxidants that improve heart health, boost brain function, and support weight loss. Ideal for snacking or adding to dishes.",
+      "quantity": 1
+    },
+    {
+      "id": 52,
+      "name": "Zaffaron Masala Tikki",
+      "image": "./assets/topSales/zaffaron masala tikki 250 200g.webp",
+      "price": 250,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "200 g",
+      "description": "Zaffaron Masala Tikki is a flavorful and healthy snack made with saffron, spices, and herbs. It’s known for its rich taste and health benefits, such as improving digestion and boosting immunity.",
+      "quantity": 1
+    },
+    {
+      "id": 53,
+      "name": "Shilajit",
+      "image": "./assets/topSales/shilajit 250g 35rs g.webp",
+      "price": 40,
+      "rating": 5,
+      "unit": "1 g",
+      "description": "Shilajit, rich in minerals and antioxidants, boosts energy, enhances stamina, supports memory and focus, and protects brain health. It also promotes healthy aging and strengthens immunity",
+      "quantity": 1
+    },
+    {
+      "id": 54,
+      "name": "Almond Chocolates",
+      "image": "./assets/topSales/almond choclate 600 200 g.webp",
+      "price": 600,
+      "rating": 5,
+      "unit": "200 g",
+      "description": "Delicious almond chocolates crafted with premium cocoa and crunchy almonds, perfect for gifting or indulging.",
+      "quantity": 1
+    },
+    {
+      "id": 56,
+      "name": "Gulkand",
+      "image": "./assets/topSales/gulkand 500 500g.webp",
+      "price": 500,
+      "rating": 5,
+      "unit": "500 g",
+      "description": "Natural Gulkand prepared with organic rose petals, ideal for desserts or as a health supplement.",
+      "quantity": 1
+    },
+    {
+      "id": 57,
+      "name": "Dry Fruit Mix",
+      "image": "./assets/topSales/dry fruit mix 700 500g.webp",
+      "price": 700,
+      "rating": 5,
+      "unit": "500 g",
+      "description": "Healthy dry fruit mix packed with premium nuts and seeds for energy and nutrition on the go.",
+      "quantity": 1
+    },
+    {
+      "id": 58,
+      "name": "Kashmiri Chilli Powder",
+      "image": "./assets/topSales/kasmiri red chill powder 450 500g.webp",
+      "price": 450,
+      "rating": 4,
+      "unit": "500 g",
+      "description": "Authentic Kashmiri red chilli powder with vibrant color and mild heat, perfect for Indian cooking.",
+      "quantity": 1
+    },
+    {
+      "id": 59,
+      "name": "Milk Masala",
+      "image": "./assets/topSales/milk masala 356 100g.webp",
+      "price": 356,
+      "rating": 4,
+      "unit": "100 g",
+      "description": "Aromatic milk masala blend with nuts and spices for a rich and flavorful milk drink.",
+      "quantity": 1
+    },
+    {
+      "id": 60,
+      "name": "Rogan Badam Oil",
+      "image": "./assets/topSales/rogan badaam oil 550 200ml.webp",
+      "price": 550,
+      "rating": 4,
+      "unit": "200 ml",
+      "description": "Pure Rogan Badam oil, rich in vitamin E, for hair, skin, and overall wellness.",
+      "quantity": 1
+    },
+    {
+      "id": 61,
+      "name": "Saffron Oil",
+      "image": "./assets/topSales/saffron oil 1550 20 ml.webp",
+      "price": 1550,
+      "rating": 4,
+      "unit": "20 ml",
+      "description": "Luxurious saffron oil, infused with the essence of saffron for radiant skin and health benefits.",
+      "quantity": 1
+    },
+    {
+      "id": 62,
+      "name": "Shilajit",
+      "image": "./assets/topSales/shilajit 4000 100g.webp",
+      "price": 4000,
+      "rating": 4,
+      "unit": "100 g",
+      "description": "Premium Shilajit, a natural resin packed with minerals, for energy, vitality, and immunity.",
+      "quantity": 1
+    },
+    {
+      "id": 63,
+      "name": "Walnut Chocolates",
+      "image": "./assets/topSales/wall nut choclate 600 200 g.webp",
+      "price": 600,
+      "rating": 4,
+      "unit": "200 g",
+      "description": "Rich walnut chocolates with a perfect balance of crunch and sweetness, a delightful treat.",
+      "quantity": 1
+    },
+    {
+      "id": 64,
+      "name": "Wild Honey",
+      "image": "./assets/topSales/wild hone 650 500g.webp",
+      "price": 650,
+      "rating": 4,
+      "unit": "500 g",
+      "description": "Pure wild honey harvested from natural sources, rich in antioxidants and natural sweetness.",
+      "quantity": 1
     }
-,
-{
-  "id": 21,
-  "name": "Kashmiri Saffron Soap",
-  "image": "./assets/topSales/Raya-kashmiri-saffron-soap 250.webp",
-  "price": 250,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "per piece",
-  "description": "Luxurious Kashmiri Saffron Soap that nourishes and revitalizes the skin. Known for its anti-aging properties, this soap leaves your skin feeling soft, smooth, and radiant.",
-  "quantity": 1
-},
-{
-  "id": 22,
-  "name": "Yellow Peach",
-  "image": "./assets/topSales/yellow peach 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Sweet and tangy dried yellow peaches, rich in vitamins and antioxidants. A delicious snack that supports skin health and promotes a healthy digestive system.",
-  "quantity": 1
-},
-{
-  "id": 23,
-  "name": "Walnut Shell",
-  "image": "./assets/topSales/walnut shell 500 kg.webp",
-  "price": 500,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Natural Walnut Shells that can be used for various purposes, including as an eco-friendly alternative for scrubbing and cleaning. Great for body scrubs and as an exfoliant.",
-  "quantity": 1
-},
-{
-  "id": 24,
-  "name": "Almond Shell",
-  "image": "./assets/topSales/almond shell 500 kg.webp",
-  "price": 500,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Almond shells for use in various DIY projects, crafting, and organic gardening. A versatile product that can be used to create eco-friendly, sustainable goods.",
-  "quantity": 1
-},
-{
-  "id": 25,
-  "name": "Apricot",
-  "image": "./assets/topSales/apricot 1100 kg.webp",
-  "price": 1100,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Sweet, tangy, and highly nutritious dried apricots. Packed with vitamins and antioxidants, these apricots are great for boosting immunity and improving digestion.",
-  "quantity": 1
-},
-{
-  "id": 26,
-  "name": "Blackberry",
-  "image": "./assets/topSales/black berry 1100 kg.webp",
-  "price": 1100,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Rich, sweet dried blackberries that provide a burst of antioxidants, fiber, and essential vitamins. Ideal for snacking or adding to your morning cereal or yogurt.",
-  "quantity": 1
-},
-{
-  "id": 27,
-  "name": "Black Raisins",
-  "image": "./assets/topSales/black raisons 600 kg.webp",
-  "price": 600,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Premium Black Raisins packed with antioxidants and nutrients that promote heart health, improve digestion, and boost energy. Perfect for snacking or adding to your recipes.",
-  "quantity": 1
-},
-{
-  "id": 28,
-  "name": "Cashew",
-  "image": "./assets/topSales/cashew 1150 kg.webp",
-  "price": 1150,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Delicious and crunchy Cashew Nuts rich in healthy fats, vitamins, and minerals that support heart health, boost immunity, and enhance brain function. A great addition to salads or trail mixes.",
-  "quantity": 1
-},
-{
-  "id": 29,
-  "name": "Cherry",
-  "image": "./assets/topSales/cherry 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Dried Cherries packed with vitamins and antioxidants that improve skin health, reduce inflammation, and support immune function. Enjoy them as a snack or mix into your morning oats.",
-  "quantity": 1
-},
-{
-  "id": 30,
-  "name": "Cranberry",
-  "image": "./assets/topSales/crane berry 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Cranberries are known for their high antioxidant content and are great for urinary tract health. Packed with vitamin C and fiber, they’re perfect for snacking or baking.",
-  "quantity": 1
-},
-{
-  "id": 31,
-  "name": "Green Raisins",
-  "image": "./assets/topSales/green raisons 600 kg.webp",
-  "price": 600,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Green Raisins are a healthy snack rich in vitamins, minerals, and antioxidants that support digestive health, boost energy, and strengthen bones.",
-  "quantity": 1
-},
-{
-  "id": 32,
-  "name": "Honey Roasted Muesli",
-  "image": "./assets/topSales/honey roasted muesli 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "A delicious blend of honey-roasted muesli, nuts, and fruits, perfect for a healthy breakfast or a mid-day snack. Rich in fiber and protein, it boosts metabolism and supports digestion.",
-  "quantity": 1
-},
-{
-  "id": 33,
-  "name": "Kehwa Raw",
-  "image": "./assets/topSales/kehwa raw 600 200g.webp",
-  "price": 600,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "200 g",
-  "description": "Raw Kehwa, a traditional Kashmiri herbal tea, made with green tea, saffron, and aromatic spices. Known for its soothing properties and ability to boost immunity.",
-  "quantity": 1
-},
-{
-  "id": 34,
-  "name": "Munakka (Dried Grapes)",
-  "image": "./assets/topSales/munakka 1100 kg.webp",
-  "price": 1100,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Munakka, or dried grapes, are packed with fiber, iron, and antioxidants that improve digestion, combat fatigue, and support healthy skin. A perfect addition to your diet.",
-  "quantity": 1
-},
-{
-  "id": 35,
-  "name": "Red Peaches",
-  "image": "./assets/topSales/read peach 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Red Peaches are naturally sweet and rich in vitamins A and C, promoting skin health, improving digestion, and supporting immune function. Perfect for snacking or adding to desserts.",
-  "quantity": 1
-},
-{
-  "id": 36,
-  "name": "Rose Attar",
-  "image": "./assets/topSales/rose attar 400 6ml.webp",
-  "price": 400,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "6 ml",
-  "description": "Pure Rose Attar, a soothing fragrance oil, is made from high-quality rose petals. It’s known for its calming effects and is ideal for use in aromatherapy or as a personal fragrance.",
-  "quantity": 1
-},
-{
-  "id": 37,
-  "name": "Saffron Attar",
-  "image": "./assets/topSales/saffron attar 500 6ml.webp",
-  "price": 500,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "6 ml",
-  "description": "Saffron Attar is an exotic fragrance oil made from premium saffron, known for its therapeutic properties and calming effects on the mind. It’s a natural alternative to perfumes.",
-  "quantity": 1
-},
-{
-  "id": 38,
-  "name": "Saffron Attar",
-  "image": "./assets/topSales/saffron attar 700 per.webp",
-  "price": 700,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "per piece",
-  "description": "Premium Saffron Attar, derived from the finest saffron flowers, offers a luxurious and calming aroma. Perfect for relaxation, meditation, and enhancing the ambiance of any space.",
-  "quantity": 1
-},
-{
-  "id": 39,
-  "name": "Walnut Giri",
-  "image": "./assets/topSales/walnut giri 1200 kg.webp",
-  "price": 1200,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "1 kg",
-  "description": "Walnut Giri (kernels) are rich in omega-3 fatty acids and antioxidants that improve heart health, boost brain function, and support weight loss. Ideal for snacking or adding to dishes.",
-  "quantity": 1
-},
-{
-  "id": 40,
-  "name": "Zaffaron Masala Tikki",
-  "image": "./assets/topSales/zaffaron masala tikki 250 200g.webp",
-  "price": 250,
-  "colors": ["grey", "black", "blue"],
-  "rating": 5,
-  "unit": "200 g",
-  "description": "Zaffaron Masala Tikki is a flavorful and healthy snack made with saffron, spices, and herbs. It’s known for its rich taste and health benefits, such as improving digestion and boosting immunity.",
-  "quantity": 1
-}
-
-]
+  ]
 }
 

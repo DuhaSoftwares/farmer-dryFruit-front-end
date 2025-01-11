@@ -1,7 +1,7 @@
 {
   "collections": [
   {
-    "id": 1,
+    "id": 70,
     "name": "Customers Choice",
     "image": "./assets/dr1.webp",
     "link": "#sellers",
@@ -10,7 +10,7 @@
     "quantity": 1
   },
   {
-    "id": 2,
+    "id": 71,
     "name": "New Arivals",
     "image": "./assets/dr2.webp",
     "link": "#new-arrivals",
@@ -19,7 +19,7 @@
     "quantity": 1
   },
   {
-    "id": 3,
+    "id": 72,
     "name": "Hot Sales",
     "image": "./assets/dr3.webp",
     "link": "#hot-sales",
@@ -30,142 +30,141 @@
 ]
 ,
   "topSales": [
-  {
-    "id": 4,
-    "name": "Acacia Honey",
-    "image": "./assets/topSales/Acacia honey 550 per.webp",
-    "price": 550,
-    "colors": ["red", "blue", "white"],
-    "rating": 3,
-    "unit": "500 g",
-    "description": "Pure acacia honey with a mild and sweet flavor. Known for its natural antibacterial properties, this honey is perfect for sweetening your drinks, spreads, or adding to desserts.",
-    "quantity": 1
-  },
-  {
-    "id": 5,
-    "name": "Face Scrub",
-    "image": "./assets/topSales/Face scrub 450rs.webp",
-    "price": 450,
-    "colors": [""],
-    "rating":4,
-    "unit": "15 g",
-    "description": "A rejuvenating face scrub made with natural ingredients to cleanse and exfoliate, leaving your skin feeling fresh and radiant. Ideal for all skin types.",
-    "quantity": 1
-  },
-  {
-    "id": 6,
-    "name": "Face Wash",
-    "image": "./assets/topSales/Face wash 500rs per piece.webp",
-    "price": 500,
-    "colors": ["red", "blue", "white"],
-    "rating": 3,
-    "unit": "20 ml",
-    "description": "Gentle face wash with natural herbs, perfect for daily cleansing. Removes impurities and helps maintain a healthy, glowing complexion.",
-    "quantity": 1
-  },
-  {
-    "id": 7,
-    "name": "Honey Roasted Muesli",
-    "image": "./assets/topSales/Honey roasted museli 1100rs per kg.webp",
-    "price": 1100,
-    "colors": ["green", "grey", "brown"],
-    "rating": 4,
-    "unit": "1 kg",
-    "description": "Crunchy and nutritious honey roasted muesli made with premium ingredients, perfect for a healthy breakfast or snack to start your day.",
-    "quantity": 1
-  }
+   {
+      "id": 5,
+      "name": "Kashmiri Kesar",
+      "image": "./assets/topSales/Kashmiri kesar 300rs per gram.webp",
+      "price": 300,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 g",
+      "description": "Premium Kashmiri saffron known for its rich color and distinct flavor. Ideal for enhancing the taste and aroma of your dishes, desserts, and beverages while providing health benefits like boosting immunity.",
+      "quantity": 1
+    },
+      {
+      "id": 7,
+      "name": "Mongra Saffron",
+      "image": "./assets/topSales/Media.jfif",
+      "price": 300,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "1 g",
+      "description": "High-quality Mongra saffron known for its purity and potent flavor. A must-have ingredient to elevate your cooking and beverages, providing numerous health benefits such as aiding digestion and improving mood.",
+      "quantity": 1
+    },
+    {
+      "id": 53,
+      "name": "Shilajit",
+      "image": "./assets/topSales/shilajit 250g 35rs g.webp",
+      "price": 40,
+      "rating": 5,
+      "unit": "1 g",
+      "description": "Shilajit, rich in minerals and antioxidants, boosts energy, enhances stamina, supports memory and focus, and protects brain health. It also promotes healthy aging and strengthens immunity",
+      "quantity": 1
+    },
+     {
+      "id": 13,
+      "name": "Saffron Honey",
+      "image": "./assets/saffron honey.webp",
+      "price": 1200,
+      "colors": ["black", "blue", "brown"],
+      "rating": 5,
+      "unit": "kg",
+      "description": "Pure honey infused with saffron.",
+      "quantity": 1
+    }
 
   ],
   "newArrivals": [
+
+      {
+      "id": 32,
+      "name": "Pistachio",
+      "image": "./assets/topSales/pistachu 1400 kg.webp",
+      "price": 1400,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Fresh, crunchy pistachio kernels, rich in healthy fats, protein, and fiber. A great addition to your diet for improving heart health.",
+      "quantity": 1
+    },
+    {
+      "id": 40,
+      "name": "Cashew",
+      "image": "./assets/topSales/cashew 1150 kg.webp",
+      "price": 1150,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Delicious and crunchy Cashew Nuts rich in healthy fats, vitamins, and minerals that support heart health, boost immunity, and enhance brain function. A great addition to salads or trail mixes.",
+      "quantity": 1
+    },
+         {
+      "id": 20,
+      "name": "Saffron Cream",
+      "image": "./assets/topSales/Saffron cream 400rs per piece.webp",
+      "price": 400,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "per piece",
+      "description": "Luxurious cream infused with pure saffron, known for its nourishing and revitalizing properties. Enhances skin texture and promotes a radiant glow.",
+      "quantity": 1
+    },
   {
-    "id": 8,
-    "name": "Kashmiri Kesar",
-    "image": "./assets/topSales/Kashmiri kesar 300rs per gram.webp",
-    "price": 300,
-    "colors": ["black", "blue", "brown"],
-    "rating": 5,
-    "unit": "1 g",
-    "description": "Premium Kashmiri saffron known for its rich color and distinct flavor. Ideal for enhancing the taste and aroma of your dishes, desserts, and beverages while providing health benefits like boosting immunity.",
-    "quantity": 1
-  },
-  {
-    "id": 9,
-    "name": "Kesari Milk Masala",
-    "image": "./assets/topSales/Kesari milk masala 350rs per.webp",
-    "price": 350,
-    "colors": ["black", "blue", "brown"],
-    "rating": 5,
-    "unit": "30 g",
-    "description": "A fragrant blend of saffron and spices, perfect for preparing rich and aromatic Kesari milk. Offers a comforting and healthy drink with natural antioxidants and calming properties.",
-    "quantity": 1
-  },
-  {
-    "id": 10,
-    "name": "Mongra Saffron",
-    "image": "./assets/topSales/Media.jfif",
-    "price": 300,
-    "colors": ["black", "blue", "brown"],
-    "rating": 5,
-    "unit": "1 g",
-    "description": "High-quality Mongra saffron known for its purity and potent flavor. A must-have ingredient to elevate your cooking and beverages, providing numerous health benefits such as aiding digestion and improving mood.",
-    "quantity": 1
-  },
-  {
-    "id": 11,
-    "name": "Edible Rose Water",
-    "image": "./assets/topSales/Rose water edible 300 per.webp",
-    "price": 300,
-    "colors": ["black", "blue", "brown"],
-    "rating": 5,
-    "unit": "30 ml",
-    "description": "Pure, edible rose water that adds a delicate fragrance and flavor to your dishes, desserts, and drinks. Known for its cooling properties, it helps with skin rejuvenation and digestion.",
-    "quantity": 1
-  }
+      "id": 22,
+      "name": "Saffron Facial Kit",
+      "image": "./assets/topSales/Saffron facial kit 1600rs.webp",
+      "price": 1600,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kit",
+      "description": "Complete facial kit with saffron-based products to provide a glowing, radiant complexion. Perfect for a luxurious home spa experience.",
+      "quantity": 1
+    }
 ],
   "hotSales": [
-  {
-    "id": 12,
-    "name": "Cranberries",
-    "image": "./assets/topSales/crane berry 1200 kg.webp",
-    "price": 1200,
-    "colors": ["red", "blue", "white"],
-    "rating": 5,
-    "unit": "1 kg",
-    "description": "Tangy and delicious dried cranberries, perfect for baking, salads, or snacking. Rich in antioxidants, they support urinary tract health and boost immunity.",
-    "quantity": 1
-  },
-  {
-    "id": 13,
-    "name": "Dried Kiwi",
-    "image": "./assets/kiwi.webp",
-    "price": 800,
-    "colors": [""],
-    "rating": 4,
-    "unit": "1 kg",
-    "description": "Tart and sweet dried kiwi slices, packed with vitamins and fiber. Great for snacking or adding to trail mixes and smoothies for a healthy boost.",
-    "quantity": 1
-  },
-  {
-    "id": 14,
-    "name": "Kehwa Masala",
-    "image": "./assets/kehwa masala.webp",
-    "price": 250,
-    "colors": ["red", "blue", "white"],
-    "rating": 4,
-    "unit": "200 g",
-    "description": "Traditional Kashmiri Kehwa masala, a perfect blend of spices and saffron. Ideal for brewing a warm, soothing drink with rich flavors and health benefits like improved digestion.",
-    "quantity": 1
-  },
-  {
-    "id": 15,
-    "name": "Honey Muesli",
-    "image": "./assets/topSales/honey roasted muesli 1200 kg.webp",
-    "price": 1100,
-    "colors": ["green", "grey", "brown"],
-    "rating": 4,
-    "unit": "1 Kg",
-    "description": "Crunchy and nutritious muesli, sweetened with natural honey. A perfect, healthy breakfast option that boosts energy and provides a balanced source of fiber and antioxidants.",
-    "quantity": 1
-  }
+   {
+      "id": 41,
+      "name": "Cherry",
+      "image": "./assets/topSales/cherry 1200 kg.webp",
+      "price": 1200,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "1 kg",
+      "description": "Dried Cherries packed with vitamins and antioxidants that improve skin health, reduce inflammation, and support immune function. Enjoy them as a snack or mix into your morning oats.",
+      "quantity": 1
+    },
+     {
+      "id": 44,
+      "name": "Honey Roasted Muesli",
+      "image": "./assets/topSales/hone roasted musli 1400 500g.webp",
+      "price": 1400,
+      "colors": ["grey", "black", "blue"],
+      "rating": 5,
+      "unit": "500 g",
+      "description": "A delicious blend of honey-roasted muesli, nuts, and fruits, perfect for a healthy breakfast or a mid-day snack. Rich in fiber and protein, it boosts metabolism and supports digestion.",
+      "quantity": 1
+    },
+     {
+      "id": 3,
+      "name": "Kehwa Masala",
+      "image": "./assets/kehwa masala.webp",
+      "price": 250,
+      "colors": ["red", "blue", "white"],
+      "rating": 4,
+      "unit": "200 g",
+      "description": "Traditional Kashmiri Kehwa masala, a perfect blend of spices and saffron. Ideal for brewing a warm, soothing drink with rich flavors and health benefits like improved digestion.",
+      "quantity": 1
+    },
+    {
+      "id": 63,
+      "name": "Walnut Chocolates",
+      "image": "./assets/topSales/wall nut choclate 600 200 g.webp",
+      "price": 600,
+      "rating": 4,
+      "unit": "200 g",
+      "description": "Rich walnut chocolates with a perfect balance of crunch and sweetness, a delightful treat.",
+      "quantity": 1
+    }
 ]
 }
